@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Steps, Limitations &amp; Flags — Shoulder &amp; Wing Pain Project</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">ShoulderPain<span class="dot">.</span>project</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="causes.html">Causes</a>
+      <a href="treatment.html">Treatment</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="ergonomics.html">Desk Setup</a>
+      <a href="products.html">Products &amp; Prices</a>
+      <a href="sources.html">Sources</a>
+      <a href="next-steps.html" class="active">Next Steps</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <p class="kicker">Project status</p>
+  <h1>What still needs doing, and what got in the way</h1>
+  <p class="lead">Honest project state after pass 1–3 of the build: what's complete, what's blocked on human input or real-world facts, and every irregularity found during verification, flagged for review.</p>
+  <p class="verified-date">Updated September 19, 2026</p>
+
+  <section>
+    <h2>✅ Complete (this pass)</h2>
+    <ul>
+      <li>Full cause analysis for the three suspected triggers (desk, sleep, gym), each sourced to trusted medical references.</li>
+      <li>Treatment ladder (self-care → PT/exercise → injection → surgery) with the <em>actual</em> evidence quality, including the 2025 Cochrane nuance.</li>
+      <li>Concrete exercise plan (4 parts) — every exercise traced to a published hospital/medical-center program.</li>
+      <li>OSHA/NIOSH-based small-room desk setup with three foldable desk categories + verified prices.</li>
+      <li>Product list with official-page prices, warranties, trials, and three budget builds (≈$241 / ≈$557 / ≈$1,448).</li>
+      <li>Master sources page with trust tiers and a verification log; irregularities logged below.</li>
+      <li>Site published to GitHub Pages (main branch, /docs).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>⚑ Flagged irregularities — review required</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Irregularities found while verifying line-by-line</caption>
+        <thead><tr><th>#</th><th>Irregularity</th><th>Where it matters</th><th>Action needed</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Old VIVO product URL (products/desk-fd1qb) 404s — the Folding 43″ desk was dropped/renamed from VIVO's current catalog</td><td>Desk options</td><td>Chose currently-listed VIVO folding products instead; re-verify stock at purchase time</td></tr>
+          <tr><td>2</td><td>Some retailer/manufacturer pages carry stale schema “price valid until” dates that predate verification day, while displayed prices are current</td><td>All product rows</td><td>Displayed price was used; treat structured-data dates as unreliable</td></tr>
+          <tr><td>3</td><td>A third-party review site quoted a price (~$40.81) for a similar TriggerPoint roller that doesn't match the official GRID Travel price ($34.99 on tptherapy.com)</td><td>Rehab tools</td><td>Used the official manufacturer price; all review-site pricing treated as unverified</td></tr>
+          <tr><td>4</td><td>Lillipad per-variant price was not enumerated on the product page during verification (homepage “Starting at $887” used)</td><td>Premium build total</td><td>Confirm exact Standard/Large variant price before ordering</td></tr>
+          <tr><td>5</td><td>“Wing” sensation vs. visible nerve-related winging can't be distinguished without an exam</td><td>Whole project</td><td>Human decision: if blade visibly protrudes or weakness appears → clinician visit takes priority over everything else</td></tr>
+          <tr><td>6</td><td>No fold-flat chair exists that's safe for 12 h/day — the foldable requirement is only fully satisfiable for the desk</td><td>Chair selection</td><td>Accepted trade-off: compact tuck-under chair; review if space is extreme</td></tr>
+          <tr><td>7</td><td>Personal facts not available to the project: exact room dimensions, wall/stud condition, current mattress, medication history, height/weight (chair size fit)</td><td>Desk category 2, chair sizing, NSAID safety</td><td>Measure room + check studs; pharmacist 5-min check; use chair size guides</td></tr>
+          <tr><td>8</td><td>2025 Cochrane review found manual therapy + exercise only slightly better than placebo (function below MCID)</td><td>Treatment expectations</td><td>Set expectations: exercise is the best long-term option but benefits are modest and slow (4–6 weeks); don't expect a quick fix</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔜 Recommended work for the next session</h2>
+    <ol>
+      <li>
+        <strong>Re-verify all prices</strong> (5 min). Prices were valid Sep 19, 2026 only. Re-read the 11 product pages and
+        update any that moved; the Products page is designed so only price cells change.
+      </li>
+      <li>
+        <strong>Resolve the winging question</strong> (human action). Book a primary-care or orthopedic visit if: no
+        improvement after the 2-week self-care window, visible protrusion, or any weakness. The visit converts the
+        “flag” items into a confirmed plan and may change the exercise emphasis.
+      </li>
+      <li>
+        <strong>Add a pain log</strong> (site feature). A simple local-only (no backend) day/pain-scale/activity tracker
+        would make the 2-week and 6-week checkpoints measurable — everything in this site references those checkpoints
+        but nothing records them yet.
+      </li>
+      <li>
+        <strong>Add exercise videos/diagrams</strong>. The exercise descriptions are text-only (faithful to sources);
+        linking official video demos from the cited programs would cut technique-error risk.
+      </li>
+      <li>
+        <strong>Deepen the evidence layer</strong>. Add the underlying trials behind the desk-posture claims (EMG studies
+        on forward-head posture load) with PubMed links, and a short “why standing desks help” evidence page — the
+        sit-stand claim currently rests on OSHA's “posture variation” guidance rather than a dedicated RCT summary.
+      </li>
+      <li>
+        <strong>Room measurement task</strong>. Add a measurement worksheet (desk footprint, wall studs, monitor size) so
+        the ergonomics checklist can be checked against real numbers instead of generic ranges.
+      </li>
+      <li>
+        <strong>Internationalization / currency</strong> only if buying outside the US — all prices are USD, US-stocked.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>🚧 Limitations that block a “perfect” version</h2>
+    <ul>
+      <li><strong>No personal data:</strong> I can't examine the shoulder, see the winging, or know the room's geometry. Everything is therefore structured as decision rules (“if X, then Y”) rather than a single prescription.</li>
+      <li><strong>No clinical authority:</strong> this is a research compilation. The strongest claim the evidence supports is “start self-care + exercise, checkpoint at 2 weeks, escalate to a clinician if it fails” — and that's exactly the structure used.</li>
+      <li><strong>Price volatility:</strong> furniture and accessory prices change weekly; a static site goes stale. The next session should re-verify before any purchase is made from this page.</li>
+      <li><strong>Small-study evidence base:</strong> several cited trials are small (e.g., n=33); the Cochrane base for rotator-cuff therapy is thin. The site states this rather than hiding it, but it means “evidence-based” here is stronger than it looks.</li>
+      <li><strong>Single-region assumption:</strong> US sources, USD prices, US retail. If any factor differs, the product section needs a regional pass.</li>
+      <li><strong>No live price monitoring:</strong> a static GitHub Pages site can't track prices; that would need a workflow (e.g., a scheduled job that re-fetches the 11 product pages and updates a JSON price cache) — suggested for a later session.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p><strong>Disclaimer:</strong> Informational content compiled from public sources for personal use. Not medical advice. Consult a qualified clinician for diagnosis and treatment decisions.</p>
+    <p>ShoulderPain project · sources &amp; verification log: <a href="sources.html">sources.html</a></p>
+  </div>
+</footer>
+</body>
+</html>
