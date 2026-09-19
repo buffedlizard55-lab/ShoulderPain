@@ -40,7 +40,8 @@ Organized sections:
 
 ## Maintenance
 
-- Site is plain static HTML/CSS (no build step). Edit files in `docs/` and push to `main` — GitHub Pages picks it up.
+- Site is plain static HTML/CSS (no build step). Edit files in `docs/` and push to `main` — the
+  `.github/workflows/deploy-pages.yml` workflow deploys the `docs/` folder to GitHub Pages on every push.
 - Suggested next-session work (price re-verification, pain-log feature, exercise videos, deeper evidence layer):
   `docs/next-steps.html`.
 
