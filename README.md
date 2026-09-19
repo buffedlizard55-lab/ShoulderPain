@@ -6,7 +6,7 @@ desk work in a small room.
 
 ## The website
 
-Published on GitHub Pages from the `docs/` folder: **https://buffedlizard55-lab.github.io/ShoulderPain/**
+Published on GitHub Pages (main branch, repo root): **https://buffedlizard55-lab.github.io/ShoulderPain/**
 
 Organized sections:
 
@@ -40,7 +40,11 @@ Organized sections:
 
 ## Maintenance
 
-- Site is plain static HTML/CSS (no build step). Edit files in `docs/` and push to `main` — GitHub Pages picks it up.
+- Site is plain static HTML/CSS (no build step). Push to `main` and GitHub Pages (source: main branch, repo root)
+  redeploys automatically.
+- Note: the Pages source was set to the repo root (not a `docs/` subfolder) because the CI token lacks permission to
+  change Pages settings (403 “Resource not accessible by integration”); the site files were placed at the repo root
+  to match that setting.
 - Suggested next-session work (price re-verification, pain-log feature, exercise videos, deeper evidence layer):
   `docs/next-steps.html`.
 
