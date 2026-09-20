@@ -246,3 +246,6 @@ hr.soft { border: none; border-top: 1px solid var(--line); margin: 34px 0; }
   h2 { font-size: 1.25rem; }
   .page { padding-top: 24px; }
 }
+
+/* Small, muted helper text (added in session 3) */
+.small { font-size: 0.88rem; color: var(--muted); }
