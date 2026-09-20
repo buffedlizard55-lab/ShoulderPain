@@ -2,7 +2,7 @@ name: Validate site
 on:
   pull_request:
   push:
-    branches: [main, arena/01a0bd2b-shoulderpain]
+    branches: [main, arena/01a0bfa3-shoulderpain]
 permissions:
   contents: read
 jobs:
@@ -19,7 +19,20 @@ jobs:
           python-version: '3.12'
       - run: npm ci
       - run: npm run build && git diff --exit-code -- '*.html' data/claims.json
-      - run: npm run format:check && npm run check && npm test
+      - run: npm run format:check && npm run check && npm test && npm run test:audit
       - run: npx playwright install --with-deps chromium
       - name: Browser and accessibility checks
-        run: npm run test:browser
+        run: |
+          set -o pipefail
+          npm run test:browser 2>&1 | tee browser-check.log
+      - name: Surface browser failures in check annotations
+        if: failure()
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          path = Path("browser-check.log")
+          if path.exists():
+              tail = "\n".join(line for line in path.read_text().splitlines() if "[WebServer]" not in line)[-3500:]
+              escaped = tail.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+              print("::error title=Browser test details::" + escaped)
+          PYTHON

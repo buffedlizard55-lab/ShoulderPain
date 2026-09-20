@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 24px;
 }
 body {
@@ -1122,5 +1122,24 @@ footer p {
   }
   .source-record {
     break-inside: avoid;
+  }
+}
+
+.audit-group {
+  margin-block: 1rem;
+  border: 1px solid var(--line, #cbd5d1);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.audit-group summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.audit-group .source-record {
+  overflow-wrap: anywhere;
+}
+@media print {
+  .audit-group {
+    break-inside: auto;
   }
 }

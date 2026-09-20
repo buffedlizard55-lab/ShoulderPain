@@ -1,3 +1,86 @@
+# Follow-up review — 20 September 2026
+
+Current base: `06eec870f9dda637aae2ebac37d07dd76928bd52` (merged PR #11).
+Current branch: `arena/01a0bfa3-shoulderpain`. The earlier review below is historical,
+not a claim that its test run or all its detailed product findings were repeated.
+
+## Pass 1 — repository and official-source review
+
+Read the content templates, source/claim registers, build/validation code, log
+validation and existing browser tests. GitHub Pages API reports legacy publishing
+from `main` at `/`, HTTPS enforced. Retained the existing clean, responsive ten-page
+site instead of rebuilding a working foundation.
+
+Reopened all 20 registered official source URLs. Compared the relevant medical,
+exercise, ergonomic, treatment-price and product passages with the site's text.
+AAOS HTML exercises 1, 2, 6 and 9 support the retained doses; the PDF remains a
+secondary illustrated reference, not a combined prescription. Medical possibilities
+remain unranked and condition-specific advice is not treated as a diagnosis.
+Luna's two directly opened pages still state $135 per visit; no local or insured
+price is inferred. Prices are snapshots, not purchase promises.
+
+Added a native HTML, keyboard-operable statement audit on Sources & audit with
+source-file line numbers, full source-bearing text, direct official references and
+links to source scope. JSON remains downloadable. It explicitly excludes uncited
+editorial units and includes overlapping nested units: it is not a factual guarantee
+or a claim of exhaustive automated line-by-line verification.
+
+## Pass 2 — defects and unresolved source details
+
+- Fixed the ledger parser joining text across adjacent table cells and other block
+  boundaries. Refactored extraction into a reusable side-effect-free function.
+- Validation now detects stale claim text/line numbers, a missing generated page,
+  unknown source markers in unbuilt templates, invalid/future check dates.
+- Added eight offline regression tests, including mutation tests. Updated CI to
+  run them and use this session's branch, not the prior session branch.
+- COMHOMA extraction includes both in-stock and sold-out controls; flagged this
+  without declaring which applies to checkout. Mixed drawer/no-drawer specs remain
+  flagged. No folded envelope or weight invented.
+- Branch extraction shows a template error and incomplete spec-sheet download URL.
+  Retained the visible $369 price, overall dimensions, adjustments and 275 lb
+  capacity. Removed prior base diameter, weight, detailed seat ranges and warranty
+  duration that were not reproduced in this retrieval. Do not construe omission
+  as proof the prior values were false. Manufacturer documentation is still needed.
+- Lillipad stock and static-load contradictions persist; working and storage
+  heights remain distinct. IKEA package size is not bare folded size.
+
+## Pass 3 — original requirements and verification
+
+- Medical advice, treatment, exercises, ergonomics, folding furniture, explicit price
+  status, official review links and next-session priorities remain present.
+- Reading requires no sign-in, questionnaire or symptom entry. The log is optional.
+- No chair in the checked set is certified as meeting both folding and adjustable
+  workstation support. No actual room/door/body/removal fit is asserted.
+- Added two browser regressions for keyboard and no-JavaScript use of the audit.
+  CI passed 32 tests but found the no-JavaScript summary click unstable during
+  smooth anchor scrolling. Removed global smooth scrolling; full suite rerun
+  required before merge. CI now surfaces failure details in check annotations,
+  since sandbox network access to downloadable Actions logs also failed.
+- Local build, structural/source/ledger checks, eight Node tests and eight Python
+  audit tests passed. Formatter and whitespace checks are run before publication.
+- Local Chromium installation failed with ECONNRESET from the Playwright CDN.
+  This is not a browser pass. Current GitHub CI results and merge outcome are
+  recorded in the PR/final response after they actually occur.
+
+## Next-session priorities / boundaries
+
+1. Qualified clinician/PT review of medical guidance and exercise suitability.
+2. Human screen-reader testing and a cross-browser/device matrix; axe/Chromium
+   checks cannot replace these.
+3. Region/provider-specific care pricing when geography/coverage is known; do not
+   manufacture local quotes from the single US provider example.
+4. Before purchase, recheck exact variants, price, shipping, stock, returns and
+   manuals. Obtain missing folded dimensions and a usable Branch spec sheet.
+5. Validate real room/body/removal-route measurements before any fit conclusion.
+
+Research cannot diagnose this pain, replace examination, prove completeness or
+zero errors, guarantee availability/prices, or physically verify furniture fit.
+No purchase, booking or personal-information submission was performed.
+
+---
+
+## Historical prior-release record (PR #11)
+
 # Review record — 20 September 2026
 
 ## Scope and honesty boundary

@@ -9,7 +9,8 @@
     "test:browser": "playwright test",
     "serve": "python3 -m http.server 8000 --bind 0.0.0.0",
     "format": "prettier --write \"content/*.html\" \"css/*.css\" \"js/*.js\" \"tests/**/*.cjs\" playwright.config.cjs",
-    "format:check": "prettier --check \"content/*.html\" \"css/*.css\" \"js/*.js\" \"tests/**/*.cjs\" playwright.config.cjs"
+    "format:check": "prettier --check \"content/*.html\" \"css/*.css\" \"js/*.js\" \"tests/**/*.cjs\" playwright.config.cjs",
+    "test:audit": "python3 -m unittest discover -s tests -p \"test_*.py\""
   },
   "repository": {
     "type": "git",

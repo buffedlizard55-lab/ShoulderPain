@@ -231,3 +231,33 @@ test("oversize import rejected and cancelled overwrite preserves history", async
   await page.reload();
   await expect(page.locator("#log-summary")).toContainText("4.0/10");
 });
+
+test("statement audit expands by keyboard and links to source scope", async ({
+  page,
+}) => {
+  await page.goto("/sources.html#statement-audit");
+  const group = page.locator(".audit-group").first();
+  const summary = group.locator("summary");
+  await summary.focus();
+  await page.keyboard.press("Enter");
+  await expect(group).toHaveAttribute("open", "");
+  await expect(group.locator(".source-record").first()).toBeVisible();
+  await group
+    .getByRole("link", { name: "M1 register entry", exact: true })
+    .first()
+    .click();
+  await expect(page).toHaveURL(/#m1$/);
+  await expect(page.locator("#m1")).toBeInViewport();
+});
+
+test("statement audit remains available without JavaScript", async ({
+  browser,
+}) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto("http://127.0.0.1:8000/sources.html#statement-audit");
+  const group = page.locator(".audit-group").first();
+  await group.locator("summary").click();
+  await expect(group.locator(".source-record").first()).toBeVisible();
+  await context.close();
+});
