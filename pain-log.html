@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pain Log — Shoulder &amp; Wing Pain Project</title>
+<meta name="description" content="Private, offline daily tracker for shoulder and wing pain: pain levels, sleep side, desk hours, breaks, and exercise completion, with 2-week and 6-week checkpoint summaries. Data stays in your browser.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Page-specific styles (tracker form + cards) */
+  .log-form fieldset { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; margin: 18px 0; }
+  .log-form legend { font-weight: 700; color: var(--navy); padding: 0 6px; }
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px 18px; }
+  .field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+  .field input, .field select, .field textarea {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px;
+    font: inherit; background: #fff; color: var(--ink);
+  }
+  .field textarea { min-height: 70px; resize: vertical; }
+  .field .hint { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 3px; }
+  .check-row { display: flex; align-items: center; gap: 8px; }
+  .check-row input { width: auto; }
+  .check-row label { font-weight: 600; font-size: 0.9rem; margin: 0; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+  button.btn {
+    font: inherit; font-weight: 600; cursor: pointer; border-radius: 8px;
+    padding: 9px 16px; border: 1px solid var(--teal); background: var(--teal); color: #fff;
+  }
+  button.btn.secondary { background: #fff; color: var(--teal); }
+  button.btn.danger { background: #fff; color: var(--red); border-color: var(--red); }
+  button.btn:hover { filter: brightness(0.95); }
+  #status { font-size: 0.9rem; color: var(--muted); min-height: 1.4em; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 18px 0; }
+  .stat-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; background: var(--bg-soft); }
+  .stat-card .stat-value { font-size: 1.5rem; font-weight: 700; color: var(--navy); }
+  .stat-card .stat-label { font-size: 0.82rem; color: var(--muted); }
+  .del-btn { font: inherit; font-size: 0.8rem; cursor: pointer; background: none; border: 1px solid #f3b9b9; color: var(--red); border-radius: 6px; padding: 3px 9px; }
+  .del-btn:hover { background: var(--red-light); }
+  .trend-up { color: var(--red); font-weight: 700; }
+  .trend-down { color: var(--green); font-weight: 700; }
+  .trend-flat { color: var(--muted); font-weight: 700; }
+  .checkpoint { border-left: 4px solid var(--teal); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">ShoulderPain<span class="dot">.</span>project</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="causes.html">Causes</a>
+      <a href="treatment.html">Treatment</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="ergonomics.html">Desk Setup</a>
+      <a href="products.html">Products &amp; Prices</a>
+      <a href="pain-log.html" class="active">Pain Log</a>
+      <a href="sources.html">Sources</a>
+      <a href="next-steps.html">Next Steps</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <p class="kicker">Section 6 · Tracking tool</p>
+  <h1>Daily pain log</h1>
+  <p class="lead">Everything on this site ends in two checkpoints: “if it isn't better after 2–4 weeks of self-care, book a clinician” and “re-evaluate the exercise plan at 6 weeks.” This page makes those decisions measurable — log once in the morning and once at night (or once a day if that's more realistic).</p>
+
+  <div class="callout teal">
+    <span class="callout-title">🔒 Privacy: everything stays on this device</span>
+    This page has no backend, no analytics, and no network calls. Entries are stored in your browser's
+    <code>localStorage</code> under the key <code>shoulderpain-log-v1</code> and never leave your computer. Clearing your
+    browser data deletes them — use <strong>Export</strong> below to keep a backup file. A pain log is also useful to show
+    a clinician at the visits described on the <a href="treatment.html">Treatment page</a>.
+  </div>
+  <div class="callout red">
+    <span class="callout-title">Not medical advice</span>
+    The checkpoint messages below are reminders based on the escalation plan on the
+    <a href="treatment.html">Treatment page</a> (MedlinePlus: contact a provider if pain persists more than 2–4 weeks
+    despite home treatment <sup class="src"><a href="sources.html#s1">S1</a></sup>; Mayo: worsening pain or harder movement warrants a visit
+    <sup class="src"><a href="sources.html#s7">S7</a></sup>) — they are not a diagnosis. Red flags always override the calendar:
+    see the <a href="causes.html">Causes page</a>.
+  </div>
+
+  <section aria-labelledby="log-form-heading">
+    <h2 id="log-form-heading">Log today</h2>
+    <form class="log-form" id="entry-form" novalidate>
+      <fieldset>
+        <legend>New / update entry (one per day — saving again on the same date overwrites)</legend>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-date">Date</label>
+            <input type="date" id="f-date" required>
+          </div>
+          <div class="field">
+            <label for="f-side">Which side did you mostly sleep on?</label>
+            <select id="f-side">
+              <option value="left">Left (the sore side)</option>
+              <option value="right">Right</option>
+              <option value="back">Back</option>
+              <option value="mixed">Mixed / other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-morning">Pain on waking (0–10)</label>
+            <select id="f-morning">
+              <option value="">— skipped —</option>
+            </select>
+            <span class="hint">0 = no pain, 10 = worst imaginable</span>
+          </div>
+          <div class="field">
+            <label for="f-evening">Pain at end of day (0–10)</label>
+            <select id="f-evening">
+              <option value="">— skipped —</option>
+            </select>
+            <span class="hint">Rate the whole day, not the worst second</span>
+          </div>
+          <div class="field">
+            <label for="f-hours">Hours at the desk today</label>
+            <input type="number" id="f-hours" min="0" max="24" step="0.5" inputmode="decimal" placeholder="e.g. 12">
+          </div>
+          <div class="field">
+            <label for="f-breaks">Micro-breaks taken (roughly)</label>
+            <input type="number" id="f-breaks" min="0" max="99" step="1" inputmode="numeric" placeholder="e.g. 6">
+            <span class="hint">Target: stand/move every ~60 min — see <a href="exercises.html">Exercises, Part D</a></span>
+          </div>
+          <div class="field">
+            <label>Exercises done today</label>
+            <div class="check-row"><input type="checkbox" id="f-exA"> <label for="f-exA">Part A (daily routine)</label></div>
+            <div class="check-row"><input type="checkbox" id="f-exB"> <label for="f-exB">Part B (band work)</label></div>
+          </div>
+          <div class="field" style="grid-column: 1 / -1;">
+            <label for="f-notes">Notes (triggers, what helped, gym session…)</label>
+            <textarea id="f-notes" maxlength="500" placeholder="e.g. overhead press felt sharp; new pillow helped morning pain"></textarea>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn">Save entry</button>
+          <button type="button" class="btn secondary" id="btn-reset">Clear form</button>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+      </fieldset>
+    </form>
+  </section>
+
+  <section aria-labelledby="summary-heading">
+    <h2 id="summary-heading">Checkpoints &amp; trends</h2>
+    <div class="stat-cards" id="stat-cards">
+      <div class="stat-card"><div class="stat-value" id="st-days">–</div><div class="stat-label">days logged</div></div>
+      <div class="stat-card"><div class="stat-value" id="st-avg7">–</div><div class="stat-label">avg end-of-day pain, last 7 days</div></div>
+      <div class="stat-card"><div class="stat-value" id="st-trend">–</div><div class="stat-label">vs. the 7 days before that</div></div>
+      <div class="stat-card"><div class="stat-value" id="st-adh">–</div><div class="stat-label">Part A done, last 7 days</div></div>
+    </div>
+    <div class="callout teal checkpoint" id="checkpoint-box" hidden>
+      <span class="callout-title" id="checkpoint-title"></span>
+      <span id="checkpoint-text"></span>
+    </div>
+    <p class="small" style="color:var(--muted);font-size:0.88rem;" id="summary-empty">No entries yet — the summary fills in once you save your first day.</p>
+  </section>
+
+  <section aria-labelledby="history-heading">
+    <h2 id="history-heading">History</h2>
+    <div class="table-wrap">
+      <table id="history-table">
+        <caption>Saved entries (most recent first)</caption>
+        <thead>
+          <tr><th>Date</th><th>Slept on</th><th>Pain AM</th><th>Pain PM</th><th>Desk h</th><th>Breaks</th><th>Ex. A</th><th>Ex. B</th><th>Notes</th><th></th></tr>
+        </thead>
+        <tbody id="history-body">
+          <tr id="history-empty"><td colspan="10" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btn-row">
+      <button type="button" class="btn secondary" id="btn-export-json">Export backup (JSON)</button>
+      <button type="button" class="btn secondary" id="btn-export-csv">Export CSV (for a doctor visit)</button>
+      <button type="button" class="btn secondary" id="btn-import">Import backup (JSON)</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" class="btn danger" id="btn-clear">Delete all data</button>
+    </div>
+    <p class="small" style="color:var(--muted);font-size:0.88rem;">
+      CSV columns: date, slept-on, pain AM, pain PM, desk hours, breaks, exercise A, exercise B, notes.
+      Import merges the file into what's already here (same-date entries are replaced) — export first if unsure.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <p><strong>Disclaimer:</strong> Informational content compiled from public sources for personal use. Not medical advice. Consult a qualified clinician for diagnosis and treatment decisions.</p>
+    <p>ShoulderPain project · sources &amp; verification log: <a href="sources.html">sources.html</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var KEY = 'shoulderpain-log-v1';
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---------- storage ---------- */
+  var storageOK = true;
+  function load() {
+    var raw = null;
+    try { raw = window.localStorage.getItem(KEY); } catch (e) { storageOK = false; }
+    if (!raw) return { entries: {} };
+    try {
+      var data = JSON.parse(raw);
+      if (data && typeof data === 'object' && data.entries && typeof data.entries === 'object') {
+        return { entries: data.entries };
+      }
+    } catch (e) { /* corrupted -> start fresh */ }
+    return { entries: {} };
+  }
+  function persist(state) {
+    try {
+      window.localStorage.setItem(KEY, JSON.stringify({ version: 1, entries: state.entries }));
+      return true;
+    } catch (e) {
+      storageOK = false;
+      setStatus('⚠ Could not save: browser storage is unavailable (private mode?) — export to keep a copy.');
+      return false;
+    }
+  }
+
+  /* ---------- helpers ---------- */
+  function setStatus(msg) { $('status').textContent = msg; }
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  function validDate(s) { return /^\d{4}-\d{2}-\d{2}$/.test(s); }
+  function dateToDays(s) { return Math.floor(Date.parse(s + 'T00:00:00Z') / 86400000); }
+  function daysAgo(n) { return todayDays() - n; }
+  function todayDays() { return dateToDays(todayStr()); }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function fmt1(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+  var SIDE_LABEL = { left: 'Left', right: 'Right', back: 'Back', mixed: 'Mixed' };
+
+  /* ---------- populate 0–10 selects ---------- */
+  ['f-morning', 'f-evening'].forEach(function (id) {
+    var sel = $(id);
+    for (var v = 0; v <= 10; v++) {
+      var o = document.createElement('option');
+      o.value = String(v); o.textContent = String(v);
+      sel.appendChild(o);
+    }
+  });
+
+  /* ---------- form ---------- */
+  $('f-date').value = todayStr();
+  $('f-date').max = todayStr();
+
+  function readForm() {
+    var date = $('f-date').value;
+    if (!validDate(date)) { setStatus('Please pick a valid date.'); return null; }
+    var m = $('f-morning').value, e = $('f-evening').value;
+    var hours = $('f-hours').value, breaks = $('f-breaks').value;
+    var h = hours === '' ? null : parseFloat(hours);
+    var b = breaks === '' ? null : parseInt(breaks, 10);
+    if (h !== null && (isNaN(h) || h < 0 || h > 24)) { setStatus('Desk hours must be between 0 and 24.'); return null; }
+    if (b !== null && (isNaN(b) || b < 0 || b > 99)) { setStatus('Breaks must be between 0 and 99.'); return null; }
+    return {
+      m: m === '' ? null : Number(m),
+      e: e === '' ? null : Number(e),
+      side: $('f-side').value,
+      hours: h, breaks: b,
+      exA: $('f-exA').checked, exB: $('f-exB').checked,
+      notes: $('f-notes').value.trim().slice(0, 500)
+    };
+  }
+  function fillForm(dateStr, entry) {
+    $('f-date').value = dateStr;
+    $('f-side').value = entry.side || 'left';
+    $('f-morning').value = entry.m === null || entry.m === undefined ? '' : String(entry.m);
+    $('f-evening').value = entry.e === null || entry.e === undefined ? '' : String(entry.e);
+    $('f-hours').value = entry.hours === null || entry.hours === undefined ? '' : String(entry.hours);
+    $('f-breaks').value = entry.breaks === null || entry.breaks === undefined ? '' : String(entry.breaks);
+    $('f-exA').checked = !!entry.exA;
+    $('f-exB').checked = !!entry.exB;
+    $('f-notes').value = entry.notes || '';
+  }
+
+  $('entry-form').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var entry = readForm();
+    if (!entry) return;
+    var date = $('f-date').value;
+    var state = load();
+    var updating = !!state.entries[date];
+    state.entries[date] = entry;
+    if (persist(state)) {
+      setStatus(updating ? 'Updated entry for ' + date + '.' : 'Saved entry for ' + date + '.');
+      render();
+    }
+  });
+  $('btn-reset').addEventListener('click', function () {
+    $('f-date').value = todayStr();
+    $('f-side').value = 'left';
+    $('f-morning').value = ''; $('f-evening').value = '';
+    $('f-hours').value = ''; $('f-breaks').value = '';
+    $('f-exA').checked = false; $('f-exB').checked = false;
+    $('f-notes').value = '';
+    setStatus('Form cleared.');
+  });
+
+  /* ---------- summary + checkpoints ---------- */
+  function avg(arr) {
+    var xs = arr.filter(function (x) { return x !== null && x !== undefined && !isNaN(x); });
+    if (!xs.length) return null;
+    return xs.reduce(function (a, b) { return a + b; }, 0) / xs.length;
+  }
+  function renderSummary(entries) {
+    var dates = Object.keys(entries).sort();
+    $('st-days').textContent = dates.length ? String(dates.length) : '–';
+    if (!dates.length) { $('summary-empty').hidden = false; $('checkpoint-box').hidden = true; return; }
+    $('summary-empty').hidden = true;
+
+    function inWindow(dayFrom, dayTo) { // inclusive day window, most recent = dayTo
+      var vals = [];
+      dates.forEach(function (d) {
+        var dd = dateToDays(d);
+        if (dd >= dayFrom && dd <= dayTo) vals.push(entries[d]);
+      });
+      return vals;
+    }
+    var last7 = inWindow(daysAgo(6), todayDays());
+    var prev7 = inWindow(daysAgo(13), daysAgo(7));
+    var a7 = avg(last7.map(function (x) { return x.e; }));
+    var p7 = avg(prev7.map(function (x) { return x.e; }));
+    $('st-avg7').textContent = a7 === null ? '–' : fmt1(a7) + ' / 10';
+    if (a7 === null || p7 === null) {
+      $('st-trend').textContent = '–';
+      $('st-trend').className = 'stat-value';
+    } else {
+      var d = a7 - p7;
+      if (d < -0.3) { $('st-trend').innerHTML = '<span class="trend-down">▼ improving</span>'; }
+      else if (d > 0.3) { $('st-trend').innerHTML = '<span class="trend-up">▲ worsening</span>'; }
+      else { $('st-trend').innerHTML = '<span class="trend-flat">≈ flat</span>'; }
+    }
+    var aDone = last7.filter(function (x) { return x.exA; }).length;
+    $('st-adh').textContent = last7.length ? aDone + ' / ' + last7.length + ' logged days' : '–';
+
+    // Checkpoint logic (mirrors treatment.html escalation, which cites S1/S7)
+    var first = dateToDays(dates[0]);
+    var span = todayDays() - first + 1; // days since first entry (inclusive)
+    var box = $('checkpoint-box');
+    box.hidden = false;
+    if (span < 14) {
+      $('checkpoint-title').textContent = 'Day ' + span + ' — keep going';
+      $('checkpoint-text').textContent = 'Checkpoint 1 arrives at day 14: if end-of-day pain is not improving after 2–4 weeks of consistent self-care + exercise, that is the trigger to book a clinician (MedlinePlus S1 / Mayo S7 — see Treatment page).';
+    } else if (span < 42) {
+      var improving = (a7 !== null && p7 !== null && a7 < p7);
+      $('checkpoint-title').textContent = 'Day ' + span + ' — checkpoint 1 reached';
+      $('checkpoint-text').textContent = improving
+        ? 'Trend looks better than the previous week. Continue the plan; the exercise re-evaluation lands at day 42 (6 weeks).'
+        : 'No clear improvement yet. MedlinePlus says contact a provider if pain persists more than 2–4 weeks despite home treatment (S1), and Mayo lists worsening pain or harder movement as visit-worthy (S7). If you are past that window, book the appointment — the log above is exactly what to show them.';
+    } else {
+      $('checkpoint-title').textContent = 'Day ' + span + ' — 6-week exercise checkpoint';
+      $('checkpoint-text').textContent = 'Re-evaluate: is the wing feeling reduced? Is end-of-day desk pain lower? If nothing has changed by now, book the clinician visit and bring this log (see Treatment page and Next Steps).';
+    }
+  }
+
+  /* ---------- history table ---------- */
+  function renderTable(entries) {
+    var body = $('history-body');
+    body.innerHTML = '';
+    var dates = Object.keys(entries).sort().reverse();
+    if (!dates.length) {
+      body.innerHTML = '<tr><td colspan="10" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>';
+      return;
+    }
+    dates.forEach(function (d) {
+      var x = entries[d];
+      var tr = document.createElement('tr');
+      function td(html) { var c = document.createElement('td'); c.innerHTML = html; return c; }
+      tr.appendChild(td('<strong>' + escapeHtml(d) + '</strong>'));
+      tr.appendChild(td(escapeHtml(SIDE_LABEL[x.side] || '–')));
+      tr.appendChild(td(x.m === null || x.m === undefined ? '–' : String(x.m)));
+      tr.appendChild(td(x.e === null || x.e === undefined ? '–' : String(x.e)));
+      tr.appendChild(td(x.hours === null || x.hours === undefined ? '–' : String(x.hours)));
+      tr.appendChild(td(x.breaks === null || x.breaks === undefined ? '–' : String(x.breaks)));
+      tr.appendChild(td(x.exA ? '✓' : '–'));
+      tr.appendChild(td(x.exB ? '✓' : '–'));
+      tr.appendChild(td(escapeHtml(x.notes || '')));
+      var action = document.createElement('td');
+      var edit = document.createElement('button');
+      edit.type = 'button'; edit.className = 'del-btn'; edit.textContent = 'Load';
+      edit.setAttribute('aria-label', 'Load entry ' + d + ' into the form');
+      edit.addEventListener('click', function () { fillForm(d, x); window.scrollTo({ top: 0, behavior: 'smooth' }); setStatus('Loaded ' + d + ' into the form — edit and save to update it.'); });
+      var del = document.createElement('button');
+      del.type = 'button'; del.className = 'del-btn'; del.textContent = 'Delete';
+      del.setAttribute('aria-label', 'Delete entry ' + d);
+      del.addEventListener('click', function () {
+        if (!window.confirm('Delete the entry for ' + d + '?')) return;
+        var state = load();
+        delete state.entries[d];
+        persist(state); render();
+        setStatus('Deleted entry for ' + d + '.');
+      });
+      action.appendChild(edit); action.appendChild(document.createTextNode(' ')); action.appendChild(del);
+      tr.appendChild(action);
+      body.appendChild(tr);
+    });
+  }
+
+  function render() {
+    var state = load();
+    renderTable(state.entries);
+    renderSummary(state.entries);
+  }
+
+  /* ---------- export / import / clear ---------- */
+  function download(filename, text, type) {
+    var blob = new Blob([text], { type: type });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
+  }
+  $('btn-export-json').addEventListener('click', function () {
+    var state = load();
+    if (!Object.keys(state.entries).length) { setStatus('Nothing to export yet.'); return; }
+    download('shoulderpain-log-' + todayStr() + '.json', JSON.stringify({ version: 1, exported: todayStr(), entries: state.entries }, null, 2), 'application/json');
+    setStatus('Backup downloaded.');
+  });
+  $('btn-export-csv').addEventListener('click', function () {
+    var state = load();
+    var dates = Object.keys(state.entries).sort();
+    if (!dates.length) { setStatus('Nothing to export yet.'); return; }
+    function q(s) { return '"' + String(s === null || s === undefined ? '' : s).replace(/"/g, '""') + '"'; }
+    var rows = [['date', 'slept_on', 'pain_am', 'pain_pm', 'desk_hours', 'breaks', 'exercise_a', 'exercise_b', 'notes']];
+    dates.forEach(function (d) {
+      var x = state.entries[d];
+      rows.push([q(d), q(SIDE_LABEL[x.side] || ''), q(x.m === null || x.m === undefined ? '' : x.m), q(x.e === null || x.e === undefined ? '' : x.e), q(x.hours === null || x.hours === undefined ? '' : x.hours), q(x.breaks === null || x.breaks === undefined ? '' : x.breaks), q(x.exA ? 'yes' : 'no'), q(x.exB ? 'yes' : 'no'), q(x.notes || '')]);
+    });
+    download('shoulderpain-log-' + todayStr() + '.csv', rows.map(function (r) { return r.join(','); }).join('\r\n'), 'text/csv');
+    setStatus('CSV downloaded.');
+  });
+  $('btn-import').addEventListener('click', function () { $('import-file').click(); });
+  $('import-file').addEventListener('change', function (ev) {
+    var file = ev.target.files && ev.target.files[0];
+    ev.target.value = ''; // allow re-selecting the same file
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      var data;
+      try { data = JSON.parse(String(reader.result)); } catch (e) { setStatus('Import failed: not valid JSON.'); return; }
+      var incoming = data && data.entries && typeof data.entries === 'object' ? data.entries : null;
+      if (!incoming) { setStatus('Import failed: file has no "entries" object.'); return; }
+      var state = load();
+      var added = 0, replaced = 0, skipped = 0;
+      Object.keys(incoming).forEach(function (d) {
+        if (!validDate(d)) { skipped++; return; }
+        var x = incoming[d];
+        if (!x || typeof x !== 'object') { skipped++; return; }
+        // sanitize each field
+        var clean = {
+          m: (x.m === null || x.m === undefined || x.m === '') ? null : Math.max(0, Math.min(10, Number(x.m) || 0)),
+          e: (x.e === null || x.e === undefined || x.e === '') ? null : Math.max(0, Math.min(10, Number(x.e) || 0)),
+          side: ['left', 'right', 'back', 'mixed'].indexOf(x.side) >= 0 ? x.side : 'mixed',
+          hours: (x.hours === null || x.hours === undefined || x.hours === '') ? null : Math.max(0, Math.min(24, Number(x.hours) || 0)),
+          breaks: (x.breaks === null || x.breaks === undefined || x.breaks === '') ? null : Math.max(0, Math.min(99, Math.round(Number(x.breaks) || 0))),
+          exA: !!x.exA, exB: !!x.exB,
+          notes: typeof x.notes === 'string' ? x.notes.slice(0, 500) : ''
+        };
+        if (isNaN(clean.m) || isNaN(clean.e)) { skipped++; return; }
+        if (state.entries[d]) replaced++; else added++;
+        state.entries[d] = clean;
+      });
+      persist(state); render();
+      setStatus('Import done: ' + added + ' added, ' + replaced + ' replaced' + (skipped ? ', ' + skipped + ' skipped (invalid)' : '') + '.');
+    };
+    reader.readAsText(file);
+  });
+  $('btn-clear').addEventListener('click', function () {
+    if (!window.confirm('Delete ALL logged entries from this browser? This cannot be undone — export a backup first if you want to keep one.')) return;
+    try { window.localStorage.removeItem(KEY); } catch (e) {}
+    render();
+    setStatus('All data deleted.');
+  });
+
+  render();
+  if (!storageOK) setStatus('⚠ Browser storage is unavailable (private mode?) — entries will not survive a reload.');
+})();
+</script>
+</body>
+</html>
