@@ -1,82 +1,67 @@
-# ShoulderPain
+# Shoulder Guide
 
-A source-linked static GitHub Pages research project for a healthy male adult around age 36–40 with left shoulder /
-scapular (“wing”) pain in the context of left-side sleeping, gym loading (possible strain), and up to 12 hours/day of
-slouched or static computer work in a small room.
+A source-linked GitHub Pages guide for shoulder and shoulder-blade (“wing”) pain, built around the user's stated context: a male adult aged about 36–40, left-side sleeping, possible workout injury, prolonged computer use and limited room space.
 
-**Live site:** https://buffedlizard55-lab.github.io/ShoulderPain/ (GitHub Pages, repository root, built from `main`)
+**Site:** https://buffedlizard55-lab.github.io/ShoulderPain/
 
-This is information organization, not diagnosis or medical advice. Emergency symptoms and urgent-care thresholds are
-visible on the Home, Causes, Treatment and Next Steps pages.
+**Educational information, not diagnosis or a personalized rehabilitation plan.** Emergency/urgent warning signs take priority over exercises, furniture or symptom logging. No sign-in or symptom entry is required.
 
-## Page map
+## What changed in this review
 
-| Page | Contents |
-|---|---|
-| `index.html` | Scope, disclaimer, a “first 72 hours, no purchases” starter table, card navigation, cautious bottom line |
-| `causes.html` | Desk exposure, side sleeping, gym loading, scapular winging/dyskinesis, red flags, referral patterns, self-triage table |
-| `treatment.html` | Activity modification, source-specific ice/heat, medication safety, PT/exercise, evidence table for TENS/laser/massage/injections, injection/surgery escalation, checkpoints |
-| `exercises.html` | Daily routine, band work, wing-specific program, AAOS doses, resistance-band safety, and a practical desk-break schedule (every move sourced) |
-| `ergonomics.html` | Federal OSHA/NIOSH and Oregon OSHA workstation guidance, small-room strategy, depth caveats, measurements + desk footprints, 12-hour-static-posture fixes |
-| `products.html` | Foldable/quick-removal desks, non-folding chair trade-offs, clamp-on monitor mount, pillows, rehab tools, official-page prices, 3 budget builds, visible pass-3/4 corrections |
-| `costs.html` | **Added pass 4.** How to price treatment with official tools — ACA/Medicare coverage rules, the Medicare procedure price lookup, FAIR Health, and the No Surprises Act good-faith estimate. Deliberately prints no invented prices |
-| `pain-log.html` | Offline `localStorage` tracker (pain, sleep side, desk exposure, breaks, exercise, irregularity flags, notes) with an inline-SVG pain chart, 2-week/6-week checkpoints, print/save-as-PDF, JSON/CSV export |
-| `sources.html` | Master source list (S1–S56) with trust tiers, a claim ledger, a source-tier audit, and four verification/correction logs (32 logged corrections) |
-| `next-steps.html` | Person-facing next actions, remaining work, assumptions, limitations, and every irregularity flagged during verification |
+The existing repository already contained a substantial static research site. This revision replaces blanket verification/completeness claims with a narrower, auditable source register, simplifies the UI and corrects unsafe or unverified assumptions. The previous site remains in Git history.
 
-## Requirements covered
+- Ten organized pages: start, medical advice, treatment, exercises, desk/room, furniture/prices, care costs, optional log, sources/audit and next steps.
+- 20 directly opened official sources (2026-09-20). `data/sources.json` records source section, short excerpt, scope and check date. Government/medical-society guidance is separated from commercial product information.
+- `data/claims.json` maps source-bearing content units to references and source-file lines. This is a review aid, **not an automated truth certificate**.
+- Five furniture listings, with exact variant/price boundaries and folding trade-offs. No product is claimed to fit an unmeasured room or treat shoulder pain.
+- Official provider PT price example ($135 self-pay per visit at Luna), not a nationwide average. Other unverified medical costs are explicitly unpriced.
+- Mobile-friendly navigation, keyboard/focus support, responsive tables, print styles and optional product filters; all research content works without JavaScript.
+- Optional local-only symptom log: v1 data compatibility, validation, backup/import, CSV formula mitigation, deletion and storage-failure protection. It does not diagnose or recommend waiting based on averages.
 
-- **No diagnosis by assumption:** “wing” is treated as an ambiguous description. Visible winging, weakness, neurologic
-  symptoms, trauma, chest symptoms and major loss of function are escalated rather than self-treated.
-- **Trusted source preference:** load-bearing medical claims use MedlinePlus/NIH, OSHA/NIOSH/CDC, Mayo Clinic,
-  Mayo Clinic Health System, Cleveland Clinic, Mass General Brigham, AAOS/ASES, NCBI/StatPearls, Cochrane and a
-  PubMed-indexed trial. Lower-tier/affiliate/product sources are labelled and do not carry the medical pathway.
-- **Direct manual-review links:** source chips lead to `sources.html`, whose rows contain direct URLs and a narrow
-  “used for” description; a claim ledger records what each load-bearing claim stands on.
-- **Line-by-line claim boundaries:** generic AAOS exercise doses are labelled general conditioning guidance, not a
-  winging prescription; where no source states a dose, it is marked † as a project default.
-- **Small space and foldability:** desks are selected for fold-flat, wall-folding or quick-removal use. Chairs are
-  explicitly marked as non-folding trade-offs; no chair is falsely presented as meeting the fold-flat requirement.
-- **Pricing:** product snapshots are dated September 20, 2026, use manufacturer pages where available, label
-  retailer/distributor prices and mark unverified figures. Treatment pricing has no official national list, so
-  `costs.html` gives the official coverage rules and price tools instead of numbers, and says so on the page.
-- **Privacy-safe tracking:** the pain log makes no network request and uses browser `localStorage`; it provides
-  JSON/CSV export and deletion. Device/browser access and exported files are still privacy risks and are disclosed.
-- **Four explicit review passes** (implementation/verification, bug + missing-requirement review, full re-check, and a
-  final source-by-source pass with the site text open beside it) are recorded in `sources.html` (`#pass2`, `#pass3`,
-  `#pass4`; pass 2 and 3 logs also carry the pass-2/pass-3 correction tables).
+## Content and build
+
+Edit `content/*.html` (body fragments), `data/sources.json`, `css/style.css` and `js/*`. The shared page layout is in `tools/build.py`.
+
+```sh
+npm ci                        # test/format dependencies only; no runtime dependencies
+npm run build                 # claim ledger + ten static root HTML pages
+npm run check                 # local targets/fragments, metadata, references and nav
+npm test                      # pure log-validation tests
+npx playwright install --with-deps chromium
+npm run test:browser           # desktop/mobile/keyboard/accessibility/log scenarios
+npm run serve                 # local preview, 0.0.0.0:8000
+```
+
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE=/path/to/chromium npm run test:browser` allows an existing compatible Chromium binary. No third-party scripts, fonts, images, analytics or APIs load in the site itself. Following an external source link leaves the site and is subject to the destination's policies. Hosting providers may process ordinary HTTP requests; “local-only” refers to the log application's data handling, not a claim about hosting logs.
+
+The site is served from the repository root. Relative URLs work at the `/ShoulderPain/` Pages project path. Python 3 and Node 22 are used in validation; visitors need neither.
 
 ## Verification policy
 
-1. Medical statements are paraphrased from a cited source or clearly marked as a project suggestion/limitation. If a
-   source is condition-specific, the page keeps that condition-specific boundary.
-2. Exercise dosing comes from the AAOS general conditioning program or the cited handout where shown; otherwise no
-   exact number is invented. Every exercise page says to stop for pain and seek clinician/PT input for visible
-   winging, weakness, neurologic symptoms, trauma, or persistent/worsening symptoms.
-3. Federal OSHA’s monitor distance and Oregon OSHA’s separate work-surface-depth/viewing-distance details are kept
-   separate. The site does not call a 24-inch depth rule “federal OSHA.”
-4. Product specifications and prices are snapshots, not endorsements or medical-efficacy evidence. Re-open the direct
-   page before buying — one price moved within the same day and one chair variant changed overnight during checks.
-5. If a source or product page conflicts with the project’s earlier wording, the correction is recorded in the source
-   log instead of silently hidden. Known irregularities are listed on `next-steps.html`.
+1. Read the relevant passage on the official page, not only a search excerpt.
+2. Keep condition-specific advice condition-specific; possibilities are not a diagnosis.
+3. Put a source by medical, exercise, ergonomic, price and specification claims. Label editorial application/safety suggestions separately.
+4. Quote prices only for the checked variant; distinguish discount, list price, sale price, tax/shipping and availability.
+5. Unknown or conflicting facts stay visibly unresolved. No claim of independent clinical verification or zero errors.
+6. Run the build and tests after edits. Automated checks cannot establish medical accuracy.
 
-## Technical notes
+## Deployment
 
-- Plain static HTML/CSS/JavaScript; no build step, package manager, third-party runtime, analytics, backend or
-  external script dependency.
-- GitHub Pages serves the repository root from `main`; deployment is automatic after changes reach `main`. The Pages
-  source is the repository root (not a `docs/` subfolder) because the CI token lacks permission to change Pages
-  settings (403 “Resource not accessible by integration”).
-- The pain log’s storage key is `shoulderpain-log-v1`. Clearing site data deletes the entries; export a backup before
-  clearing or moving browsers. Imports are validated: invalid or future dates, and out-of-range pain/desk/breaks
-  values, are skipped and counted — never silently clamped or guessed.
-- Styling is shared in `css/style.css`; tables scroll horizontally on narrow screens, navigation can scroll on mobile,
-  and pages include skip links, focus styles and print-friendly basics (the pain log also prints chart + table).
+At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bcb6-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
 
-## Maintenance / remaining work
+## Optional log and privacy
 
-Price and stock checks must be repeated before purchase. Remaining limitations and optional work — monitor-arm fit
-against the chosen desk’s tilting/lipped top, IKEA US price checks if those chair alternatives are of interest,
-pricing your own treatment with the `costs.html` tools, region-specific pricing, deeper primary research on computer
-exposure, and official exercise *videos* (none exist on the cited pages, so illustrated official handouts are linked
-instead) — are listed on `next-steps.html`.
+Storage key: `shoulderpain-log-v1` (retained from the old site). Prior entries can still be read/imported if valid. The clinical “improving/worsening” classifier and calendar-based advice were removed: sparse logs should not reassure someone or postpone assessment. The summary is descriptive only.
+
+No input is transmitted by the application. This is not encrypted or HIPAA-certified storage. Other users of the browser, browser extensions and exported files are privacy risks. Export before clearing browser data. Import validates numbers, booleans, calendar dates and shape; invalid entries are counted, never rounded or silently converted. Invalid persisted data blocks edits rather than overwriting it. Raw JSON export is available for recovery. Cross-tab changes block saves until reload.
+
+## Open limitations / next session
+
+- No clinician exam or clinical peer review; no systematic/exhaustive literature review.
+- Actual room fit, safe removal route and body/desk measurements unknown.
+- No checked chair meets both folding and adjustable long-day-workstation criteria.
+- Product stock, prices and return policies change; Lillipad has contradictory page content.
+- Personal care/medicine costs, country and insurance remain unknown.
+- Further manual screen-reader testing and source rechecks are still valuable.
+
+See `next-steps.html` for the prioritized backlog and `REVIEW.md` for the three-pass audit.

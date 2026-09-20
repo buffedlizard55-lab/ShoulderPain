@@ -1,0 +1,179 @@
+<div class="notice">
+  <strong>What “checked” means here</strong>
+  <p>
+    The cited official page was opened and the relevant passage compared with
+    the guide’s wording. It does <em>not</em> mean independent clinical
+    validation, a guaranteed price, a systematic review or a guarantee of zero
+    errors. This project has not been reviewed by your clinician.
+  </p>
+</div>
+<section>
+  <h2>How to review a statement</h2>
+  <ol class="steps">
+    <li>
+      Use the reference beside the statement to open the official page directly.
+    </li>
+    <li>
+      Use the register below for the section, short evidence excerpt and scope
+      limit.
+    </li>
+    <li>
+      Treat “project suggestion,” “project application” and “unresolved” as
+      editorial judgments, not findings asserted by the publisher.
+    </li>
+  </ol>
+  <p>
+    <a href="data/sources.json"
+      >Download the machine-readable source register (JSON)</a
+    >
+    · <a href="data/claims.json">Download the claim-to-source ledger (JSON)</a>
+  </p>
+</section>
+<section>
+  <h2>Claim coverage map</h2>
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Audit the complete paragraphs at each linked page, not a source label in
+        isolation
+      </caption>
+      <thead>
+        <tr>
+          <th>Claim group</th>
+          <th>Primary references</th>
+          <th>Boundary checked</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a href="causes.html#red-flags"
+              >Emergency and assessment thresholds</a
+            >
+          </td>
+          <td>[[M1]] [[M2]]</td>
+          <td>
+            NHS 2-week threshold retained; warning signs override any wait
+            period.
+          </td>
+        </tr>
+        <tr>
+          <td><a href="causes.html">Possible causes and winging</a></td>
+          <td>[[M1]] [[M2]] [[M3]] [[W3]]</td>
+          <td>
+            Possibility, not probability or diagnosis. No causal certainty from
+            lifestyle.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="treatment.html">Sleep, activity, comfort, medicine</a>
+          </td>
+          <td>[[M2]] [[M4]] [[M5]] [[M6]]</td>
+          <td>
+            Rotator-cuff guidance is condition-specific; medicine cautions are
+            not exhaustive.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="exercises.html"
+              >Selected exercise instructions and doses</a
+            >
+          </td>
+          <td>[[E1]] [[E2]] [[E3]]</td>
+          <td>
+            General supervised program; no invented personalized progression.
+          </td>
+        </tr>
+        <tr>
+          <td><a href="ergonomics.html">Workstation and breaks</a></td>
+          <td>[[W1]] [[W2]] [[W3]]</td>
+          <td>
+            Viewing distance is not desk depth. Timer interval is a project
+            suggestion.
+          </td>
+        </tr>
+        <tr>
+          <td><a href="products.html">Five furniture listings</a></td>
+          <td>[[P1]] [[P2]] [[P3]] [[P4]] [[P5]]</td>
+          <td>
+            Variant-specific snapshots; dimensions not proof of room fit or
+            treatment.
+          </td>
+        </tr>
+        <tr>
+          <td><a href="costs.html">Treatment price and estimate rights</a></td>
+          <td>[[C1]] [[C2]] [[C3]]</td>
+          <td>One commercial price example; personalized costs unknown.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section id="review-passes">
+  <h2>Three review passes</h2>
+  <p>
+    See <a href="REVIEW.md">the repository review record</a> for tests,
+    corrections and remaining limits. This review supersedes the previous site’s
+    blanket “all links and prices independently verified” claim. Earlier text
+    remains in Git history, not as current advice.
+  </p>
+  <div class="cards three">
+    <article class="panel">
+      <span class="card-number">PASS 1</span>
+      <h3>Rebuild around traceable claims</h3>
+      <p>
+        Reopened official sources; tightened medical boundaries; documented five
+        furniture candidates and actual price snapshots; separated unknown
+        costs.
+      </p>
+    </article>
+    <article class="panel">
+      <span class="card-number">PASS 2</span>
+      <h3>Safety and technical review</h3>
+      <p>
+        Check symptom-log edge cases, citation/link integrity, responsive
+        layout, keyboard access and privacy. Record discovered bugs and fixes.
+      </p>
+    </article>
+    <article class="panel">
+      <span class="card-number">PASS 3</span>
+      <h3>Reconcile with the brief</h3>
+      <p>
+        Recheck every retained medical/product statement, exact exercise doses,
+        foldability constraints, deployment and unresolved requirements.
+      </p>
+    </article>
+  </div>
+</section>
+<section>
+  <h2>Irregularities kept visible</h2>
+  <ul>
+    <li>
+      <strong>Lillipad:</strong> conflicting stock messaging and static-load
+      figures; storage height differs from suggested working range. [[P3]]
+    </li>
+    <li>
+      <strong>COMHOMA:</strong> multiple variants share images; discount amount
+      is not price. [[P1]]
+    </li>
+    <li>
+      <strong>IKEA:</strong> package dimensions are not separately verified
+      folded dimensions. [[P4]]
+    </li>
+    <li>
+      <strong>Luna:</strong> stale search excerpt differed from the directly
+      opened provider price. [[C2]] [[C3]]
+    </li>
+    <li>
+      <strong>AAOS PDF:</strong> extraction artifacts and differing limits for
+      some exercises; selected exercises checked against HTML. [[E1]] [[E3]]
+    </li>
+    <li>
+      <strong>Unresolved:</strong> actual room fit, a folding adjustable
+      long-workday chair, local treatment pricing and individual diagnosis.
+      <a href="next-steps.html">Next steps →</a>
+    </li>
+  </ul>
+</section>

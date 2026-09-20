@@ -1,0 +1,222 @@
+[
+  {
+    "id": "M1",
+    "title": "MedlinePlus · Shoulder pain",
+    "type": "Government-hosted medical reference",
+    "url": "https://medlineplus.gov/ency/article/003171.htm",
+    "locator": "Causes; When to Contact a Medical Professional",
+    "excerpt": "Sudden left shoulder pain can sometimes be a sign of a heart attack.",
+    "boundary": "General differential and emergency warning signs; not a diagnosis.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "M2",
+    "title": "NHS · Shoulder pain",
+    "type": "Public health service",
+    "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
+    "locator": "Self-care; urgent advice; treatments",
+    "excerpt": "Get medical help if it does not start feeling better after 2 weeks.",
+    "boundary": "General shoulder pain. Uses UK care pathways; local services differ.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "M3",
+    "title": "AAOS / ASES · Scapular disorders",
+    "type": "Professional medical society",
+    "url": "https://www.orthoinfo.org/diseases--conditions/scapular-shoulder-blade-disorders/",
+    "locator": "Cause; Doctor Examination; Treatment",
+    "excerpt": "Injuries to the nerves that supply the muscles",
+    "boundary": "Winging can involve muscle, nerve or bone/joint problems. Individual exam needed.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "M4",
+    "title": "MedlinePlus · Rotator cuff self-care",
+    "type": "Government-hosted medical reference",
+    "url": "https://medlineplus.gov/ency/patientinstructions/000358.htm",
+    "locator": "Using Your Shoulder; Returning to Sports",
+    "excerpt": "When you sleep, lie either on the side that is not in pain or on your back.",
+    "boundary": "Rotator-cuff-specific comfort and return-to-sport guidance; does not establish the cause of this pain.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "M5",
+    "title": "NHS · Ibuprofen for adults",
+    "type": "Public health service",
+    "url": "https://www.nhs.uk/medicines/ibuprofen-for-adults/",
+    "locator": "Who can and cannot use; interactions",
+    "excerpt": "Do not take ibuprofen at the same time as other non-steroidal anti-inflammatory drugs (NSAIDs), such as naproxen or aspirin.",
+    "boundary": "Safety examples, not an exhaustive contraindication list or a prescription.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "M6",
+    "title": "NHS · Paracetamol for adults",
+    "type": "Public health service",
+    "url": "https://www.nhs.uk/medicines/paracetamol-for-adults/",
+    "locator": "How to take; Who can and cannot take",
+    "excerpt": "You should also avoid taking paracetamol at the same time as other medicines containing paracetamol",
+    "boundary": "Follow the local product label; do not substitute UK maximum doses for another formulation.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "E1",
+    "title": "AAOS / ASES · Shoulder conditioning",
+    "type": "Professional medical society",
+    "url": "https://www.orthoinfo.org/recovery/rotator-cuff-and-shoulder-conditioning-program/",
+    "locator": "Getting Started; exercises 1, 2, 6, 9",
+    "excerpt": "You should not feel pain during an exercise.",
+    "boundary": "General, supervised conditioning. Exact doses below belong to this source, not a personalized program.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "E2",
+    "title": "CSP · Shoulder exercise videos",
+    "type": "Professional physiotherapy society",
+    "url": "https://www.csp.org.uk/conditions/shoulder-pain/video-exercises-shoulder-pain",
+    "locator": "Introduction and video headings",
+    "excerpt": "We recommend that you seek advice from a physiotherapist or healthcare professional before starting any new exercise regime.",
+    "boundary": "Official page hosts Physiotec videos. Page checked; video playback not independently tested.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "E3",
+    "title": "AAOS · 2025 conditioning PDF",
+    "type": "Professional medical society",
+    "url": "https://www.orthoinfo.org/globalassets/pdfs/rotator-cuff-and-shoulder-conditioning-program-2025.pdf",
+    "locator": "Introduction and exercise panels",
+    "excerpt": "This is a general conditioning program that provides a wide range of exercises.",
+    "boundary": "Illustrated reference only. Extracted text had artifacts; selected doses cross-checked against HTML E1. Some other loading limits differ.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "W1",
+    "title": "OSHA · Workstation evaluation",
+    "type": "US government",
+    "url": "https://www.osha.gov/etools/computer-workstations/checklists/evaluation",
+    "locator": "Work stations; Seating; General concepts",
+    "excerpt": "Shoulders are relaxed (not elevated).",
+    "boundary": "Workstation risk-reduction guidance, not proof that a product treats shoulder pain.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "W2",
+    "title": "OSHA · Monitors",
+    "type": "US government",
+    "url": "https://www.osha.gov/etools/computer-workstations/components/monitors",
+    "locator": "Monitor Quick Tips; Viewing distance",
+    "excerpt": "Generally, the preferred viewing distance is between 20 and 40 inches (50 and 100 cm)",
+    "boundary": "Eye-to-screen distance, not desk depth. Screen top at or slightly below eye level.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "W3",
+    "title": "OSHA · Work process",
+    "type": "US government",
+    "url": "https://www.osha.gov/etools/computer-workstations/work-process",
+    "locator": "Prolonged periods of activity",
+    "excerpt": "maintaining static postures, such as viewing the monitor, for a prolonged period of time without taking a break can fatigue the muscles of the neck and shoulder",
+    "boundary": "Supports variation and short breaks; no universal timer interval in the cited text.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P1",
+    "title": "COMHOMA · DH005, White",
+    "type": "Official manufacturer / seller",
+    "url": "https://comhoma.com/products/comhoma-small-adjustable-standing-desk-tiltable-tabletop-dh005",
+    "locator": "White price; manufacturer specification and folding images",
+    "excerpt": "Sale price$54.49Regular price$79.99",
+    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope not verified.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P2",
+    "title": "VIVO · MOUNT-SF1FB, Black",
+    "type": "Official manufacturer / seller",
+    "url": "https://vivo-us.com/products/mount-sf1fb",
+    "locator": "Price; Compatibility; Specifications",
+    "excerpt": "$69.99",
+    "boundary": "43.3 × 18 inches; 2.3 inches from wall folded; 110 lb capacity. Wall fixture remains installed.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P3",
+    "title": "Lillipad · PRO Standard Maple",
+    "type": "Official manufacturer / seller",
+    "url": "https://www.lillipad.com/products/lillipad-foldable-electric-standing-desk",
+    "locator": "Selected variant; Specifications; FAQ",
+    "excerpt": "Collapsed: 53\" x 24\" x 6\" (at min. height)",
+    "boundary": "Displayed $1,049 with sold-out and add-to-cart/ship messaging. 67 lb desk; 75 lb operational rating. Static-load claims conflict (700 vs 350 lb).",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P4",
+    "title": "IKEA US · GUNDE, Black 002.177.97",
+    "type": "Official manufacturer / seller",
+    "url": "https://www.ikea.com/us/en/p/gunde-folding-chair-black-00217797/",
+    "locator": "Price; Measurements; Packaging",
+    "excerpt": "Tested for220 lb",
+    "boundary": "Displayed $14.99. Fixed seat height; folding dining chair, not verified for prolonged computer work. Package dimensions are not claimed as folded dimensions.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P5",
+    "title": "Branch · Ergonomic Chair",
+    "type": "Official manufacturer / seller",
+    "url": "https://www.branchfurniture.com/products/ergonomic-chair",
+    "locator": "Product details; Dimensions; Find Your Fit",
+    "excerpt": "25″W x 24″D x 38-42″H | Base diameter: 27.6″",
+    "boundary": "Starting price $369 in comparison section. Non-folding alternative only; adjustment range does not prove individual fit.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "C1",
+    "title": "CMS · Good faith estimates",
+    "type": "US government",
+    "url": "https://www.cms.gov/initiatives/your-patient-rights/medical-bill-rights/get-help/medical-bill-guides-resources/what-good-faith-health-insurance-estimate",
+    "locator": "Introduction; What is included",
+    "excerpt": "Usually, if you aren’t using health insurance to pay for your care, your health care provider must give you a good faith estimate",
+    "boundary": "US self-pay/uninsured protections and conditions. Not an actual treatment quote.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "C2",
+    "title": "Luna · Rates and insurance",
+    "type": "Official care provider / commercial",
+    "url": "https://www.getluna.com/rates-and-insurance",
+    "locator": "Self-pay",
+    "excerpt": " $135 per visit",
+    "boundary": "One provider’s advertised US in-home PT price, not a nationwide average or personal quote. Eligibility and service area unknown.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "C3",
+    "title": "Luna · Scripps partner page",
+    "type": "Official care provider / commercial",
+    "url": "https://www.getluna.com/scripps",
+    "locator": "Are Luna visits covered by insurance?",
+    "excerpt": "Our self-pay rate is $135 per visit.",
+    "boundary": "Search snippet displayed $125, but directly opened page displayed $135. Direct source used instead of snippet.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  }
+]
