@@ -2,7 +2,7 @@ name: Validate site
 on:
   pull_request:
   push:
-    branches: [main, arena/01a0bfa3-shoulderpain]
+    branches: [main, arena/01a0bfc0-shoulderpain]
 permissions:
   contents: read
 jobs:
@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: npm run build && git diff --exit-code -- '*.html' data/claims.json
       - run: npm run format:check && npm run check && npm test && npm run test:audit
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium firefox webkit
       - name: Browser and accessibility checks
         run: |
           set -o pipefail

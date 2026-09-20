@@ -172,8 +172,8 @@
     {
       "id": "costs-04",
       "file": "content/costs.html",
-      "line": 78,
-      "text": "Physical therapy Luna example: $135 self-pay/visit. Other providers and insured out-of-pocket costs not verified. [[C2]] Confirm location, initial vs follow-up charges and the proposed visit plan. Do not multiply by an invented number of sessions.",
+      "line": 51,
+      "text": "United States · Luna service areas $135 per self-pay visit. [[C2]] Provider example only. Location, eligibility, insured cost and number of visits are not established.",
       "source_ids": [
         "C2"
       ]
@@ -181,7 +181,25 @@
     {
       "id": "costs-05",
       "file": "content/costs.html",
-      "line": 114,
+      "line": 59,
+      "text": "United Kingdom · NHS physiotherapy Free through the NHS. [[C4]] NHS says waits may be long and local access/referral routes vary. This is not a private-care price or a claim that this reader is eligible.",
+      "source_ids": [
+        "C4"
+      ]
+    },
+    {
+      "id": "costs-06",
+      "file": "content/costs.html",
+      "line": 130,
+      "text": "Physical therapy Luna example: $135 self-pay/visit. Other providers and insured out-of-pocket costs not verified. [[C2]] Confirm location, initial vs follow-up charges and the proposed visit plan. Do not multiply by an invented number of sessions.",
+      "source_ids": [
+        "C2"
+      ]
+    },
+    {
+      "id": "costs-07",
+      "file": "content/costs.html",
+      "line": 166,
       "text": "In the US, if you are not using health insurance, providers usually must give a good faith estimate if you request one or schedule services at least 3 business days ahead. The estimate should itemize expected charges. It may not include separately scheduled services or other providers; request estimates from each relevant provider/facility. [[C1]]",
       "source_ids": [
         "C1"
@@ -547,15 +565,16 @@
       "id": "products-02",
       "file": "content/products.html",
       "line": 68,
-      "text": "Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. The extracted page includes both “In stock” and “Sold Out” controls; actual availability remains unresolved. [[P1]]",
+      "text": "Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. The page includes both “In stock” and “Sold Out” controls; actual availability remains unresolved. [[P1]] The official installation index does not list DH005, so assembly steps, folded envelope and unit weight remain unverified. [[P6]]",
       "source_ids": [
-        "P1"
+        "P1",
+        "P6"
       ]
     },
     {
       "id": "products-03",
       "file": "content/products.html",
-      "line": 75,
+      "line": 77,
       "text": "The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]]",
       "source_ids": [
         "P1"
@@ -565,15 +584,16 @@
       "id": "products-04",
       "file": "content/products.html",
       "line": 47,
-      "text": "FLIP-TOP · COMPACT$54.49 COMHOMA DH005 White · no-drawer version · sale price Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]] Conditional candidate The shallow surface and high minimum height may not fit your seated setup. The base remains on the floor; the full folded envelope and unit weight were not verified. “Folds flat” marketing does not mean the entire frame collapses. Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. The extracted page includes both “In stock” and “Sold Out” controls; actual availability remains unresolved. [[P1]] The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]] Official listing & current terms ↗",
+      "text": "FLIP-TOP · COMPACT$54.49 COMHOMA DH005 White · no-drawer version · sale price Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]] Conditional candidate The shallow surface and high minimum height may not fit your seated setup. The base remains on the floor; the full folded envelope and unit weight were not verified. “Folds flat” marketing does not mean the entire frame collapses. Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. The page includes both “In stock” and “Sold Out” controls; actual availability remains unresolved. [[P1]] The official installation index does not list DH005, so assembly steps, folded envelope and unit weight remain unverified. [[P6]] The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]] Official listing & current terms ↗",
       "source_ids": [
-        "P1"
+        "P1",
+        "P6"
       ]
     },
     {
       "id": "products-05",
       "file": "content/products.html",
-      "line": 92,
+      "line": 94,
       "text": "43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]]",
       "source_ids": [
         "P2"
@@ -582,26 +602,27 @@
     {
       "id": "products-06",
       "file": "content/products.html",
-      "line": 85,
-      "text": "WALL-FOLDING · FIXED INSTALL$69.99 VIVO folding workbench MOUNT-SF1FB · Black 43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]] Folds away; does not quickly detach Only a candidate if a permanent wall fixture is acceptable. Height is set by installation and the 18-inch depth needs a real screen/input-device fit check. Flag: confirm wall structure, installation permission and the manual’s requirements. Installation cost is not verified. No generic clamp-on monitor arm is recommended for this folding particle-board top. Official listing, manual & terms ↗",
+      "line": 109,
+      "text": "Manual check: the manual says not to install into drywall alone. For wood, its brackets align to stud centers; supplied anchors are only for brick/concrete. It calls for at least 3/8 inch (10 mm) between shelf and wall and says to squeeze both levers to fold. A qualified technician is advised if installation safety is uncertain. [[P7]] Installation permission/cost and the actual wall remain unverified. No generic clamp-on monitor arm is recommended for this folding particle-board top.",
       "source_ids": [
-        "P2"
+        "P7"
       ]
     },
     {
       "id": "products-07",
       "file": "content/products.html",
-      "line": 123,
-      "text": "Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]]",
+      "line": 87,
+      "text": "WALL-FOLDING · FIXED INSTALL$69.99 VIVO folding workbench MOUNT-SF1FB · Black 43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]] Folds away; does not quickly detach Only a candidate if a permanent wall fixture is acceptable. Height is set by installation and the 18-inch depth needs a real screen/input-device fit check. Manual check: the manual says not to install into drywall alone. For wood, its brackets align to stud centers; supplied anchors are only for brick/concrete. It calls for at least 3/8 inch (10 mm) between shelf and wall and says to squeeze both levers to fold. A qualified technician is advised if installation safety is uncertain. [[P7]] Installation permission/cost and the actual wall remain unverified. No generic clamp-on monitor arm is recommended for this folding particle-board top. Official listing, manual & terms ↗",
       "source_ids": [
-        "P3"
+        "P2",
+        "P7"
       ]
     },
     {
       "id": "products-08",
       "file": "content/products.html",
-      "line": 138,
-      "text": "Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]]",
+      "line": 130,
+      "text": "Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]]",
       "source_ids": [
         "P3"
       ]
@@ -609,8 +630,8 @@
     {
       "id": "products-09",
       "file": "content/products.html",
-      "line": 144,
-      "text": "Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]]",
+      "line": 145,
+      "text": "Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]]",
       "source_ids": [
         "P3"
       ]
@@ -618,43 +639,54 @@
     {
       "id": "products-10",
       "file": "content/products.html",
-      "line": 116,
-      "text": "FULLY COLLAPSING · ELECTRIC$1,049 Lillipad PRO Standard · Maple · displayed sale price Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]] Storage fit and handling remain unproven The collapsed desk is longer than its top. It is heavy; wheels do not guarantee easy movement through your room or across thresholds. Do not lift a heavy desk with a painful shoulder. Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]] Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]] Official listing & variant confirmation ↗",
+      "line": 151,
+      "text": "Manual check: unplug and clear the top before moving; use two hands at the foot tube on flat indoor surfaces, and two people for stairs or uneven areas. The PRO manual limits operation to 30 lb from 13.5–20 inches and no load from 6–13.5 inches; 75 lb applies above 20 inches. It also requires wall clearance and prohibits an extension cord. [[P8]] Page advertises 60-day returns and a 5-year critical-component warranty. Check policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]]",
       "source_ids": [
+        "P8",
         "P3"
       ]
     },
     {
       "id": "products-11",
       "file": "content/products.html",
-      "line": 162,
+      "line": 123,
+      "text": "FULLY COLLAPSING · ELECTRIC$1,049 Lillipad PRO Standard · Maple · displayed sale price Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]] Storage fit and handling remain unproven The collapsed desk is longer than its top. It is heavy; wheels do not guarantee easy movement through your room or across thresholds. Do not lift a heavy desk with a painful shoulder. Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]] Manual check: unplug and clear the top before moving; use two hands at the foot tube on flat indoor surfaces, and two people for stairs or uneven areas. The PRO manual limits operation to 30 lb from 13.5–20 inches and no load from 6–13.5 inches; 75 lb applies above 20 inches. It also requires wall clearance and prohibits an extension cord. [[P8]] Page advertises 60-day returns and a 5-year critical-component warranty. Check policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]] Official listing & variant confirmation ↗",
+      "source_ids": [
+        "P3",
+        "P8"
+      ]
+    },
+    {
+      "id": "products-12",
+      "file": "content/products.html",
+      "line": 174,
       "text": "Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]]",
       "source_ids": [
         "P4"
       ]
     },
     {
-      "id": "products-12",
+      "id": "products-13",
       "file": "content/products.html",
-      "line": 173,
+      "line": 185,
       "text": "This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]]",
       "source_ids": [
         "W1"
       ]
     },
     {
-      "id": "products-13",
+      "id": "products-14",
       "file": "content/products.html",
-      "line": 179,
+      "line": 191,
       "text": "Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]]",
       "source_ids": [
         "P4"
       ]
     },
     {
-      "id": "products-14",
+      "id": "products-15",
       "file": "content/products.html",
-      "line": 155,
+      "line": 167,
       "text": "FOLDING CHAIR · LIMITED USE CASE$14.99 IKEA GUNDE Black · article 002.177.97 Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]] Meets folding need, not a verified long-day workstation solution This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]] Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]] Official listing, manual & current terms ↗",
       "source_ids": [
         "P4",
@@ -662,19 +694,10 @@
       ]
     },
     {
-      "id": "products-15",
-      "file": "content/products.html",
-      "line": 197,
-      "text": "Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; adjustable/removable armrests and lumbar rest; stated capacity 275 lb. The selected Black / Black / Standard also displayed $369. [[P5]]",
-      "source_ids": [
-        "P5"
-      ]
-    },
-    {
       "id": "products-16",
       "file": "content/products.html",
-      "line": 212,
-      "text": "Flag: the earlier review recorded a wider base diameter and more detailed adjustment ranges, but those details were not reproduced in this session’s retrieved text. They are omitted pending a usable official spec sheet. Confirm the full base footprint, adjustment ranges, weight, warranty, variant-specific total, stock and return conditions. This is not a recommendation to relax your hard constraint silently. The source’s spec-sheet area showed a template error and an incomplete download URL; the dimensions above come from the visible product page, not a downloaded spec sheet. [[P5]]",
+      "line": 209,
+      "text": "Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; adjustable/removable armrests and lumbar rest; stated capacity 275 lb. The selected Black / Black / Standard also displayed $369. [[P5]]",
       "source_ids": [
         "P5"
       ]
@@ -682,10 +705,68 @@
     {
       "id": "products-17",
       "file": "content/products.html",
-      "line": 190,
-      "text": "NOT FOLDABLE · EXCEPTION ONLYfrom $369 Branch Ergonomic Chair Ergonomic Chair · not Lite or Pro Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; adjustable/removable armrests and lumbar rest; stated capacity 275 lb. The selected Black / Black / Standard also displayed $369. [[P5]] Does not meet the folding requirement Included only to show the trade-off between foldability and adjustable support. It requires a separate parking space and a clear removal route. No personal fit, rapid-removal time or pain-relief benefit has been verified. Flag: the earlier review recorded a wider base diameter and more detailed adjustment ranges, but those details were not reproduced in this session’s retrieved text. They are omitted pending a usable official spec sheet. Confirm the full base footprint, adjustment ranges, weight, warranty, variant-specific total, stock and return conditions. This is not a recommendation to relax your hard constraint silently. The source’s spec-sheet area showed a template error and an incomplete download URL; the dimensions above come from the visible product page, not a downloaded spec sheet. [[P5]] Official specifications & current terms ↗",
+      "line": 224,
+      "text": "Specification check: the official page and direct spec sheet expose a 27.6-inch base diameter, 17–21 inch seat height, 18–22 inch seat depth, 25–29 inch armrest width, 26–29 inch armrest height, 20° tilt and 7-year warranty. [[P5]] [[P9]] Conflict: the product page says 42 lb while the PDF says 35 lb assembled, so weight remains unresolved. These ranges still do not prove body fit. Confirm the exact variant total, stock, returns and a 27.6-inch clear floor/removal path before purchase. This is not a recommendation to relax the folding constraint.",
       "source_ids": [
-        "P5"
+        "P5",
+        "P9"
+      ]
+    },
+    {
+      "id": "products-18",
+      "file": "content/products.html",
+      "line": 202,
+      "text": "NOT FOLDABLE · EXCEPTION ONLYfrom $369 Branch Ergonomic Chair Ergonomic Chair · not Lite or Pro Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; adjustable/removable armrests and lumbar rest; stated capacity 275 lb. The selected Black / Black / Standard also displayed $369. [[P5]] Does not meet the folding requirement Included only to show the trade-off between foldability and adjustable support. It requires a separate parking space and a clear removal route. No personal fit, rapid-removal time or pain-relief benefit has been verified. Specification check: the official page and direct spec sheet expose a 27.6-inch base diameter, 17–21 inch seat height, 18–22 inch seat depth, 25–29 inch armrest width, 26–29 inch armrest height, 20° tilt and 7-year warranty. [[P5]] [[P9]] Conflict: the product page says 42 lb while the PDF says 35 lb assembled, so weight remains unresolved. These ranges still do not prove body fit. Confirm the exact variant total, stock, returns and a 27.6-inch clear floor/removal path before purchase. This is not a recommendation to relax the folding constraint. Official listing, spec sheet & current terms ↗",
+      "source_ids": [
+        "P5",
+        "P9"
+      ]
+    },
+    {
+      "id": "products-19",
+      "file": "content/products.html",
+      "line": 261,
+      "text": "COMHOMA DH005 White, no drawer Listing checked; DH005 absent from official manual index. [[P1]] [[P6]] Do not rely on folding/assembly claims until the seller supplies the matching guide and full folded size/weight.",
+      "source_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "products-20",
+      "file": "content/products.html",
+      "line": 272,
+      "text": "VIVO MOUNT-SF1FB Black Matching SKU manual checked. [[P7]] No purchase until wall type, stud/masonry locations, permission, installed height and folded clearance are confirmed.",
+      "source_ids": [
+        "P7"
+      ]
+    },
+    {
+      "id": "products-21",
+      "file": "content/products.html",
+      "line": 280,
+      "text": "Lillipad PRO Standard (42) April 2025 PRO manual checked; it covers Standard (42) and Large (48). [[P8]] No purchase until 53 × 24 × 6 inch storage and 67 lb handling route work without unsafe lifting.",
+      "source_ids": [
+        "P8"
+      ]
+    },
+    {
+      "id": "products-22",
+      "file": "content/products.html",
+      "line": 291,
+      "text": "IKEA GUNDE 002.177.97 Official listing's PDF is a generic care document, not an assembly/folded-dimension manual. [[P4]] Do not use package measurements as the chair's folded envelope or treat this fixed chair as an ergonomic long-day chair.",
+      "source_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "products-23",
+      "file": "content/products.html",
+      "line": 302,
+      "text": "Branch Ergonomic Chair, Standard Product details and matching spec sheet checked. [[P5]] [[P9]] It fails the folding requirement; 27.6-inch base route and body fit must be measured if considering the exception.",
+      "source_ids": [
+        "P5",
+        "P9"
       ]
     },
     {
