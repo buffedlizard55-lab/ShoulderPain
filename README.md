@@ -1,59 +1,53 @@
 # ShoulderPain
 
-A personal, research-backed project for dealing with **left shoulder + scapular "wing" pain** (healthy male, 36–40),
-caused (suspected) by: sleeping on the left side, a possible gym strain, and 12+ hours/day of slouched or static
-desk work in a small room.
+A source-linked, static GitHub Pages research project for a healthy male adult around age 36–40 with left shoulder/scapular (“wing”) pain in the context of left-side sleeping, gym loading/possible injury, and up to 12 hours/day of slouched or static computer work.
 
-## The website
+## Live site
 
-Published on GitHub Pages (main branch, repo root): **https://buffedlizard55-lab.github.io/ShoulderPain/**
+GitHub Pages (repository root, built from `main`): **https://buffedlizard55-lab.github.io/ShoulderPain/**
 
-Organized sections:
+This is information organization, not diagnosis or medical advice. Emergency symptoms and urgent-care thresholds are visible on the Home, Causes, Treatment, and Next Steps pages.
+
+## Page map
 
 | Page | Contents |
 |---|---|
-| `index.html` | Overview, how to use, verified bottom line, honesty policy |
-| `causes.html` | Medical causes for each suspected trigger + red flags + self-triage table |
-| `treatment.html` | Escalation ladder: self-care → exercise/PT → injection → surgery, with real evidence quality |
-| `exercises.html` | Daily routine, band work, wing-specific program, desk break schedule (every move sourced) |
-| `ergonomics.html` | OSHA/NIOSH setup checklist for a small room, measurement worksheet + desk footprints, 12-hour-static-posture fixes |
-| `products.html` | Foldable desks, chairs, clamp-on monitor mount, pillows, rehab tools — official-page prices, 3 budget builds, visible pass-3 corrections |
-| `pain-log.html` | Private offline tracker (pain, sleep side, desk hours, exercise adherence) with 2-week/6-week checkpoint reminders + JSON/CSV export |
-| `sources.html` | Master source list (S1–S48) with trust tiers + verification logs (passes 2 and 3; 19 logged corrections) |
-| `next-steps.html` | Remaining work, limitations, and every irregularity flagged during verification |
+| `index.html` | Scope, disclaimer, navigation, cautious bottom line, and how to use the project |
+| `causes.html` | Desk exposure, side sleeping, gym loading, scapular winging/dyskinesis, red flags, and referral patterns |
+| `treatment.html` | Activity modification, source-specific ice/heat, medication safety, PT/exercise, injection/surgery escalation, and checkpoints |
+| `exercises.html` | Pain-free rules, AAOS general conditioning options/doses, visible-wing limits, resistance-band safety, and a practical desk-break schedule |
+| `ergonomics.html` | Federal OSHA/NIOSH and Oregon OSHA workstation guidance, small-room strategies, depth caveats, and a measurement worksheet |
+| `products.html` | Foldable/quick-removal desks, non-folding chair trade-offs, monitor mount, sleep aids, rehab tools, prices, and budget builds |
+| `pain-log.html` | Offline `localStorage` tracker for pain, sleep side, desk exposure, breaks, exercise, irregularity flags, notes, summaries, import/export, and checkpoints |
+| `sources.html` | Claim ledger, direct medical/ergonomics/product links, trust tiers, price snapshots, and three-pass verification/correction log |
+| `next-steps.html` | Recommended next actions, irregularity flags, assumptions, limitations, and future improvements |
 
-## Requirements honored
+## Requirements covered
 
-- **Small space** — all desk options are compact or fold-flat; chairs chosen for small footprint.
-- **Foldable / quick-removal** — desk requirement met (fold-flat portable desk, wall-mount folding desk, or fully
-  foldable electric desk). Chairs can't fold flat at 12 h/day quality — flagged as a trade-off in `next-steps.html`.
-- **Pricing + official verified sources** — every product price was read from the official manufacturer page (retailer
-  sources are explicitly badged) on 2026-09-19 (two passes) and re-read on 2026-09-20 (pass 3).
-- **No hallucinations / line-by-line verification** — every claim carries a source chip linking to `sources.html`;
-  the verification logs record how and when each entry was checked; irregularities are flagged, not hidden. Pass 2
-  (session 2) re-read every load-bearing claim and price and fixed 8 items; pass 3 (session 3) re-opened **every**
-  source and product page by direct retrieval and fixed 11 more — including one product that was the wrong part
-  (an add-on monitor arm with no desk clamp), a chair pick with no listed ergonomic adjustments, an unsupported
-  drug-safety claim, mis-attributed posture/sleep claims and exercise doses the sources never stated. Both logs are at
-  the bottom of `sources.html`; nothing is corrected silently.
+- **No diagnosis by assumption:** “wing” is treated as an ambiguous description. Visible winging, weakness, neurologic symptoms, trauma, chest symptoms, and major loss of function are escalated rather than self-treated.
+- **Trusted source preference:** load-bearing medical claims use MedlinePlus/NIH, OSHA/NIOSH/CDC, Mayo Clinic, Cleveland Clinic, Mass General Brigham, AAOS/ASES, NCBI, Cochrane, and a PubMed-indexed trial. Lower-tier/affiliate/product sources are labelled and are not used to carry the medical pathway.
+- **Direct manual-review links:** source chips lead to `sources.html`, whose rows contain direct URLs and a narrow “used for” description.
+- **Line-by-line claim boundaries:** the source ledger records what each source supports and what the site deliberately does not claim. Generic AAOS exercise doses are labelled as general conditioning guidance rather than a winging prescription.
+- **Small space and foldability:** desks are selected for fold-flat, wall-folding, or quick-removal use. Chairs are explicitly marked as non-folding trade-offs; no chair is falsely presented as meeting the fold-flat requirement.
+- **Prices and caveats:** product snapshots are dated September 20, 2026, use manufacturer pages where available, label retailer/distributor prices, show variant/stock irregularities, and say that price, shipping, tax, returns, and availability change.
+- **Privacy-safe tracking:** the pain log makes no network request and uses browser `localStorage`; it provides JSON/CSV export and deletion. Device/browser access and exported files are still privacy risks and are disclosed.
+- **Three explicit review passes:** implementation/verification, bug + missing-requirement + assumption review, and final full accuracy/completeness/code-quality review are recorded in `sources.html#pass1`, `#pass2`, and `#pass3`.
 
 ## Verification policy
 
-- Medical claims: paraphrased from (or quoted with attribution to) .gov (OSHA/NIOSH/MedlinePlus), medical-center
-  (Mayo Clinic, Mayo Clinic Health System, Cleveland Clinic, AAOS OrthoInfo, Mass General Brigham, Texas Children's,
-  OSU Wexner), peer-reviewed (Cochrane, PubMed/PMC), or flagged commercial sources. Exercise doses are quoted from the
-  AAOS conditioning program or the cited handout, or marked † as defaults when no source states a number.
-- Product prices: read from official pages on 2026-09-19 and 2026-09-20 — they change, so re-check before buying
-  (one price moved within the same day; one chair variant price changed overnight).
-- Known irregularities from verification: see `next-steps.html` (flagged table, rows 1–20).
+1. Medical statements are paraphrased from a cited source or clearly marked as a project suggestion/limitation. If a source is condition-specific, the page keeps that condition-specific boundary.
+2. Exercise dosing comes from the AAOS general conditioning program where shown; otherwise no exact number is invented. Every exercise page says to stop for pain and seek clinician/PT input for visible winging, weakness, neurologic symptoms, trauma, or persistent/worsening symptoms.
+3. Federal OSHA’s monitor distance and Oregon OSHA’s separate work-surface-depth/viewing-distance details are kept separate. The site does not call a 24-inch depth rule “federal OSHA.”
+4. Product specifications and prices are snapshots, not endorsements or medical efficacy evidence. Re-open the direct page before buying.
+5. If a source or product page conflicts with the project’s earlier wording, the correction is recorded in the source log instead of silently hidden.
 
-## Maintenance
+## Technical notes
 
-- Site is plain static HTML/CSS/JS (no build step, no dependencies, no backend; the pain log uses browser
-  `localStorage` only). Push to `main` and GitHub Pages (source: main branch, repo root) redeploys automatically.
-- Note: the Pages source was set to the repo root (not a `docs/` subfolder) because the CI token lacks permission to
-  change Pages settings (403 “Resource not accessible by integration”); the site files were placed at the repo root
-  to match that setting.
-- Suggested next-session work (price re-checks before buying, monitor-arm fit check for the chosen desk, deeper
-  evidence layer, optional pain-log chart/print view): `next-steps.html`. No verified official exercise *videos*
-  exist on the cited program pages, so the site links illustrated official handouts instead of third-party videos.
+- Plain static HTML/CSS/JavaScript; no build step, package manager, third-party runtime, analytics, backend, or external script dependency.
+- GitHub Pages serves the repository root from `main`; deployment is automatic after changes reach `main`.
+- The pain log’s storage key is `shoulderpain-log-v1`. Clearing site data deletes the entries; export a backup before clearing or moving browsers.
+- Styling is shared in `css/style.css`; tables are horizontally scrollable on narrow screens, navigation can scroll on mobile, and pages include skip links, focus styles, and print-friendly basics.
+
+## Maintenance / remaining work
+
+Price and stock checks must be repeated before purchase. The remaining limitations and optional work—such as a dependency-free pain trend chart, a printable clinician report, region-specific pricing, and deeper primary research on computer exposure—are listed on `next-steps.html`.
