@@ -2,7 +2,7 @@ name: Validate site
 on:
   pull_request:
   push:
-    branches: [main, arena/01a0bcb6-shoulderpain]
+    branches: [main, arena/01a0bd2b-shoulderpain]
 permissions:
   contents: read
 jobs:

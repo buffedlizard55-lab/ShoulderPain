@@ -34,16 +34,35 @@
   role="group"
   aria-label="Filter furniture"
 >
-  <button type="button" aria-pressed="true" data-filter="all">
+  <button
+    type="button"
+    aria-pressed="true"
+    data-filter="all"
+    aria-controls="product-list"
+  >
     All options</button
-  ><button type="button" aria-pressed="false" data-filter="folding">
+  ><button
+    type="button"
+    aria-pressed="false"
+    data-filter="folding"
+    aria-controls="product-list"
+  >
     Folding candidates</button
-  ><button type="button" aria-pressed="false" data-filter="chair">
+  ><button
+    type="button"
+    aria-pressed="false"
+    data-filter="chair"
+    aria-controls="product-list"
+  >
     Chairs &amp; trade-offs
   </button>
 </div>
 <p id="filter-status" class="small" role="status"></p>
-<section class="product-grid" aria-label="Furniture comparison">
+<section
+  class="product-grid"
+  id="product-list"
+  aria-label="Furniture comparison"
+>
   <article class="product" data-kind="folding" id="comhoma">
     <div class="product-heading">
       <span class="pill">FLIP-TOP · COMPACT</span
