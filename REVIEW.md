@@ -48,9 +48,7 @@ Local results:
 - Build: 10 pages, 20 sources and 90 source-bearing review units generated.
 - Structural check: all local files/fragments, page metadata, main navigation and source markers passed.
 - Node unit tests: 8 passed (dates, shapes, numeric/boolean validation, missing values, malicious keys, entry limit and CSV escaping).
-- The base commit's Chromium browser suite had 31 passing tests, including automated axe WCAG 2 A/AA + 2.1 AA checks on all 10 pages at 390px and 1440px, no page-level horizontal overflow at 320, 390, 768 or 1440px, and functional/privacy/project-path cases. The current session's browser re-run was attempted but the sandbox could not download the Playwright Chromium binary; the PR check must re-run this suite on GitHub-hosted runners.
-- Build reproducibility, formatter and Git whitespace checks included in the current validation. The current source/link/claim checker is stricter than the base commit.
-- Standard Playwright browser download and Debian package retrieval were blocked by sandbox networking. CI uses the normal Playwright installation on GitHub-hosted runners.
-- Remaining testing limits: no manual screen-reader-user audit, cross-browser matrix or third-party video-playback test. Automated accessibility is not full conformance certification.
-
+- GitHub PR #11's `validate` job passed after installing Chromium: the 31-test browser suite passed, including automated axe WCAG 2 A/AA + 2.1 AA checks on all 10 pages at 390px and 1440px, no page-level horizontal overflow at 320, 390, 768 or 1440px, and functional/privacy/project-path cases.
+- Build reproducibility, formatter, source/link/claim checks, Node tests and Git whitespace checks passed in CI. The current source/link/claim checker is stricter than the base commit.
+- The local Playwright browser download was blocked by sandbox networking; the successful GitHub-hosted run is the browser verification for this revision. Remaining limits are no manual screen-reader-user audit, cross-browser matrix or third-party video-playback test. Automated accessibility is not full conformance certification.
 PR/merge/publication outcome will be recorded in the GitHub PR and final response after the actual request is attempted.
