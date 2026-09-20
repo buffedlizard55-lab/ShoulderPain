@@ -1,0 +1,832 @@
+{
+  "notice": "Review ledger of source-bearing content units, not automated proof of truth. Project judgments and limitations are explicitly labeled in the site. References checked against opened official pages on 2026-09-20.",
+  "claims": [
+    {
+      "id": "causes-01",
+      "file": "content/causes.html",
+      "line": 3,
+      "text": "The sources support these as possible causes or aggravating factors. They cannot tell which applies to you, and this is not an exhaustive differential diagnosis. Age, sex and feeling healthy do not establish the cause. [[M1]] [[M2]]",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "causes-02",
+      "file": "content/causes.html",
+      "line": 16,
+      "text": "Call 911 (US) or your local emergency number for sudden pressure/crushing shoulder pain, especially with chest pain, pain spreading to the jaw, arm or neck, breathlessness, dizziness or sweating. Go to an emergency department after a severe injury with a very painful, swollen, bruised or bleeding shoulder. [[M1]]",
+      "source_ids": [
+        "M1"
+      ]
+    },
+    {
+      "id": "causes-03",
+      "file": "content/causes.html",
+      "line": 13,
+      "text": "EMERGENCY Do not wait for exercises or a new chair Call 911 (US) or your local emergency number for sudden pressure/crushing shoulder pain, especially with chest pain, pain spreading to the jaw, arm or neck, breathlessness, dizziness or sweating. Go to an emergency department after a severe injury with a very painful, swollen, bruised or bleeding shoulder. [[M1]]",
+      "source_ids": [
+        "M1"
+      ]
+    },
+    {
+      "id": "causes-04",
+      "file": "content/causes.html",
+      "line": 27,
+      "text": "Sudden or very severe pain; inability to move the arm; changed shape or major swelling; persistent pins and needles or loss of feeling; an unusually hot or cold arm/shoulder; pain after an injury or fall; severe pain in both shoulders; fever or feeling unwell. NHS guidance treats these as urgent. [[M2]]",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "causes-05",
+      "file": "content/causes.html",
+      "line": 24,
+      "text": "URGENT ASSESSMENT Seek urgent local medical care Sudden or very severe pain; inability to move the arm; changed shape or major swelling; persistent pins and needles or loss of feeling; an unusually hot or cold arm/shoulder; pain after an injury or fall; severe pain in both shoulders; fever or feeling unwell. NHS guidance treats these as urgent. [[M2]]",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "causes-06",
+      "file": "content/causes.html",
+      "line": 38,
+      "text": "Arrange assessment if pain worsens, is not improving after 2 weeks or movement is very difficult. [[M2]] A newly protruding shoulder blade or weakness deserves a clinician’s examination rather than an assumed “posture problem”; use urgent care for the associated warning signs above. This is the project’s cautious application of AAOS guidance. [[M3]]",
+      "source_ids": [
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "causes-07",
+      "file": "content/causes.html",
+      "line": 35,
+      "text": "CLINICAL APPOINTMENT Worsening or persistent symptoms Arrange assessment if pain worsens, is not improving after 2 weeks or movement is very difficult. [[M2]] A newly protruding shoulder blade or weakness deserves a clinician’s examination rather than an assumed “posture problem”; use urgent care for the associated warning signs above. This is the project’s cautious application of AAOS guidance. [[M3]]",
+      "source_ids": [
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "causes-08",
+      "file": "content/causes.html",
+      "line": 64,
+      "text": "Rotator cuff / tendon or bursa irritation Rotator cuff inflammation, tears, bursitis and overuse/injury of nearby tendons are recognized causes of shoulder pain. Arm use or overhead movement may hurt. [[M1]] [[M2]] A painful workout does not distinguish a strain from a tear, and pain alone cannot identify the damaged structure.",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "causes-09",
+      "file": "content/causes.html",
+      "line": 76,
+      "text": "Sustained desk work Static postures without breaks can fatigue neck and shoulder muscles. OSHA recommends task variation and short breaks. [[W3]] Your desk exposure is a plausible contributor, not proof of an injury or the only cause. A posture photo cannot settle this.",
+      "source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "causes-10",
+      "file": "content/causes.html",
+      "line": 87,
+      "text": "Sleep-position aggravation For rotator cuff problems, MedlinePlus suggests the non-painful side or back, with pillows supporting the painful shoulder. [[M4]] This supports a comfort trial, not the claim that left-side sleeping caused a tear or nerve injury.",
+      "source_ids": [
+        "M4"
+      ]
+    },
+    {
+      "id": "causes-11",
+      "file": "content/causes.html",
+      "line": 98,
+      "text": "Scapular movement disorder / visible winging AAOS describes abnormal shoulder-blade position or movement associated with muscle weakness/tightness, nerve injury or bone/joint injury. Symptoms may include pain, weakness, limited motion, snapping and visible prominence. [[M3]] “Wing pain” is not itself a diagnosis. A prominent blade does not identify a particular damaged nerve.",
+      "source_ids": [
+        "M3"
+      ]
+    },
+    {
+      "id": "causes-12",
+      "file": "content/causes.html",
+      "line": 111,
+      "text": "Neck or other referred pain Shoulder pain may originate elsewhere, including the neck or lungs. [[M1]] Do not assume every shoulder-blade symptom is muscular, especially with chest or neurologic symptoms.",
+      "source_ids": [
+        "M1"
+      ]
+    },
+    {
+      "id": "causes-13",
+      "file": "content/causes.html",
+      "line": 122,
+      "text": "Other shoulder conditions Frozen shoulder, arthritis, instability, acromioclavicular-joint problems, fracture and dislocation are other recognized possibilities. [[M1]] [[M2]] This list neither confirms nor excludes any of them. Trauma and major loss of function change the urgency.",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "causes-14",
+      "file": "content/causes.html",
+      "line": 141,
+      "text": "A clinician can assess shoulder and shoulder-blade movement, strength and tenderness. Imaging is not always necessary for scapular dyskinesis; it may be ordered for a suspected bone or other shoulder injury. Nerve testing may be considered if nerve injury is suspected. [[M3]]",
+      "source_ids": [
+        "M3"
+      ]
+    },
+    {
+      "id": "costs-01",
+      "file": "content/costs.html",
+      "line": 16,
+      "text": "Advertised self-pay price on its rates page, checked 20 September 2026. [[C2]]",
+      "source_ids": [
+        "C2"
+      ]
+    },
+    {
+      "id": "costs-02",
+      "file": "content/costs.html",
+      "line": 12,
+      "text": "OFFICIAL PROVIDER · US EXAMPLE Luna in-home physical therapy Advertised self-pay price on its rates page, checked 20 September 2026. [[C2]] $135per visit Not a personal quote or endorsement. Service area, clinical suitability, availability, required space and any referral/insurance requirements must be confirmed. No course length is assumed. The listed price is not a US market average.",
+      "source_ids": [
+        "C2"
+      ]
+    },
+    {
+      "id": "costs-03",
+      "file": "content/costs.html",
+      "line": 29,
+      "text": "Verification irregularity: a search excerpt for Luna’s Scripps page said $125. Directly opening that page showed $135, matching the main rates page. This guide uses the opened official page, not the stale excerpt. [[C2]] [[C3]]",
+      "source_ids": [
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "costs-04",
+      "file": "content/costs.html",
+      "line": 78,
+      "text": "Physical therapy Luna example: $135 self-pay/visit. Other providers and insured out-of-pocket costs not verified. [[C2]] Confirm location, initial vs follow-up charges and the proposed visit plan. Do not multiply by an invented number of sessions.",
+      "source_ids": [
+        "C2"
+      ]
+    },
+    {
+      "id": "costs-05",
+      "file": "content/costs.html",
+      "line": 114,
+      "text": "In the US, if you are not using health insurance, providers usually must give a good faith estimate if you request one or schedule services at least 3 business days ahead. The estimate should itemize expected charges. It may not include separately scheduled services or other providers; request estimates from each relevant provider/facility. [[C1]]",
+      "source_ids": [
+        "C1"
+      ]
+    },
+    {
+      "id": "ergonomics-01",
+      "file": "content/ergonomics.html",
+      "line": 5,
+      "text": "OSHA recommends opportunities to vary work and avoid prolonged sitting or standing. Workstation changes address exposure; they do not diagnose or repair a shoulder injury. [[W1]] [[W3]]",
+      "source_ids": [
+        "W1",
+        "W3"
+      ]
+    },
+    {
+      "id": "ergonomics-02",
+      "file": "content/ergonomics.html",
+      "line": 34,
+      "text": "Support your body. Back supported, feet flat or on a stable footrest, room under the desk for knees and legs. [[W1]]",
+      "source_ids": [
+        "W1"
+      ]
+    },
+    {
+      "id": "ergonomics-03",
+      "file": "content/ergonomics.html",
+      "line": 38,
+      "text": "Bring work closer. Relax the shoulders, keep elbows close, and put the mouse beside the keyboard at the same level. [[W1]]",
+      "source_ids": [
+        "W1"
+      ]
+    },
+    {
+      "id": "ergonomics-04",
+      "file": "content/ergonomics.html",
+      "line": 42,
+      "text": "Set the screen for your eyes. Directly in front; top at or slightly below eye level. Generally 20–40 inches from eyes to screen, with readable text. [[W2]]",
+      "source_ids": [
+        "W2"
+      ]
+    },
+    {
+      "id": "ergonomics-05",
+      "file": "content/ergonomics.html",
+      "line": 47,
+      "text": "Change position and tasks. Use short breaks and alternate computer with non-computer tasks. [[W3]]",
+      "source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "ergonomics-06",
+      "file": "content/ergonomics.html",
+      "line": 95,
+      "text": "A shallow desk is not automatically unusable, and a deep desk is not automatically ergonomic. The OSHA 20–40 inch guideline is eye-to-screen distance, not a mandatory desktop depth. [[W2]]",
+      "source_ids": [
+        "W2"
+      ]
+    },
+    {
+      "id": "ergonomics-07",
+      "file": "content/ergonomics.html",
+      "line": 114,
+      "text": "A separate home for loose equipment. Use an existing shelf or container for the keyboard, mouse and cables. Keep frequently used items within comfortable reach during work. [[W1]] [[M4]]",
+      "source_ids": [
+        "W1",
+        "M4"
+      ]
+    },
+    {
+      "id": "ergonomics-08",
+      "file": "content/ergonomics.html",
+      "line": 130,
+      "text": "Use the existing sleep setup first. Try the non-painful side or back with pillow support rather than buying a mattress on the assumption it will treat the shoulder. [[M4]]",
+      "source_ids": [
+        "M4"
+      ]
+    },
+    {
+      "id": "ergonomics-09",
+      "file": "content/ergonomics.html",
+      "line": 140,
+      "text": "Suggested routine: use an existing timer to prompt a brief position change or walk every 30–60 minutes, as comfortable. Alternate tasks and avoid replacing a long sitting block with a long standing block. The timing is a project reminder, not an evidence-based prescription; the variation principle comes from OSHA. [[W1]] [[W3]]",
+      "source_ids": [
+        "W1",
+        "W3"
+      ]
+    },
+    {
+      "id": "ergonomics-10",
+      "file": "content/ergonomics.html",
+      "line": 147,
+      "text": "Do not force shoulders “back and down” all day. Use supported, relaxed positions and movement opportunities rather than treating posture as a test of willpower. This is the project’s application of OSHA’s relaxed-shoulder and variability guidance. [[W1]]",
+      "source_ids": [
+        "W1"
+      ]
+    },
+    {
+      "id": "exercises-01",
+      "file": "content/exercises.html",
+      "line": 3,
+      "text": "AAOS calls this a general conditioning program to perform under a doctor’s supervision, with exercises selected by a doctor or physical therapist. You should not feel pain during the exercises; stop and discuss pain with your clinician/PT. [[E1]] Visible winging, new weakness, an injury or neurologic symptoms should be assessed before loading the shoulder. [[M3]] Urgent symptoms override exercise →",
+      "source_ids": [
+        "E1",
+        "M3"
+      ]
+    },
+    {
+      "id": "exercises-02",
+      "file": "content/exercises.html",
+      "line": 14,
+      "text": "AAOS recommends 5–10 minutes of low-impact warm-up such as walking before its program. Its 4–6 week program duration is general guidance, not a reason to delay assessment or a guaranteed recovery period. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-03",
+      "file": "content/exercises.html",
+      "line": 39,
+      "text": "Do not round your back or lock your knees. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-04",
+      "file": "content/exercises.html",
+      "line": 40,
+      "text": "AAOS example: 2 sets of 10 · 5–6 days/week. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-05",
+      "file": "content/exercises.html",
+      "line": 28,
+      "text": "NO SPECIAL EQUIPMENT 1. Pendulum Lean forward, supporting one hand on a stable counter or table. Let the other arm hang freely. Gently swing forward/back, side-to-side and in circles; repeat the sequence with the other arm. Do not round your back or lock your knees. [[E1]] AAOS example: 2 sets of 10 · 5–6 days/week. [[E1]] Project safety: do not lean on an unlocked folding top or rolling desk.",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-06",
+      "file": "content/exercises.html",
+      "line": 60,
+      "text": "Do not pull on or press the elbow. Stop if painful. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-07",
+      "file": "content/exercises.html",
+      "line": 61,
+      "text": "AAOS example: 4 repetitions each side · 5–6 days/week. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-08",
+      "file": "content/exercises.html",
+      "line": 47,
+      "text": "NO SPECIAL EQUIPMENT 2. Crossover arm stretch Relax your shoulders. Gently bring one arm across the chest, holding at the upper arm. Hold for 30 seconds, then relax for 30 seconds; repeat with the other arm. Do not pull on or press the elbow. Stop if painful. [[E1]] AAOS example: 4 repetitions each side · 5–6 days/week. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-09",
+      "file": "content/exercises.html",
+      "line": 77,
+      "text": "With a comfortably resistant band securely anchored, keep the elbow bent near your side, slowly pull it straight back and return slowly. AAOS cues a shoulder-blade squeeze on the pull. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-10",
+      "file": "content/exercises.html",
+      "line": 82,
+      "text": "AAOS example: 3 sets of 8 · 3 days/week; progress to 3 sets of 12 as easier. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-11",
+      "file": "content/exercises.html",
+      "line": 75,
+      "text": "3. Standing row With a comfortably resistant band securely anchored, keep the elbow bent near your side, slowly pull it straight back and return slowly. AAOS cues a shoulder-blade squeeze on the pull. [[E1]] AAOS example: 3 sets of 8 · 3 days/week; progress to 3 sets of 12 as easier. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-12",
+      "file": "content/exercises.html",
+      "line": 89,
+      "text": "With a securely anchored comfortable-resistance band and bent elbow at your side, slowly rotate the arm outward without moving the elbow away from the body; return slowly. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-13",
+      "file": "content/exercises.html",
+      "line": 94,
+      "text": "AAOS example: 3 sets of 8 · 3 days/week; progress to 3 sets of 12 as easier. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-14",
+      "file": "content/exercises.html",
+      "line": 87,
+      "text": "4. External rotation, elbow at side With a securely anchored comfortable-resistance band and bent elbow at your side, slowly rotate the arm outward without moving the elbow away from the body; return slowly. [[E1]] AAOS example: 3 sets of 8 · 3 days/week; progress to 3 sets of 12 as easier. [[E1]]",
+      "source_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "exercises-15",
+      "file": "content/exercises.html",
+      "line": 113,
+      "text": "AAOS’s HTML program is the dose reference used above. Its illustrated PDF is also linked for manual review. [[E1]] [[E3]]",
+      "source_ids": [
+        "E1",
+        "E3"
+      ]
+    },
+    {
+      "id": "exercises-16",
+      "file": "content/exercises.html",
+      "line": 111,
+      "text": "Illustrations and full instructions AAOS’s HTML program is the dose reference used above. Its illustrated PDF is also linked for manual review. [[E1]] [[E3]] The PDF text extraction contained artifacts, and some other weight limits differ between PDF and HTML. We did not combine the two into a new routine.",
+      "source_ids": [
+        "E1",
+        "E3"
+      ]
+    },
+    {
+      "id": "exercises-17",
+      "file": "content/exercises.html",
+      "line": 125,
+      "text": "The Chartered Society of Physiotherapy hosts shoulder exercise videos supplied by Physiotec. It advises professional input before a new exercise regime and urgent medical advice if these exercises worsen pain. [[E2]]",
+      "source_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "exercises-18",
+      "file": "content/exercises.html",
+      "line": 123,
+      "text": "Videos from the CSP The Chartered Society of Physiotherapy hosts shoulder exercise videos supplied by Physiotec. It advises professional input before a new exercise regime and urgent medical advice if these exercises worsen pain. [[E2]] The page was checked; playback was not independently tested. Opening it may involve third-party video services.",
+      "source_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "exercises-19",
+      "file": "content/exercises.html",
+      "line": 140,
+      "text": "Walking or changing tasks need not become another shoulder workout. OSHA supports short recovery pauses and varied tasks. [[W3]] See the small-room workday plan.",
+      "source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "index-01",
+      "file": "content/index.html",
+      "line": 14,
+      "text": "General guidance: [[M1]] [[M2]] [[M4]] [[W3]]",
+      "source_ids": [
+        "M1",
+        "M2",
+        "M4",
+        "W3"
+      ]
+    },
+    {
+      "id": "index-02",
+      "file": "content/index.html",
+      "line": 33,
+      "text": "Sudden pressure or crushing shoulder pain, especially with chest pain, pain spreading to the jaw/arm/neck, breathlessness, dizziness or sweating, can signal a heart attack. Call 911 in the US or your local emergency number. Do not use this site to rule it out. [[M1]]",
+      "source_ids": [
+        "M1"
+      ]
+    },
+    {
+      "id": "index-03",
+      "file": "content/index.html",
+      "line": 84,
+      "text": "Those are clues, not a diagnosis. We do not know your pain duration, exact location, strength, medical history or room measurements. “Wing” does not automatically mean a winged scapula. [[M3]]",
+      "source_ids": [
+        "M3"
+      ]
+    },
+    {
+      "id": "index-04",
+      "file": "content/index.html",
+      "line": 114,
+      "text": "Difficulty moving the arm also warrants care. Sudden severe pain, injury-related pain or persistent numbness may need urgent assessment sooner. If this has already lasted 2 weeks, do not restart the clock. [[M2]] See the full care thresholds →",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "next-steps-01",
+      "file": "content/next-steps.html",
+      "line": 4,
+      "text": "Check urgency. Warning signs come before desk changes, exercise or cost comparisons. [[M1]] [[M2]]",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "next-steps-02",
+      "file": "content/next-steps.html",
+      "line": 9,
+      "text": "If there are no warning signs, reduce aggravating activity and keep gentle movement. Try supported sleep and more varied computer tasks. [[M2]] [[M4]] [[W3]]",
+      "source_ids": [
+        "M2",
+        "M4",
+        "W3"
+      ]
+    },
+    {
+      "id": "next-steps-03",
+      "file": "content/next-steps.html",
+      "line": 16,
+      "text": "Arrange care if worsening or not improving after 2 weeks. Do not wait another 2 weeks if the symptoms have already persisted. [[M2]] Visible winging/weakness needs examination rather than a self-selected corrective routine. [[M3]]",
+      "source_ids": [
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "id": "pain-log-01",
+      "file": "content/pain-log.html",
+      "line": 13,
+      "text": "Do not wait for a trend or a calendar reminder if symptoms worsen or warning signs occur. Use the care thresholds. This tool does not infer diagnosis, recovery or whether exercise is safe. [[M1]] [[M2]]",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "products-01",
+      "file": "content/products.html",
+      "line": 35,
+      "text": "Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]]",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "products-02",
+      "file": "content/products.html",
+      "line": 49,
+      "text": "Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. [[P1]]",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "products-03",
+      "file": "content/products.html",
+      "line": 55,
+      "text": "The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]]",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "products-04",
+      "file": "content/products.html",
+      "line": 28,
+      "text": "FLIP-TOP · COMPACT$54.49 COMHOMA DH005 White · no-drawer version · sale price Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]] Conditional candidate The shallow surface and high minimum height may not fit your seated setup. The base remains on the floor; the full folded envelope and unit weight were not verified. “Folds flat” marketing does not mean the entire frame collapses. Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. [[P1]] The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]] Official listing & current terms ↗",
+      "source_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "products-05",
+      "file": "content/products.html",
+      "line": 72,
+      "text": "43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]]",
+      "source_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "products-06",
+      "file": "content/products.html",
+      "line": 65,
+      "text": "WALL-FOLDING · FIXED INSTALL$69.99 VIVO folding workbench MOUNT-SF1FB · Black 43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]] Folds away; does not quickly detach Only a candidate if a permanent wall fixture is acceptable. Height is set by installation and the 18-inch depth needs a real screen/input-device fit check. Flag: confirm wall structure, installation permission and the manual’s requirements. Installation cost is not verified. No generic clamp-on monitor arm is recommended for this folding particle-board top. Official listing, manual & terms ↗",
+      "source_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "products-07",
+      "file": "content/products.html",
+      "line": 103,
+      "text": "Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]]",
+      "source_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "products-08",
+      "file": "content/products.html",
+      "line": 118,
+      "text": "Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]]",
+      "source_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "products-09",
+      "file": "content/products.html",
+      "line": 124,
+      "text": "Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]]",
+      "source_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "products-10",
+      "file": "content/products.html",
+      "line": 96,
+      "text": "FULLY COLLAPSING · ELECTRIC$1,049 Lillipad PRO Standard · Maple · displayed sale price Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]] Storage fit and handling remain unproven The collapsed desk is longer than its top. It is heavy; wheels do not guarantee easy movement through your room or across thresholds. Do not lift a heavy desk with a painful shoulder. Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]] Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]] Official listing & variant confirmation ↗",
+      "source_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "products-11",
+      "file": "content/products.html",
+      "line": 142,
+      "text": "Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]]",
+      "source_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "products-12",
+      "file": "content/products.html",
+      "line": 153,
+      "text": "This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]]",
+      "source_ids": [
+        "W1"
+      ]
+    },
+    {
+      "id": "products-13",
+      "file": "content/products.html",
+      "line": 159,
+      "text": "Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]]",
+      "source_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "products-14",
+      "file": "content/products.html",
+      "line": 135,
+      "text": "FOLDING CHAIR · LIMITED USE CASE$14.99 IKEA GUNDE Black · article 002.177.97 Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]] Meets folding need, not a verified long-day workstation solution This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]] Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]] Official listing, manual & current terms ↗",
+      "source_ids": [
+        "P4",
+        "W1"
+      ]
+    },
+    {
+      "id": "products-15",
+      "file": "content/products.html",
+      "line": 177,
+      "text": "Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; base diameter 27.6 inches; weight 42 lb. Seat height 17–21 inches, seat depth 18–22 inches; adjustable/removable armrests; stated capacity 275 lb; assembly required and 7-year warranty listed. [[P5]]",
+      "source_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "products-16",
+      "file": "content/products.html",
+      "line": 170,
+      "text": "NOT FOLDABLE · EXCEPTION ONLYfrom $369 Branch Ergonomic Chair Ergonomic Chair · not Lite or Pro Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; base diameter 27.6 inches; weight 42 lb. Seat height 17–21 inches, seat depth 18–22 inches; adjustable/removable armrests; stated capacity 275 lb; assembly required and 7-year warranty listed. [[P5]] Does not meet the folding requirement Included only to show the trade-off between foldability and adjustable support. It requires a separate parking space and a clear removal route. No personal fit, rapid-removal time or pain-relief benefit has been verified. Flag: base diameter is wider than the headline body width. Variant-specific total, stock and return conditions need confirmation. This is not a recommendation to relax your hard constraint silently. Official specifications & current terms ↗",
+      "source_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "treatment-01",
+      "file": "content/treatment.html",
+      "line": 3,
+      "text": "If pain followed an injury, is suddenly severe, or includes persistent numbness, inability to move, fever or major swelling, seek urgent care rather than testing a routine. [[M2]] Full warning signs →",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-02",
+      "file": "content/treatment.html",
+      "line": 20,
+      "text": "NHS advises staying active and gently moving the shoulder, avoiding activities that make it worse, and avoiding self-invented strenuous exercises or heavy gym equipment. [[M2]]",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-03",
+      "file": "content/treatment.html",
+      "line": 17,
+      "text": "01 / ACTIVITY Reduce aggravating loads, not all movement NHS advises staying active and gently moving the shoulder, avoiding activities that make it worse, and avoiding self-invented strenuous exercises or heavy gym equipment. [[M2]] Project application: pause painful presses, dips, rows or overhead work rather than pushing through them. No fixed return-to-gym date is justified here. Additional purchase: $0 for activity changes.",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-04",
+      "file": "content/treatment.html",
+      "line": 35,
+      "text": "Rotator-cuff self-care guidance suggests lying on the non-painful side or your back, with pillows supporting the painful shoulder. [[M4]]",
+      "source_ids": [
+        "M4"
+      ]
+    },
+    {
+      "id": "treatment-05",
+      "file": "content/treatment.html",
+      "line": 32,
+      "text": "02 / SLEEP Try a supported, less painful position Rotator-cuff self-care guidance suggests lying on the non-painful side or your back, with pillows supporting the painful shoulder. [[M4]] Boundary: a comfort option, not evidence of your diagnosis. No special pillow or new mattress is established as necessary by this source. Additional purchase: $0 if suitable pillows are already available.",
+      "source_ids": [
+        "M4"
+      ]
+    },
+    {
+      "id": "treatment-06",
+      "file": "content/treatment.html",
+      "line": 51,
+      "text": "NHS suggests either frozen peas wrapped in a tea towel for up to 20 minutes, 3 times daily, or a wrapped hot-water bottle for up to 20 minutes, 2–3 times daily. [[M2]]",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-07",
+      "file": "content/treatment.html",
+      "line": 48,
+      "text": "03 / COMFORT Heat or cold, with a barrier NHS suggests either frozen peas wrapped in a tea towel for up to 20 minutes, 3 times daily, or a wrapped hot-water bottle for up to 20 minutes, 2–3 times daily. [[M2]] Project safety rule: do not sleep with a pack, use burning heat or ice directly on skin. Stop if skin or symptoms worsen; ask a clinician before use over areas with reduced sensation or circulation. Additional purchase: $0 only if safe, suitable supplies are already owned; otherwise not priced.",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-08",
+      "file": "content/treatment.html",
+      "line": 70,
+      "text": "Short breaks, changing tasks and adjustable workstations can reduce prolonged static or repetitive exposure. An improved chair does not replace breaks. [[W3]]",
+      "source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "treatment-09",
+      "file": "content/treatment.html",
+      "line": 67,
+      "text": "04 / WORKDAY Make position changes part of the day Short breaks, changing tasks and adjustable workstations can reduce prolonged static or repetitive exposure. An improved chair does not replace breaks. [[W3]] Project application: start with a reminder every 30–60 minutes to change position or take a brief walk as comfortable. This interval is a practical suggestion, not a medical dose or an OSHA rule. Additional purchase: $0 using an existing timer.",
+      "source_ids": [
+        "W3"
+      ]
+    },
+    {
+      "id": "treatment-10",
+      "file": "content/treatment.html",
+      "line": 86,
+      "text": "NHS lists paracetamol (called acetaminophen in the US) and ibuprofen as possible pain-relief options for shoulder pain. Follow your local product label and pharmacist’s advice; this site does not prescribe doses or combinations. [[M1]] [[M2]] [[M5]] [[M6]]",
+      "source_ids": [
+        "M1",
+        "M2",
+        "M5",
+        "M6"
+      ]
+    },
+    {
+      "id": "treatment-11",
+      "file": "content/treatment.html",
+      "line": 105,
+      "text": "Acetaminophen / paracetamol Do not duplicate it across pain, cold or flu products. Check with a pharmacist for liver/kidney conditions or heavy alcohol use. An overdose can damage the liver; get urgent poison/medical advice if you exceed the label. [[M6]] Not verified: brand, strength, pack size and market not chosen. No invented range.",
+      "source_ids": [
+        "M6"
+      ]
+    },
+    {
+      "id": "treatment-12",
+      "file": "content/treatment.html",
+      "line": 118,
+      "text": "Ibuprofen (NSAID) May be unsuitable with previous ulcers, some asthma/allergies, heart/liver/kidney conditions or clotting problems. Interactions include anticoagulants and other medicines. Do not combine with other NSAIDs such as naproxen or aspirin without medical advice; do not stop prescribed medicines on your own. Use the smallest effective dose for the shortest time per label/advice. [[M5]] Not verified: formulation and suitability must be established first.",
+      "source_ids": [
+        "M5"
+      ]
+    },
+    {
+      "id": "treatment-13",
+      "file": "content/treatment.html",
+      "line": 139,
+      "text": "Assessment before assumptions. A health professional examines the shoulder and may order tests to clarify the cause. [[M2]]",
+      "source_ids": [
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-14",
+      "file": "content/treatment.html",
+      "line": 143,
+      "text": "Physical therapy / rehabilitation. For scapular disorders, therapy targets the specific causes, strengthening stabilizing muscles and stretching limiting tightness. Generic band work is not a substitute for this assessment. [[M3]]",
+      "source_ids": [
+        "M3"
+      ]
+    },
+    {
+      "id": "treatment-15",
+      "file": "content/treatment.html",
+      "line": 149,
+      "text": "Medication or injections when appropriate. These may be offered for pain/swelling after evaluation. They are not a blanket recommendation for unexplained winging. [[M1]] [[M2]]",
+      "source_ids": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "treatment-16",
+      "file": "content/treatment.html",
+      "line": 154,
+      "text": "Specialist or surgical care when indicated. Most muscle-weakness/tightness-related dyskinesis does not need surgery; underlying shoulder injury can change the treatment. [[M3]]",
+      "source_ids": [
+        "M3"
+      ]
+    },
+    {
+      "id": "treatment-17",
+      "file": "content/treatment.html",
+      "line": 168,
+      "text": "NHS advises assessment if symptoms worsen or do not improve after 2 weeks. This is a care threshold, not a promise to heal in 2 weeks. [[M2]] MedlinePlus rotator-cuff advice supports gradual return to sport after pain, strength and motion are assessed. [[M4]]",
+      "source_ids": [
+        "M2",
+        "M4"
+      ]
+    }
+  ]
+}
