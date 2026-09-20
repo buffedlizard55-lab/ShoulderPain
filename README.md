@@ -47,7 +47,7 @@ The site is served from the repository root. Relative URLs work at the `/Shoulde
 
 ## Deployment
 
-At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bcb6-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
+At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bd2b-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
 
 ## Optional log and privacy
 

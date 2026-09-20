@@ -81,42 +81,51 @@
       "id": "causes-09",
       "file": "content/causes.html",
       "line": 76,
+      "text": "Workout overload or nearby tendon injury Overuse or injury of nearby tendons, muscle imbalance and rotator cuff tears are recognized possibilities. A new load, form change or painful repetition can be useful history for a clinician. [[M1]] Timing after a workout does not identify a strain, tendon problem or tear. Do not test the theory with more painful loading.",
+      "source_ids": [
+        "M1"
+      ]
+    },
+    {
+      "id": "causes-10",
+      "file": "content/causes.html",
+      "line": 88,
       "text": "Sustained desk work Static postures without breaks can fatigue neck and shoulder muscles. OSHA recommends task variation and short breaks. [[W3]] Your desk exposure is a plausible contributor, not proof of an injury or the only cause. A posture photo cannot settle this.",
       "source_ids": [
         "W3"
       ]
     },
     {
-      "id": "causes-10",
+      "id": "causes-11",
       "file": "content/causes.html",
-      "line": 87,
+      "line": 99,
       "text": "Sleep-position aggravation For rotator cuff problems, MedlinePlus suggests the non-painful side or back, with pillows supporting the painful shoulder. [[M4]] This supports a comfort trial, not the claim that left-side sleeping caused a tear or nerve injury.",
       "source_ids": [
         "M4"
       ]
     },
     {
-      "id": "causes-11",
+      "id": "causes-12",
       "file": "content/causes.html",
-      "line": 98,
+      "line": 110,
       "text": "Scapular movement disorder / visible winging AAOS describes abnormal shoulder-blade position or movement associated with muscle weakness/tightness, nerve injury or bone/joint injury. Symptoms may include pain, weakness, limited motion, snapping and visible prominence. [[M3]] “Wing pain” is not itself a diagnosis. A prominent blade does not identify a particular damaged nerve.",
       "source_ids": [
         "M3"
       ]
     },
     {
-      "id": "causes-12",
+      "id": "causes-13",
       "file": "content/causes.html",
-      "line": 111,
+      "line": 123,
       "text": "Neck or other referred pain Shoulder pain may originate elsewhere, including the neck or lungs. [[M1]] Do not assume every shoulder-blade symptom is muscular, especially with chest or neurologic symptoms.",
       "source_ids": [
         "M1"
       ]
     },
     {
-      "id": "causes-13",
+      "id": "causes-14",
       "file": "content/causes.html",
-      "line": 122,
+      "line": 134,
       "text": "Other shoulder conditions Frozen shoulder, arthritis, instability, acromioclavicular-joint problems, fracture and dislocation are other recognized possibilities. [[M1]] [[M2]] This list neither confirms nor excludes any of them. Trauma and major loss of function change the urgency.",
       "source_ids": [
         "M1",
@@ -124,9 +133,9 @@
       ]
     },
     {
-      "id": "causes-14",
+      "id": "causes-15",
       "file": "content/causes.html",
-      "line": 141,
+      "line": 153,
       "text": "A clinician can assess shoulder and shoulder-blade movement, strength and tenderness. Imaging is not always necessary for scapular dyskinesis; it may be ordered for a suspected bone or other shoulder injury. Nerve testing may be considered if nerve injury is suspected. [[M3]]",
       "source_ids": [
         "M3"
@@ -528,7 +537,7 @@
     {
       "id": "products-01",
       "file": "content/products.html",
-      "line": 35,
+      "line": 54,
       "text": "Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]]",
       "source_ids": [
         "P1"
@@ -537,7 +546,7 @@
     {
       "id": "products-02",
       "file": "content/products.html",
-      "line": 49,
+      "line": 68,
       "text": "Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. [[P1]]",
       "source_ids": [
         "P1"
@@ -546,7 +555,7 @@
     {
       "id": "products-03",
       "file": "content/products.html",
-      "line": 55,
+      "line": 74,
       "text": "The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]]",
       "source_ids": [
         "P1"
@@ -555,7 +564,7 @@
     {
       "id": "products-04",
       "file": "content/products.html",
-      "line": 28,
+      "line": 47,
       "text": "FLIP-TOP · COMPACT$54.49 COMHOMA DH005 White · no-drawer version · sale price Manufacturer images list a 31.5 × 15.75 inch top, 30.71–46.46 inch height range, lockable casters and a 90° flip-top storage design. Stated capacity: 110 lb. [[P1]] Conditional candidate The shallow surface and high minimum height may not fit your seated setup. The base remains on the floor; the full folded envelope and unit weight were not verified. “Folds flat” marketing does not mean the entire frame collapses. Flag: drawer-variant images mix different heights/capacities into the same page. Do not transfer these White/no-drawer specs to the drawer version. Monitor-arm compatibility is unverified. [[P1]] The $25.50 figure near the images is the discount, not the price; the selected White price is $54.49. [[P1]] Official listing & current terms ↗",
       "source_ids": [
         "P1"
@@ -564,7 +573,7 @@
     {
       "id": "products-05",
       "file": "content/products.html",
-      "line": 72,
+      "line": 91,
       "text": "43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]]",
       "source_ids": [
         "P2"
@@ -573,7 +582,7 @@
     {
       "id": "products-06",
       "file": "content/products.html",
-      "line": 65,
+      "line": 84,
       "text": "WALL-FOLDING · FIXED INSTALL$69.99 VIVO folding workbench MOUNT-SF1FB · Black 43.3 × 18 inch top, 1 inch thick; 2.3 inches from the wall when folded. Steel brackets and particle-board top; stated capacity 110 lb. Mounting options: wood stud, brick or concrete. Page showed in stock, a 3-year warranty and 30-day return policy. [[P2]] Folds away; does not quickly detach Only a candidate if a permanent wall fixture is acceptable. Height is set by installation and the 18-inch depth needs a real screen/input-device fit check. Flag: confirm wall structure, installation permission and the manual’s requirements. Installation cost is not verified. No generic clamp-on monitor arm is recommended for this folding particle-board top. Official listing, manual & terms ↗",
       "source_ids": [
         "P2"
@@ -582,7 +591,7 @@
     {
       "id": "products-07",
       "file": "content/products.html",
-      "line": 103,
+      "line": 122,
       "text": "Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]]",
       "source_ids": [
         "P3"
@@ -591,7 +600,7 @@
     {
       "id": "products-08",
       "file": "content/products.html",
-      "line": 118,
+      "line": 137,
       "text": "Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]]",
       "source_ids": [
         "P3"
@@ -600,7 +609,7 @@
     {
       "id": "products-09",
       "file": "content/products.html",
-      "line": 124,
+      "line": 143,
       "text": "Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]]",
       "source_ids": [
         "P3"
@@ -609,7 +618,7 @@
     {
       "id": "products-10",
       "file": "content/products.html",
-      "line": 96,
+      "line": 115,
       "text": "FULLY COLLAPSING · ELECTRIC$1,049 Lillipad PRO Standard · Maple · displayed sale price Desktop 46 × 24 inches; folded envelope 53 × 24 × 6 inches; unit weight 67 lb. The FAQ gives a suggested working-height range of 13.5–42 inches; 6 inches is the storage height. Wheels, a removable wheel brake and a 75 lb operational load rating are listed. [[P3]] Storage fit and handling remain unproven The collapsed desk is longer than its top. It is heavy; wheels do not guarantee easy movement through your room or across thresholds. Do not lift a heavy desk with a painful shoulder. Availability flag: “Sold out,” add-to-cart and shipping messages appear together. Treat availability as unresolved. The same page lists 700 lb and 350 lb static-load tests in different sections; neither is the 75 lb operational rating. [[P3]] Page advertises 60-day returns and a 5-year critical-component warranty. Check the linked policy conditions. GO/Large pricing is not inferred from this selected variant. [[P3]] Official listing & variant confirmation ↗",
       "source_ids": [
         "P3"
@@ -618,7 +627,7 @@
     {
       "id": "products-11",
       "file": "content/products.html",
-      "line": 142,
+      "line": 161,
       "text": "Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]]",
       "source_ids": [
         "P4"
@@ -627,7 +636,7 @@
     {
       "id": "products-12",
       "file": "content/products.html",
-      "line": 153,
+      "line": 172,
       "text": "This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]]",
       "source_ids": [
         "W1"
@@ -636,7 +645,7 @@
     {
       "id": "products-13",
       "file": "content/products.html",
-      "line": 159,
+      "line": 178,
       "text": "Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]]",
       "source_ids": [
         "P4"
@@ -645,7 +654,7 @@
     {
       "id": "products-14",
       "file": "content/products.html",
-      "line": 135,
+      "line": 154,
       "text": "FOLDING CHAIR · LIMITED USE CASE$14.99 IKEA GUNDE Black · article 002.177.97 Open size 16⅛ W × 17¾ D × 30¾ H inches; fixed seat height 17¾ inches. Tested for 220 lb. Pre-assembled, indoor use, locks open and has a carry/hanging handle. Local stock requires a store/delivery check. [[P4]] Meets folding need, not a verified long-day workstation solution This is a folding household chair, without the adjustable seat/back/arm support sought in the OSHA workstation checklist. The project does not recommend it as the solution for a 12-hour desk day. [[W1]] Flag: manufacturer lists package dimensions (16½ × 35¾ × 2¾ inches; 4 lb 13 oz), not a separately verified folded-chair envelope. Do not equate package measurements with the bare chair. [[P4]] Official listing, manual & current terms ↗",
       "source_ids": [
         "P4",
@@ -655,7 +664,7 @@
     {
       "id": "products-15",
       "file": "content/products.html",
-      "line": 177,
+      "line": 196,
       "text": "Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; base diameter 27.6 inches; weight 42 lb. Seat height 17–21 inches, seat depth 18–22 inches; adjustable/removable armrests; stated capacity 275 lb; assembly required and 7-year warranty listed. [[P5]]",
       "source_ids": [
         "P5"
@@ -664,7 +673,7 @@
     {
       "id": "products-16",
       "file": "content/products.html",
-      "line": 170,
+      "line": 189,
       "text": "NOT FOLDABLE · EXCEPTION ONLYfrom $369 Branch Ergonomic Chair Ergonomic Chair · not Lite or Pro Official comparison lists a $369 starting price. General dimensions 25 W × 24 D × 38–42 H inches; base diameter 27.6 inches; weight 42 lb. Seat height 17–21 inches, seat depth 18–22 inches; adjustable/removable armrests; stated capacity 275 lb; assembly required and 7-year warranty listed. [[P5]] Does not meet the folding requirement Included only to show the trade-off between foldability and adjustable support. It requires a separate parking space and a clear removal route. No personal fit, rapid-removal time or pain-relief benefit has been verified. Flag: base diameter is wider than the headline body width. Variant-specific total, stock and return conditions need confirmation. This is not a recommendation to relax your hard constraint silently. Official specifications & current terms ↗",
       "source_ids": [
         "P5"

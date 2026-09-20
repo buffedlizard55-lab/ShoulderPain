@@ -43,6 +43,9 @@ for (const width of [390, 1440]) {
 }
 test("skip link and product filters work with keyboard", async ({ page }) => {
   await page.goto("/products.html");
+  await expect(page.locator("#filter-status")).toHaveText(
+    "Showing 5 options. Read the qualification limits on each card.",
+  );
   await page.keyboard.press("Tab");
   await expect(page.locator(".skip-link")).toBeFocused();
   await page.keyboard.press("Enter");
