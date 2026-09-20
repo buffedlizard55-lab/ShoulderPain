@@ -32,7 +32,7 @@ jobs:
           from pathlib import Path
           path = Path("browser-check.log")
           if path.exists():
-              tail = "\n".join(path.read_text().splitlines()[-100:])
+              tail = "\n".join(line for line in path.read_text().splitlines() if "[WebServer]" not in line)[-3500:]
               escaped = tail.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
               print("::error title=Browser test details::" + escaped)
           PYTHON
