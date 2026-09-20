@@ -6,7 +6,17 @@ A source-linked GitHub Pages guide for shoulder and shoulder-blade (“wing”) 
 
 **Educational information, not diagnosis or a personalized rehabilitation plan.** Emergency/urgent warning signs take priority over exercises, furniture or symptom logging. No sign-in or symptom entry is required.
 
-## What changed in this review
+## Follow-up review (current session)
+
+This session starts at `06eec87`, after PR #11. It reopens the 20 registered
+sources, adds an accessible on-page statement ledger, and strengthens offline
+checks against stale ledger text/line numbers, missing pages, unknown template
+references and invalid/future source dates. New source flags include COMHOMA's
+mixed stock controls and Branch's unusable spec-sheet area. Branch specifications
+not reproduced in the current retrieval are omitted rather than re-certified.
+Run `npm run test:audit` for the eight new audit regression tests.
+
+## Prior release foundation
 
 The existing repository already contained a substantial static research site. This revision replaces blanket verification/completeness claims with a narrower, auditable source register, simplifies the UI and corrects unsafe or unverified assumptions. The previous site remains in Git history.
 
@@ -47,7 +57,7 @@ The site is served from the repository root. Relative URLs work at the `/Shoulde
 
 ## Deployment
 
-At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bd2b-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
+At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bfa3-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
 
 ## Optional log and privacy
 

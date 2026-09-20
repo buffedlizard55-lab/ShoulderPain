@@ -9,6 +9,8 @@ from urllib.parse import unquote, urlsplit
 import json
 import re
 import sys
+from datetime import date
+from claim_ledger import collect
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
@@ -63,6 +65,13 @@ class Page(HTMLParser):
 
 
 pages = {path.name: Page(path) for path in ROOT.glob("*.html")}
+expected_pages = {path.name for path in (ROOT / "content").glob("*.html")}
+if not expected_pages or set(pages) != expected_pages:
+    errors.append("Generated page set does not match content templates")
+for path in (ROOT / "content").glob("*.html"):
+    for marker in re.findall(r"\[\[(.*?)\]\]", path.read_text()):
+        if marker not in source_ids:
+            errors.append(f"{path}: unknown source marker {marker}")
 for name, page in pages.items():
     for ok, label in (
         (page.lang, "language"),
@@ -114,11 +123,19 @@ for source in sources:
     ):
         if not source.get(key):
             errors.append(f"Source {source.get('id', '?')}: missing {key}")
+    try:
+        checked = date.fromisoformat(source["checked"])
+        if checked > date.today():
+            errors.append(f"Source {source['id']}: future check date")
+    except (ValueError, TypeError):
+        errors.append(f"Source {source['id']}: invalid check date")
     if urlsplit(source["url"]).scheme != "https":
         errors.append("Non-HTTPS source " + source["url"])
 
 claims_path = ROOT / "data/claims.json"
 claims_data = json.loads(claims_path.read_text())
+if claims_data != collect(ROOT):
+    errors.append("Claim ledger is stale; run npm run build and review changes")
 claims = claims_data.get("claims", [])
 if not isinstance(claims, list) or not claims:
     errors.append("data/claims.json: missing claims list")

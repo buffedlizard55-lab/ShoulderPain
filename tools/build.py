@@ -43,7 +43,18 @@ def source_page():
  text+='<section><h2>Official source register</h2><p>Each reference below was directly opened on 20 September 2026. Excerpts are short review aids, not full quotations of the guidance. Publisher authority does not make every claim certain. Commercial sources support prices/specifications only.</p><div class="source-list">'
  for s in SOURCES:
   text+=f'''<article class="source-record" id="{s['id'].lower()}"><div><span class="pill">{s['id']} · {html.escape(s['type'])}</span><h3><a href="{html.escape(s['url'],quote=True)}">{html.escape(s['title'])} ↗</a></h3></div><p><strong>Read:</strong> {html.escape(s['locator'])}.</p><blockquote>{html.escape(s['excerpt'])}</blockquote><p><strong>Boundary:</strong> {html.escape(s['boundary'])}</p><p class="small">Checked {s['checked']} · {s['method']}</p></article>'''
- return text+'</div></section>'
+ text+='</div></section><section id="statement-audit"><h2>Statement-by-statement review</h2><p>Source-bearing paragraphs, list items, table rows and cards, grouped by page. Nested units can overlap; this is not a count of independent facts. Uncited editorial text is not included: review the full page too. A reference is not a truth certificate.</p>'
+ claims=json.loads((ROOT/'data/claims.json').read_text())['claims']
+ for slug,label,*_ in PAGES:
+  rows=[c for c in claims if c['file']==f'content/{slug}.html']
+  if not rows: continue
+  text+=f'<details class="audit-group"><summary>{html.escape(label)} · {len(rows)} review units</summary><p><a href="{slug}.html">Read the full page and its limits →</a></p>'
+  for c in rows:
+   text+=f'<article id="{c["id"]}" class="source-record"><h3>{c["id"]}</h3><p class="small">{html.escape(c["file"])} · line {c["line"]}</p><p>{html.escape(c["text"])}</p><p>Source scope: '
+   text+=' · '.join(f'<a href="#{sid.lower()}">{sid} register entry</a>' for sid in c['source_ids'])
+   text+='</p></article>'
+  text+='</details>'
+ return text+'</section>'
 
 for slug,label,title,lead in PAGES:
  body=source_page() if slug=='sources' else (ROOT/'content'/f'{slug}.html').read_text()

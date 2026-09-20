@@ -138,7 +138,7 @@
     "url": "https://comhoma.com/products/comhoma-small-adjustable-standing-desk-tiltable-tabletop-dh005",
     "locator": "White price; manufacturer specification and folding images",
     "excerpt": "Sale price$54.49Regular price$79.99",
-    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope not verified.",
+    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope not verified. Extracted controls include both in-stock and sold-out text; actual stock unresolved.",
     "checked": "2026-09-20",
     "method": "Official page directly opened and relevant text read"
   },
@@ -180,9 +180,9 @@
     "title": "Branch · Ergonomic Chair",
     "type": "Official manufacturer / seller",
     "url": "https://www.branchfurniture.com/products/ergonomic-chair",
-    "locator": "Product details; Dimensions; Find Your Fit",
-    "excerpt": "25″W x 24″D x 38-42″H | Base diameter: 27.6″",
-    "boundary": "Starting price $369 in comparison section. Non-folding alternative only; adjustment range does not prove individual fit.",
+    "locator": "Selected Black / Black / Standard; Benefits; comparison; spec-sheet area",
+    "excerpt": "25”W x 24”D x 38-42”H",
+    "boundary": "Displayed $369. Non-folding exception. Earlier base diameter, unit weight, seat adjustment ranges and warranty duration not reproduced in this retrieval and omitted from current card. Spec-sheet area showed a template error/incomplete download URL.",
     "checked": "2026-09-20",
     "method": "Official page directly opened and relevant text read"
   },
