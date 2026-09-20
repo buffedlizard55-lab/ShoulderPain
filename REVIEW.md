@@ -52,6 +52,10 @@ or a claim of exhaustive automated line-by-line verification.
 - No chair in the checked set is certified as meeting both folding and adjustable
   workstation support. No actual room/door/body/removal fit is asserted.
 - Added two browser regressions for keyboard and no-JavaScript use of the audit.
+  CI passed 32 tests but found the no-JavaScript summary click unstable during
+  smooth anchor scrolling. Removed global smooth scrolling; full suite rerun
+  required before merge. CI now surfaces failure details in check annotations,
+  since sandbox network access to downloadable Actions logs also failed.
 - Local build, structural/source/ledger checks, eight Node tests and eight Python
   audit tests passed. Formatter and whitespace checks are run before publication.
 - Local Chromium installation failed with ECONNRESET from the Playwright CDN.
