@@ -29,16 +29,16 @@
   <p class="kicker">Project status</p>
   <h1>What still needs doing, and what got in the way</h1>
   <p class="lead">Honest project state after the build passes <em>and</em> an independent line-by-line verification pass: what's complete, what's blocked on human input or real-world facts, and every irregularity found during verification, flagged for review.</p>
-  <p class="verified-date">Updated September 19, 2026 (session 2: verification pass + new features)</p>
+  <p class="verified-date">Updated September 20, 2026 (session 3: third full verification pass — every source and product page re-opened; 11 corrections; 5 new sources)</p>
 
   <section>
-    <h2>✅ Complete (through session 2)</h2>
+    <h2>✅ Complete (through session 3)</h2>
     <ul>
       <li>Full cause analysis for the three suspected triggers (desk, sleep, gym), each sourced to trusted medical references.</li>
       <li>Treatment ladder (self-care → PT/exercise → injection → surgery) with the <em>actual</em> evidence quality, including the 2016 Cochrane review's honest nuance.</li>
       <li>Concrete exercise plan (4 parts) — every exercise traced to a published hospital/medical-center program.</li>
       <li>OSHA/NIOSH-based small-room desk setup with three foldable desk categories + verified prices.</li>
-      <li>Product list with official-page prices, warranties, trials, and three budget builds (≈$246 / ≈$557 / ≈$1,448).</li>
+      <li>Product list with official-page prices, warranties, trials, and three budget builds (≈$251 / ≈$567 / ≈$1,453 after the pass-3 product corrections).</li>
       <li>Master sources page with trust tiers and a verification log; irregularities logged below.</li>
       <li>Site published to GitHub Pages (main branch, repo root — the existing Pages source setting; the bot token
         cannot change it to a /docs subfolder: 403 “Resource not accessible by integration”). Site files were placed
@@ -53,6 +53,18 @@
       <li><strong>Session 2:</strong> new measurement worksheet + verified desk-footprint table on the
         <a href="ergonomics.html#measure">Desk Setup page</a>, so the buying decision can be checked against real room
         numbers.</li>
+      <li><strong>Session 3 (pass 3):</strong> every one of the 43 existing sources and all 12 product pages were re-opened by
+        direct retrieval (including the ten pages pass 2 had skipped — irregularity #11 is closed). 11 substantive
+        corrections were made and logged (<a href="sources.html#pass3">pass-3 log</a>): a wrong product (the “monitor
+        arm” was an add-on part), a weak chair pick, an unsupported drug-safety claim, three mis-attributed posture/sleep
+        claims, exercise doses that the sources didn't actually state, and a desk-depth guideline all three foldable desks
+        miss.</li>
+      <li><strong>Session 3:</strong> five sources added — AAOS's illustrated Rotator Cuff and Shoulder Conditioning Program
+        (S44, with sets/reps/days), Mayo Clinic Health System's posture-and-shoulder-pain article (S45), MedlinePlus's
+        rotator-cuff exercise list (S46), and official product pages for the replacement monitor mount (S47) and chair
+        (S48). The Exercises page now quotes doses from official programs or marks them † as defaults.</li>
+      <li><strong>Session 3:</strong> Desk Setup page gained a “what the guidance says about shoulder pain specifically”
+        section (arms too high/low, armrests, mouse reach, laptops, 24″ desk depth) and three new worksheet rows.</li>
     </ul>
   </section>
 
@@ -73,7 +85,16 @@
           <tr><td>8</td><td>2025 Cochrane review found manual therapy + exercise only slightly better than placebo (function below MCID)</td><td>Treatment expectations</td><td><strong>Found &amp; fixed in session 2:</strong> the review is from <strong>2016</strong>, not 2025 — year corrected everywhere; the expectation-setting stands (benefits are modest and slow, 4–6 weeks; don't expect a quick fix)</td></tr>
           <tr><td>9</td><td>[Session 2] Treatment page claimed the 2023 RCT (S23) beat “standard care” — the trial had no standard-care arm (it compared retraction-only vs. retraction+rotation)</td><td>Treatment step 2</td><td><strong>Fixed.</strong> Wording now describes the actual comparison</td></tr>
           <tr><td>10</td><td>[Session 2] COMHOMA DH005 price moved $49.49 → $54.49 <em>between two verification passes on the same day</em>; Branch chair row had unverified sizing text + stray “\” characters rendering on the page</td><td>Products page</td><td><strong>Fixed.</strong> Prices/claims updated; Branch row rewritten to schema-verified facts only. Confirms prices must be re-checked at purchase time</td></tr>
-          <tr><td>11</td><td>[Session 2] Sources S3–S6 (MedlinePlus drug pages), S15, S17–S19 (OSHA sub-pages), S20 (NIOSH), S29 (Healthline) were not re-fetched in the second pass</td><td>Sources page</td><td>Verified in pass 1 (same day, earlier); stable generic institutional content. Scheduled for re-verification next session — flagged here so the claim “everything verified twice” is not overstated</td></tr>
+          <tr><td>11</td><td>[Session 2] Sources S3–S6 (MedlinePlus drug pages), S15, S17–S19 (OSHA sub-pages), S20 (NIOSH), S29 (Healthline) were not re-fetched in the second pass</td><td>Sources page</td><td><strong>Closed in session 3:</strong> all ten re-fetched Sep 20, 2026 and confirmed consistent</td></tr>
+          <tr><td>12</td><td>[Session 3] Treatment page said topical diclofenac has “less whole-body exposure” — not stated by the cited MedlinePlus page, whose OTC-gel label covers arthritis of hands/wrists/elbows/feet/ankles/knees only and carries the same boxed NSAID warnings</td><td>Treatment step 1c</td><td><strong>Fixed.</strong> Claim removed; Mayo's topical-cream suggestion (S8) plus S5's limits now shown; “ask a pharmacist before shoulder use” added</td></tr>
+          <tr><td>13</td><td>[Session 3] Causes page attributed “posture causes functional winging” to S28/S27 and treated postural kyphosis as a shoulder-blade pain source; the sources don't say that (S12: postural kyphosis “doesn't usually cause pain”)</td><td>Causes §1 and §4</td><td><strong>Fixed.</strong> Rewritten to S1 (“poor shoulder posture and mechanics”), S27 (“poor physical conditioning” risk factor), S28 (musculoskeletal vs nerve winging) and the new S45; the “chest shortens / rhomboids lengthen” story is now explicitly labelled a working model</td></tr>
+          <tr><td>14</td><td>[Session 3] Sleep paragraph cited S11 (which says nothing about sleep) and paraphrased S13 as warning about “hunched” sleeping</td><td>Causes §2</td><td><strong>Fixed.</strong> S13 quoted accurately; MedlinePlus S2 (“lie either on the side that is not in pain or on your back”) is now the primary sleep citation</td></tr>
+          <tr><td>15</td><td>[Session 3] Exercise doses not present in their sources (chin-tuck hold/reps, doorway-stretch hold, crossover reps), a mislabelled drill (“protraction” vs. the handout's “retraction and elevation”), and a stated weight progression the Texas Children's handout leaves blank</td><td>Exercises Parts A–C</td><td><strong>Fixed.</strong> Doses now quoted from AAOS S44 or marked † as defaults; drill renamed; “start with no weight”</td></tr>
+          <tr><td>16</td><td>[Session 3] The listed “monitor arm” (VIVO PT-SD-AM01A, $29.99) is an add-on arm for VIVO's own monitor-stand poles — it has no desk clamp and would not have worked alone</td><td>Products, budget builds</td><td><strong>Fixed.</strong> Replaced by VIVO STAND-V001 clamp/grommet desk mount ($34.99); withdrawn row left visible; totals recomputed</td></tr>
+          <tr><td>17</td><td>[Session 3] IKEA TOSSBERG/MALSKÄR “mid pick” product page lists no lumbar/tilt/armrest adjustment; Branch “Lite $329” model no longer exists in the line-up; Branch chair shows a ~3-week ship date; Staples Dexley Blue $149.99 not shown (Black $169.99)</td><td>Chairs</td><td><strong>Fixed.</strong> IKEA MARKUS ($299.99; lumbar, tilt lock, 10-yr warranty; armrests not height-adjustable — flagged) replaces it; Lite removed; ship date noted; Dexley $169.99 + Hyken $154.99 alternative</td></tr>
+          <tr><td>18</td><td>[Session 3] Oregon OSHA's 24″ minimum work-surface depth for a flat-panel display — the COMHOMA (15.75″), VIVO wall desk (18″) and VIVO converter (15.7″) are all shallower; only Lillipad (24″/25″) meets it. Whether a clamp arm fits the COMHOMA's tilting, lipped top is unverified</td><td>Desk choice</td><td>Human check: with a shallow desk, plan the monitor arm (or a separate rear stand) so the screen sits 16–29″ away; if choosing COMHOMA, confirm the rear edge accepts a C-clamp before buying the arm</td></tr>
+          <tr><td>19</td><td>[Session 3] Three source URLs had moved (Mayo “when to see a doctor” merged into the causes page; Mass General Brigham article moved to /health-wellness/; orthoinfo.aaos.org → orthoinfo.org) — old links redirected correctly</td><td>Sources</td><td><strong>Fixed.</strong> Links updated to canonical URLs</td></tr>
+          <tr><td>20</td><td>[Session 3] No verified official <em>video</em> demonstrations exist on any cited program page (AAOS, MedlinePlus, Cleveland Clinic, hospital PDFs are illustrated text)</td><td>Exercises</td><td>Illustrated official handouts (S44 page + PDF, S26, S43, S27) are linked instead; no unverified third-party videos were added — a PT visit remains the technique check</td></tr>
         </tbody>
       </table>
     </div>
@@ -83,36 +104,41 @@
     <h2>🔜 Recommended work for the next session</h2>
     <ol>
       <li>
-        <strong>Re-verify all prices again before any purchase</strong> (5 min). Prices were valid Sep 19, 2026 only — and
-        the COMHOMA price moved <em>within a single day</em> between the two verification passes. Re-read the product
+        <strong>Re-verify all prices again before any purchase</strong> (5 min). Prices were valid Sep 19–20, 2026 only —
+        the COMHOMA price moved <em>within a single day</em>, the Branch chair is on a ~3-week ship date, the Lillipad PRO
+        variant was sold out on both days, and Staples' colour-variant pricing changed overnight. Re-read the product
         pages and update price cells; the Products page is designed so only those cells change.
-      </li>
-      <li>
-        <strong>Re-verify the 10 sources not re-checked in pass 2</strong> (S3–S6, S15, S17–S19, S20, S29) — see
-        irregularity #11. Low risk, but the site should be able to say every line was checked twice.
       </li>
       <li>
         <strong>Resolve the winging question</strong> (human action). Book a primary-care or orthopedic visit if: no
         improvement after the 2–4-week self-care window, visible protrusion, or any weakness. The visit converts the
         “flag” items into a confirmed plan and may change the exercise emphasis. Bring the
-        <a href="pain-log.html">Pain Log</a> CSV export.
+        <a href="pain-log.html">Pain Log</a> CSV export and the AAOS program printout (S44) so the PT can strike or add
+        exercises on paper.
       </li>
       <li>
-        <strong>Add exercise videos/diagrams</strong>. The exercise descriptions are text-only (faithful to sources);
-        linking official video demos from the cited programs would cut technique-error risk. Each video link must be
-        individually verified against the cited program before adding (no generic YouTube picks).
+        <strong>Confirm the monitor-arm fit for whichever desk is chosen</strong> (irregularity #18): the VIVO STAND-V001
+        clamp needs a flat rear edge up to 3.25″ thick. The VIVO wall desk (1″ top) fits; the COMHOMA tilting top is
+        unverified — a COMHOMA support query or a grommet-free alternative (monitor riser) is the fallback.
       </li>
       <li>
         <strong>Deepen the evidence layer</strong>. Add the underlying trials behind the desk-posture claims (EMG studies
-        on forward-head posture load) with PubMed links, and a short “why standing desks help” evidence page — the
-        sit-stand claim currently rests on OSHA's “posture variation” guidance rather than a dedicated RCT summary.
+        on forward-head posture load) with PubMed links, and a short “why sit-stand helps” evidence page — the sit-stand
+        claim still rests on OSHA's “posture variation” guidance rather than a dedicated RCT summary. Candidate: the
+        2013 scapular-dyskinesis consensus statement (Kibler et al., Br J Sports Med) for the posture ↔ shoulder-blade
+        mechanics link, which this site currently labels a “working model.”
+      </li>
+      <li>
+        <strong>Optional pain-log upgrades</strong>: a simple line chart of pain over time (inline SVG, still no
+        dependencies), and a “print report” view for doctor visits. (Deferred again this session in favour of the
+        verification corrections, which were higher-value.)
       </li>
       <li>
         <strong>Internationalization / currency</strong> only if buying outside the US — all prices are USD, US-stocked.
       </li>
       <li>
-        <strong>Optional pain-log upgrades</strong>: a simple line chart of pain over time (inline SVG, still no
-        dependencies), and a “print report” view for doctor visits.
+        <strong>Live price monitoring</strong> would need a scheduled workflow that re-fetches the product pages into a JSON
+        cache; it is not possible from a static page, so it is intentionally not promised.
       </li>
     </ol>
   </section>
@@ -122,10 +148,11 @@
     <ul>
       <li><strong>No personal data:</strong> I can't examine the shoulder, see the winging, or know the room's geometry. Everything is therefore structured as decision rules (“if X, then Y”) rather than a single prescription.</li>
       <li><strong>No clinical authority:</strong> this is a research compilation. The strongest claim the evidence supports is “start self-care + exercise, checkpoint at 2 weeks, escalate to a clinician if it fails” — and that's exactly the structure used.</li>
-      <li><strong>Price volatility:</strong> furniture and accessory prices change weekly; a static site goes stale. The next session should re-verify before any purchase is made from this page.</li>
+      <li><strong>Price volatility:</strong> furniture and accessory prices change weekly (and, as pass 2 showed, within a day); a static site goes stale. Re-verify before any purchase is made from this page.</li>
       <li><strong>Small-study evidence base:</strong> several cited trials are small (e.g., n=33); the Cochrane base for rotator-cuff therapy is thin. The site states this rather than hiding it, but it means “evidence-based” here is stronger than it looks.</li>
       <li><strong>Single-region assumption:</strong> US sources, USD prices, US retail. If any factor differs, the product section needs a regional pass.</li>
-      <li><strong>No live price monitoring:</strong> a static GitHub Pages site can't track prices; that would need a workflow (e.g., a scheduled job that re-fetches the 11 product pages and updates a JSON price cache) — suggested for a later session.</li>
+      <li><strong>No live price monitoring:</strong> a static GitHub Pages site can't track prices; that would need a workflow (e.g., a scheduled job that re-fetches the 12 product pages and updates a JSON price cache) — suggested for a later session.</li>
+      <li><strong>Product-fit claims are read, not tested:</strong> nothing on the Products page has been physically tried; specs are quoted from manufacturer pages. Where a fit question is open (monitor arm on the COMHOMA top; MARKUS armrest height) it is flagged rather than assumed.</li>
     </ul>
   </section>
 </main>
