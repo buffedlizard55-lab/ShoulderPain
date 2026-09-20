@@ -18,6 +18,7 @@
       <a href="exercises.html">Exercises</a>
       <a href="ergonomics.html">Desk Setup</a>
       <a href="products.html">Products &amp; Prices</a>
+      <a href="costs.html">Costs (US)</a>
       <a href="pain-log.html">Pain Log</a>
       <a href="sources.html">Sources</a>
       <a href="next-steps.html" class="active">Next Steps</a>
@@ -28,8 +29,8 @@
 <main id="main" class="page">
   <p class="kicker">Project status</p>
   <h1>What still needs doing, and what got in the way</h1>
-  <p class="lead">Honest project state after the build passes <em>and</em> an independent line-by-line verification pass: what's complete, what's blocked on human input or real-world facts, and every irregularity found during verification, flagged for review.</p>
-  <p class="verified-date">Updated September 20, 2026 (session 3: third full verification pass — every source and product page re-opened; 11 corrections; 5 new sources)</p>
+  <p class="lead">Honest project state after the build passes <em>and</em> three independent verification passes: what's complete, what's blocked on human input or real-world facts, and every irregularity found during verification, flagged for review.</p>
+  <p class="verified-date">Updated September 20, 2026 (session 3, after pass 4: 9 further corrections, 7 new sources, a new Costs page, and a claim-by-claim re-read of every medical source)</p>
 
   <section>
     <h2>✅ Complete (through session 3)</h2>
@@ -65,6 +66,23 @@
         (S48). The Exercises page now quotes doses from official programs or marks them † as defaults.</li>
       <li><strong>Session 3:</strong> Desk Setup page gained a “what the guidance says about shoulder pain specifically”
         section (arms too high/low, armrests, mouse reach, laptops, 24″ desk depth) and three new worksheet rows.</li>
+      <li><strong>Session 3 (pass 4):</strong> claim-by-claim re-read of the medical sources with the site text open beside
+        them (S1 and S2 in full, S21, S22, S23, S24 including its whole Table 2, S25, S44 — all 18 exercises — S45, S11,
+        S31, OSHA S15/S16) and of every product page. 9 corrections/additions logged
+        (<a href="sources.html#pass4">pass-4 log</a>); nothing changed silently.</li>
+      <li><strong>Session 3 (pass 4):</strong> new <a href="costs.html">Costs (US)</a> page — the brief asked for
+        treatment pricing as well as product pricing, and this closes that gap with official tools (S49–S54) instead of
+        invented numbers: ACA benefit structure, Medicare therapy coverage and 2026 cost figures, the Medicare procedure
+        price lookup, FAIR Health, and the No Surprises Act good-faith-estimate right.</li>
+      <li><strong>Session 3 (pass 4):</strong> Treatment page gained “Step 2b — other options people try”, a 12-row table
+        transcribed from the S24 Cochrane synthesis with its own quality ratings, so TENS / laser / massage / patches /
+        injection questions have sourced answers rather than opinions.</li>
+      <li><strong>Session 3 (pass 4):</strong> <a href="pain-log.html">Pain Log</a> gained the two deferred features —
+        an inline-SVG pain chart (no dependencies, no network) and a “Print / save as PDF” button with print styles — plus
+        hardened import (clamps, “not recorded” instead of a false 0) and a download fallback for restricted browsers.</li>
+      <li><strong>Session 3 (pass 4):</strong> product rows corrected from the manufacturer pages (Branch chair specs
+        replaced unverifiable claims; Branch Lite restored as a $329 option; Staples figures marked unverified;
+        pillow guarantees corrected), and every product row now links to its source-table ID.</li>
     </ul>
   </section>
 
@@ -95,6 +113,15 @@
           <tr><td>18</td><td>[Session 3] Oregon OSHA's 24″ minimum work-surface depth for a flat-panel display — the COMHOMA (15.75″), VIVO wall desk (18″) and VIVO converter (15.7″) are all shallower; only Lillipad (24″/25″) meets it. Whether a clamp arm fits the COMHOMA's tilting, lipped top is unverified</td><td>Desk choice</td><td>Human check: with a shallow desk, plan the monitor arm (or a separate rear stand) so the screen sits 16–29″ away; if choosing COMHOMA, confirm the rear edge accepts a C-clamp before buying the arm</td></tr>
           <tr><td>19</td><td>[Session 3] Three source URLs had moved (Mayo “when to see a doctor” merged into the causes page; Mass General Brigham article moved to /health-wellness/; orthoinfo.aaos.org → orthoinfo.org) — old links redirected correctly</td><td>Sources</td><td><strong>Fixed.</strong> Links updated to canonical URLs</td></tr>
           <tr><td>20</td><td>[Session 3] No verified official <em>video</em> demonstrations exist on any cited program page (AAOS, MedlinePlus, Cleveland Clinic, hospital PDFs are illustrated text)</td><td>Exercises</td><td>Illustrated official handouts (S44 page + PDF, S26, S43, S27) are linked instead; no unverified third-party videos were added — a PT visit remains the technique check</td></tr>
+          <tr><td>21</td><td>[Pass 4] Branch chair row carried four claims that are not on the product page (a 5′2″–6′2″ fit range, “BIFMA commercial grade”, “Greenguard Gold”, “HSA/FSA via Flex at checkout”)</td><td>Chairs</td><td><strong>Fixed.</strong> Claims removed and replaced with the page's actual specs (seat 17″–21″; depth 18″–22″; armrest 26″–29″, removable; tilt 20°; 275 lb; assembly; 7-yr). If certification matters to you, ask Branch directly — it could not be verified from the site</td></tr>
+          <tr><td>22</td><td>[Pass 4] Pass 3 had removed Branch's “Lite $329” model as discontinued; a live Lite product page was found in pass 4</td><td>Chairs</td><td><strong>Fixed.</strong> Pass-3 removal reversed; Lite ($329) re-added as a documented alternative (S55) with its “five focused adjustments” gap flagged</td></tr>
+          <tr><td>23</td><td>[Pass 4] Staples Dexley/Hyken prices exist only on a category page (no product page price could be read), and that listing rates the chair for a 5–10-hour workday while this project assumes up to 12 hours</td><td>Budget chair</td><td>Marked <strong>unverified</strong> and tracked as S56; the verified Branch Lite is named as the safer documented option at a similar price. Human check: read the product page at purchase time</td></tr>
+          <tr><td>24</td><td>[Pass 4] Wife Pillow guarantee was written “101-night”; vendor pages say <strong>101-day</strong> money-back plus a 3-year warranty. Eli &amp; Elm's “5-year warranty” could not be re-confirmed, while the Sleep Foundation adds a 45-day refund window</td><td>Pillows</td><td><strong>Fixed.</strong> Both rows updated; the Eli &amp; Elm warranty is now flagged “ask before buying” rather than asserted</td></tr>
+          <tr><td>25</td><td>[Pass 4] No official public price exists for the specific treatments on this site (shoulder exam, PT course, injection, cuff surgery) — see the note on the <a href="costs.html">Costs page</a></td><td>Treatment pricing</td><td>The Costs page ships official <em>tools</em> (insurer estimate, Medicare procedure lookup, FAIR Health) and the good-faith-estimate right instead of invented figures. Human action: run the estimate with your own codes/plan</td></tr>
+          <tr><td>26</td><td>[Pass 4] IKEA US product pages (NISSE folding chair; JÄRVFJÄLLET office chair) cannot be read by this project's tooling — they bounce to a generic catalogue page, so US prices are unconfirmed. (NISSE US price $19.99 appears only on a third-party site; JÄRVFJÄLLET prices seen were EU: €229 NL / £199 UK / €299 DE, with 2D adjustable armrests, a 10-year guarantee and a 110 kg test rating)</td><td>Chairs (alternatives)</td><td>Not added to the buying list. Human check if either is of interest: read the price on ikea.com directly</td></tr>
+          <tr><td>27</td><td>[Pass 4] Lillipad's own pages disagree on price ($869 / $887 / $997 vs the product page's $1,049 sale / $1,449 list), on static load (FAQ 350 lb vs spec sheet 700 lb), and the “Sold out” marker sits ambiguously next to the buy box</td><td>Premium desk</td><td>Both figures shown on the Products page with the discrepancy flagged; confirm the exact variant price and availability at checkout. The Lillipad row stays a <em>premium</em> option, not a default</td></tr>
+          <tr><td>28</td><td>[Pass 4] The two cited MedlinePlus pages give different ice timings (S1: 15 min on / 15 min off for 2–3 days; S2: 20 minutes at a time, 3–4×/day)</td><td>Treatment step 1b</td><td>Documented, not “fixed” — both are official; the site quotes S2 and cites it, and the Products page shows both protocols side by side</td></tr>
+          <tr><td>29</td><td>[Pass 4] The Sleep Foundation pillow guide is affiliate content (“we may earn a commission”); its prices/picks are commercial, not clinical</td><td>Sleep section</td><td>Kept as a shopping source only (labelled “affiliate” in sources), never as medical authority; positioning advice still traces to MedlinePlus/Cleveland Clinic</td></tr>
         </tbody>
       </table>
     </div>
@@ -106,7 +133,7 @@
       <li>
         <strong>Re-verify all prices again before any purchase</strong> (5 min). Prices were valid Sep 19–20, 2026 only —
         the COMHOMA price moved <em>within a single day</em>, the Branch chair is on a ~3-week ship date, the Lillipad PRO
-        variant was sold out on both days, and Staples' colour-variant pricing changed overnight. Re-read the product
+        variant was sold out on both days, and Staples' color-variant pricing changed overnight. Re-read the product
         pages and update price cells; the Products page is designed so only those cells change.
       </li>
       <li>
@@ -129,9 +156,15 @@
         mechanics link, which this site currently labels a “working model.”
       </li>
       <li>
-        <strong>Optional pain-log upgrades</strong>: a simple line chart of pain over time (inline SVG, still no
-        dependencies), and a “print report” view for doctor visits. (Deferred again this session in favour of the
-        verification corrections, which were higher-value.)
+        <strong>Pain-log upgrades — done in pass 4</strong> (inline-SVG chart, print/save-as-PDF, hardened import). What
+        could still be added if wanted: multi-device sync (explicitly out of scope — this project stores nothing outside
+        your browser), and a printable one-page summary sheet to hand to a clinician instead of the raw table.
+      </li>
+      <li>
+        <strong>Priced treatment estimates for a specific case</strong> (human action, 15 minutes): the Costs page gives
+        the tools but no figures by design. With the billing codes from a clinician's office, run the insurer's estimate
+        and the Medicare procedure price lookup; if uninsured, request the written good faith estimate (S49) before
+        scheduling.
       </li>
       <li>
         <strong>Internationalization / currency</strong> only if buying outside the US — all prices are USD, US-stocked.
@@ -149,10 +182,13 @@
       <li><strong>No personal data:</strong> I can't examine the shoulder, see the winging, or know the room's geometry. Everything is therefore structured as decision rules (“if X, then Y”) rather than a single prescription.</li>
       <li><strong>No clinical authority:</strong> this is a research compilation. The strongest claim the evidence supports is “start self-care + exercise, checkpoint at 2 weeks, escalate to a clinician if it fails” — and that's exactly the structure used.</li>
       <li><strong>Price volatility:</strong> furniture and accessory prices change weekly (and, as pass 2 showed, within a day); a static site goes stale. Re-verify before any purchase is made from this page.</li>
+      <li><strong>Verification depth has an honest ceiling:</strong> four passes over every source reduce the odds of a wrong claim, but the site still relies on paraphrases of sources I read, not on a clinician's review of the final text. Anything load-bearing for a real decision deserves the second reader (your clinician).</li>
       <li><strong>Small-study evidence base:</strong> several cited trials are small (e.g., n=33); the Cochrane base for rotator-cuff therapy is thin. The site states this rather than hiding it, but it means “evidence-based” here is stronger than it looks.</li>
       <li><strong>Single-region assumption:</strong> US sources, USD prices, US retail. If any factor differs, the product section needs a regional pass.</li>
       <li><strong>No live price monitoring:</strong> a static GitHub Pages site can't track prices; that would need a workflow (e.g., a scheduled job that re-fetches the 12 product pages and updates a JSON price cache) — suggested for a later session.</li>
-      <li><strong>Product-fit claims are read, not tested:</strong> nothing on the Products page has been physically tried; specs are quoted from manufacturer pages. Where a fit question is open (monitor arm on the COMHOMA top; MARKUS armrest height) it is flagged rather than assumed.</li>
+      <li><strong>Product-fit claims are read, not tested:</strong> nothing on the Products page has been physically tried; specs are quoted from manufacturer pages. Where a fit question is open (monitor arm on the COMHOMA top; MARKUS armrest height; whether the Branch Lite's five adjustments include armrest height) it is flagged rather than assumed.</li>
+      <li><strong>Treatment prices are not published in any official national list</strong> for these services, so the Costs page can only hand you the tools and the coverage rules. A real number requires your billing codes + your plan (or a good-faith estimate).</li>
+      <li><strong>Two retail sites resisted verification:</strong> IKEA's US product pages could not be read by the project's tooling (US prices unconfirmed, flagged), and Staples' figures come from a category page only. Prices from retailer <em>category</em> pages are inherently weaker evidence than product pages.</li>
     </ul>
   </section>
 </main>

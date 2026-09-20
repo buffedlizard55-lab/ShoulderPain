@@ -54,6 +54,7 @@
       <a href="exercises.html">Exercises</a>
       <a href="ergonomics.html">Desk Setup</a>
       <a href="products.html">Products &amp; Prices</a>
+      <a href="costs.html">Costs (US)</a>
       <a href="pain-log.html" class="active">Pain Log</a>
       <a href="sources.html">Sources</a>
       <a href="next-steps.html">Next Steps</a>
@@ -62,7 +63,7 @@
 </header>
 
 <main id="main" class="page">
-  <p class="kicker">Section 6 · Tracking tool</p>
+  <p class="kicker">Section 7 · Tracking tool</p>
   <h1>Daily pain log</h1>
   <p class="lead">Everything on this site ends in two checkpoints: “if it isn't better after 2–4 weeks of self-care, book a clinician” and “re-evaluate the exercise plan at 6 weeks.” This page makes those decisions measurable — log once in the morning and once at night (or once a day if that's more realistic).</p>
 
@@ -155,6 +156,17 @@
       <span class="callout-title" id="checkpoint-title"></span>
       <span id="checkpoint-text"></span>
     </div>
+
+    <div id="chart-wrap" hidden>
+      <h3>End-of-day pain, last 30 logged days</h3>
+      <div class="chart-box">
+        <svg id="pain-chart" viewBox="0 0 640 200" role="img" aria-labelledby="chart-desc" preserveAspectRatio="xMidYMid meet">
+          <desc id="chart-desc">Line chart of end-of-day pain scores from 0 to 10 for the most recent logged days.</desc>
+        </svg>
+      </div>
+      <p class="small" style="color:var(--muted);font-size:0.85rem;" id="chart-note"></p>
+    </div>
+
     <p class="small" style="color:var(--muted);font-size:0.88rem;" id="summary-empty">No entries yet — the summary fills in once you save your first day.</p>
   </section>
 
@@ -174,6 +186,7 @@
     <div class="btn-row">
       <button type="button" class="btn secondary" id="btn-export-json">Export backup (JSON)</button>
       <button type="button" class="btn secondary" id="btn-export-csv">Export CSV (for a doctor visit)</button>
+      <button type="button" class="btn secondary" id="btn-print">Print / save as PDF</button>
       <button type="button" class="btn secondary" id="btn-import">Import backup (JSON)</button>
       <input type="file" id="import-file" accept="application/json,.json" hidden>
       <button type="button" class="btn danger" id="btn-clear">Delete all data</button>
@@ -240,6 +253,12 @@
     });
   }
   function fmt1(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+  function num(v, lo, hi) { // -> clamped number, or null for blank / non-numeric
+    if (v === null || v === undefined || v === '') return null;
+    var n = Number(v);
+    if (!isFinite(n)) return null;
+    return Math.max(lo, Math.min(hi, n));
+  }
   var SIDE_LABEL = { left: 'Left', right: 'Right', back: 'Back', mixed: 'Mixed' };
 
   /* ---------- populate 0–10 selects ---------- */
@@ -259,15 +278,14 @@
   function readForm() {
     var date = $('f-date').value;
     if (!validDate(date)) { setStatus('Please pick a valid date.'); return null; }
-    var m = $('f-morning').value, e = $('f-evening').value;
     var hours = $('f-hours').value, breaks = $('f-breaks').value;
     var h = hours === '' ? null : parseFloat(hours);
     var b = breaks === '' ? null : parseInt(breaks, 10);
     if (h !== null && (isNaN(h) || h < 0 || h > 24)) { setStatus('Desk hours must be between 0 and 24.'); return null; }
     if (b !== null && (isNaN(b) || b < 0 || b > 99)) { setStatus('Breaks must be between 0 and 99.'); return null; }
     return {
-      m: m === '' ? null : Number(m),
-      e: e === '' ? null : Number(e),
+      m: num($('f-morning').value, 0, 10),
+      e: num($('f-evening').value, 0, 10),
       side: $('f-side').value,
       hours: h, breaks: b,
       exA: $('f-exA').checked, exB: $('f-exB').checked,
@@ -409,20 +427,73 @@
     });
   }
 
+  /* ---------- chart: end-of-day pain, inline SVG (no libraries, no network) ---------- */
+  function renderChart(entries) {
+    var svg = $('pain-chart'), wrap = $('chart-wrap'), note = $('chart-note');
+    if (!svg || !wrap) return;
+    var dates = Object.keys(entries).sort().slice(-30);
+    var pts = dates.map(function (d) { return { d: d, v: entries[d].e }; })
+                   .filter(function (p) { return p.v !== null && p.v !== undefined && p.v !== ''; });
+    svg.innerHTML = '';
+    function el(name, attrs) {
+      var n = document.createElementNS('http://www.w3.org/2000/svg', name);
+      Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+      return n;
+    }
+    var L = 34, R = 12, T = 12, B = 26, W = 640, H = 200;
+    var aw = W - L - R, ah = H - T - B;
+    [0, 5, 10].forEach(function (v) {
+      var y = T + ah - (v / 10) * ah;
+      svg.appendChild(el('line', { x1: L, y1: y, x2: W - R, y2: y, stroke: '#e2e8f0', 'stroke-width': 1 }));
+      var t = el('text', { x: L - 8, y: y + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#64748b' });
+      t.textContent = String(v); svg.appendChild(t);
+    });
+    if (!pts.length) { wrap.hidden = true; if (note) note.textContent = ''; return; }
+    wrap.hidden = false;
+    function X(i) { return L + (pts.length === 1 ? aw / 2 : (i / (pts.length - 1)) * aw); }
+    function Y(v) { return T + ah - (v / 10) * ah; }
+    var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(p.v).toFixed(1); }).join(' ');
+    svg.appendChild(el('path', { d: d, fill: 'none', stroke: '#0f766e', 'stroke-width': 2.5, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+    pts.forEach(function (p, i) {
+      var c = el('circle', { cx: X(i).toFixed(1), cy: Y(p.v).toFixed(1), r: 3.2, fill: '#0f766e' });
+      var ti = el('title', {}); ti.textContent = p.d + ' — ' + p.v + '/10';
+      c.appendChild(ti); svg.appendChild(c);
+    });
+    function lab(x, text, anchor) {
+      var t = el('text', { x: x, y: H - 8, 'text-anchor': anchor, 'font-size': 11, fill: '#64748b' });
+      t.textContent = text; svg.appendChild(t);
+    }
+    lab(L, pts[0].d.slice(5), 'start');
+    if (pts.length > 1) lab(W - R, pts[pts.length - 1].d.slice(5), 'end');
+    if (note) note.textContent = 'Showing end-of-day pain for ' + pts.length + ' logged day' + (pts.length === 1 ? '' : 's') +
+      ' (last 30 days with entries; days with no evening score are omitted, so the line joins logged days, not every calendar day). ' +
+      'Lower is better. Print or export below before a clinician visit.';
+  }
+
   function render() {
     var state = load();
     renderTable(state.entries);
     renderSummary(state.entries);
+    renderChart(state.entries);
   }
 
   /* ---------- export / import / clear ---------- */
   function download(filename, text, type) {
-    var blob = new Blob([text], { type: type });
-    var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
-    a.href = url; a.download = filename;
+    a.download = filename;
+    var url = null;
+    try {
+      var blob = new Blob([text], { type: type });
+      url = URL.createObjectURL(blob);
+      a.href = url;
+    } catch (e) { // very old browsers / restricted webviews: fall back to a data URL
+      a.href = 'data:' + type + ';charset=utf-8,' + encodeURIComponent(text);
+    }
     document.body.appendChild(a); a.click();
-    setTimeout(function () { document.body.removeChild(a); URL.revokeObjectURL(url); }, 0);
+    setTimeout(function () {
+      if (a.parentNode) document.body.removeChild(a);
+      if (url && typeof URL.revokeObjectURL === 'function') { try { URL.revokeObjectURL(url); } catch (e2) {} }
+    }, 0);
   }
   $('btn-export-json').addEventListener('click', function () {
     var state = load();
@@ -460,17 +531,16 @@
         if (!validDate(d)) { skipped++; return; }
         var x = incoming[d];
         if (!x || typeof x !== 'object') { skipped++; return; }
-        // sanitize each field
+        // sanitize each field (non-numeric values become "not recorded", never a false 0)
         var clean = {
-          m: (x.m === null || x.m === undefined || x.m === '') ? null : Math.max(0, Math.min(10, Number(x.m) || 0)),
-          e: (x.e === null || x.e === undefined || x.e === '') ? null : Math.max(0, Math.min(10, Number(x.e) || 0)),
+          m: num(x.m, 0, 10),
+          e: num(x.e, 0, 10),
           side: ['left', 'right', 'back', 'mixed'].indexOf(x.side) >= 0 ? x.side : 'mixed',
-          hours: (x.hours === null || x.hours === undefined || x.hours === '') ? null : Math.max(0, Math.min(24, Number(x.hours) || 0)),
-          breaks: (x.breaks === null || x.breaks === undefined || x.breaks === '') ? null : Math.max(0, Math.min(99, Math.round(Number(x.breaks) || 0))),
+          hours: num(x.hours, 0, 24),
+          breaks: x.breaks === null || x.breaks === undefined || x.breaks === '' ? null : Math.max(0, Math.min(99, Math.round(Number(x.breaks) || 0))),
           exA: !!x.exA, exB: !!x.exB,
           notes: typeof x.notes === 'string' ? x.notes.slice(0, 500) : ''
         };
-        if (isNaN(clean.m) || isNaN(clean.e)) { skipped++; return; }
         if (state.entries[d]) replaced++; else added++;
         state.entries[d] = clean;
       });
@@ -479,6 +549,7 @@
     };
     reader.readAsText(file);
   });
+  $('btn-print').addEventListener('click', function () { window.print(); });
   $('btn-clear').addEventListener('click', function () {
     if (!window.confirm('Delete ALL logged entries from this browser? This cannot be undone — export a backup first if you want to keep one.')) return;
     try { window.localStorage.removeItem(KEY); } catch (e) {}
