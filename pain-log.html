@@ -72,7 +72,14 @@
     This page has no backend, no analytics, and no network calls. Entries are stored in your browser's
     <code>localStorage</code> under the key <code>shoulderpain-log-v1</code> and never leave your computer. Clearing your
     browser data deletes them — use <strong>Export</strong> below to keep a backup file. A pain log is also useful to show
-    a clinician at the visits described on the <a href="treatment.html">Treatment page</a>.
+    a clinician at the visits described on the <a href="treatment.html">Treatment page</a>. Do not use this page to
+    decide whether an emergency symptom is safe to wait on.
+  </div>
+  <div class="callout amber">
+    <span class="callout-title">Irregularity flags are deliberately explicit</span>
+    Record a visible wing, new weakness/dropping objects, numbness/tingling, or a sudden injury/onset when present. A
+    ticked flag is a prompt to read the <a href="causes.html#red-flags">red flags section</a> and consider a clinical
+    assessment; it is not a diagnosis. The log stores flags exactly as entered — it never downgrades or “corrects” one.
   </div>
   <div class="callout red">
     <span class="callout-title">Not medical advice</span>
@@ -130,6 +137,13 @@
             <div class="check-row"><input type="checkbox" id="f-exA"> <label for="f-exA">Part A (daily routine)</label></div>
             <div class="check-row"><input type="checkbox" id="f-exB"> <label for="f-exB">Part B (band work)</label></div>
           </div>
+          <div class="field">
+            <label>Flags to discuss (tick any that apply today)</label>
+            <div class="check-row"><input type="checkbox" id="f-flagWing"> <label for="f-flagWing">Visible/new wing</label></div>
+            <div class="check-row"><input type="checkbox" id="f-flagWeak"> <label for="f-flagWeak">New weakness / dropping</label></div>
+            <div class="check-row"><input type="checkbox" id="f-flagNerve"> <label for="f-flagNerve">Numbness / tingling</label></div>
+            <div class="check-row"><input type="checkbox" id="f-flagInjury"> <label for="f-flagInjury">Sudden injury / onset</label></div>
+          </div>
           <div class="field" style="grid-column: 1 / -1;">
             <label for="f-notes">Notes (triggers, what helped, gym session…)</label>
             <textarea id="f-notes" maxlength="500" placeholder="e.g. overhead press felt sharp; new pillow helped morning pain"></textarea>
@@ -176,10 +190,10 @@
       <table id="history-table">
         <caption>Saved entries (most recent first)</caption>
         <thead>
-          <tr><th>Date</th><th>Slept on</th><th>Pain AM</th><th>Pain PM</th><th>Desk h</th><th>Breaks</th><th>Ex. A</th><th>Ex. B</th><th>Notes</th><th></th></tr>
+          <tr><th>Date</th><th>Slept on</th><th>Pain AM</th><th>Pain PM</th><th>Desk h</th><th>Breaks</th><th>Ex. A</th><th>Ex. B</th><th>Flags</th><th>Notes</th><th></th></tr>
         </thead>
         <tbody id="history-body">
-          <tr id="history-empty"><td colspan="10" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>
+          <tr id="history-empty"><td colspan="11" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>
         </tbody>
       </table>
     </div>
@@ -192,8 +206,10 @@
       <button type="button" class="btn danger" id="btn-clear">Delete all data</button>
     </div>
     <p class="small" style="color:var(--muted);font-size:0.88rem;">
-      CSV columns: date, slept-on, pain AM, pain PM, desk hours, breaks, exercise A, exercise B, notes.
-      Import merges the file into what's already here (same-date entries are replaced) — export first if unsure.
+      CSV columns: date, slept-on, pain AM, pain PM, desk hours, breaks, exercise A, exercise B, flags, notes.
+      Import merges the file into what's already here (same-date entries are replaced) — export first if unsure. Entries
+      whose date is invalid or in the future, or whose pain / desk-hours / breaks values are outside their ranges, are
+      skipped and counted in the status line — nothing is clamped, guessed or silently dropped.
     </p>
   </section>
 </main>
@@ -213,6 +229,7 @@
 
   /* ---------- storage ---------- */
   var storageOK = true;
+  var storageWarning = '';
   function load() {
     var raw = null;
     try { raw = window.localStorage.getItem(KEY); } catch (e) { storageOK = false; }
@@ -222,7 +239,10 @@
       if (data && typeof data === 'object' && data.entries && typeof data.entries === 'object') {
         return { entries: data.entries };
       }
-    } catch (e) { /* corrupted -> start fresh */ }
+      storageWarning = 'Stored tracker data has an unexpected shape. It was not silently repaired — export/import a known-good backup before saving over it.';
+    } catch (e) {
+      storageWarning = 'Stored tracker data could not be read. It was not silently repaired — export/import a known-good backup before saving over it.';
+    }
     return { entries: {} };
   }
   function persist(state) {
@@ -243,7 +263,12 @@
     var d = new Date();
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   }
-  function validDate(s) { return /^\d{4}-\d{2}-\d{2}$/.test(s); }
+  function validDate(s) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
+    var parts = s.split('-').map(Number);
+    var d = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+    return d.getUTCFullYear() === parts[0] && d.getUTCMonth() === parts[1] - 1 && d.getUTCDate() === parts[2];
+  }
   function dateToDays(s) { return Math.floor(Date.parse(s + 'T00:00:00Z') / 86400000); }
   function daysAgo(n) { return todayDays() - n; }
   function todayDays() { return dateToDays(todayStr()); }
@@ -260,6 +285,13 @@
     return Math.max(lo, Math.min(hi, n));
   }
   var SIDE_LABEL = { left: 'Left', right: 'Right', back: 'Back', mixed: 'Mixed' };
+  var FLAG_LABEL = { wing: 'wing', weak: 'weak', nerve: 'numb/tingle', injury: 'injury' };
+  function flagText(flags) {
+    if (!flags) return '–';
+    var labels = [];
+    Object.keys(FLAG_LABEL).forEach(function (key) { if (flags[key]) labels.push(FLAG_LABEL[key]); });
+    return labels.length ? labels.join(', ') : '–';
+  }
 
   /* ---------- populate 0–10 selects ---------- */
   ['f-morning', 'f-evening'].forEach(function (id) {
@@ -277,7 +309,8 @@
 
   function readForm() {
     var date = $('f-date').value;
-    if (!validDate(date)) { setStatus('Please pick a valid date.'); return null; }
+    if (!validDate(date)) { setStatus('Please pick a valid calendar date.'); return null; }
+    if (dateToDays(date) > todayDays()) { setStatus('Future dates are not accepted — log the entry on or after that date.'); return null; }
     var hours = $('f-hours').value, breaks = $('f-breaks').value;
     var h = hours === '' ? null : parseFloat(hours);
     var b = breaks === '' ? null : parseInt(breaks, 10);
@@ -289,6 +322,12 @@
       side: $('f-side').value,
       hours: h, breaks: b,
       exA: $('f-exA').checked, exB: $('f-exB').checked,
+      flags: {
+        wing: $('f-flagWing').checked,
+        weak: $('f-flagWeak').checked,
+        nerve: $('f-flagNerve').checked,
+        injury: $('f-flagInjury').checked
+      },
       notes: $('f-notes').value.trim().slice(0, 500)
     };
   }
@@ -301,6 +340,10 @@
     $('f-breaks').value = entry.breaks === null || entry.breaks === undefined ? '' : String(entry.breaks);
     $('f-exA').checked = !!entry.exA;
     $('f-exB').checked = !!entry.exB;
+    $('f-flagWing').checked = !!(entry.flags && entry.flags.wing);
+    $('f-flagWeak').checked = !!(entry.flags && entry.flags.weak);
+    $('f-flagNerve').checked = !!(entry.flags && entry.flags.nerve);
+    $('f-flagInjury').checked = !!(entry.flags && entry.flags.injury);
     $('f-notes').value = entry.notes || '';
   }
 
@@ -323,6 +366,8 @@
     $('f-morning').value = ''; $('f-evening').value = '';
     $('f-hours').value = ''; $('f-breaks').value = '';
     $('f-exA').checked = false; $('f-exB').checked = false;
+    $('f-flagWing').checked = false; $('f-flagWeak').checked = false;
+    $('f-flagNerve').checked = false; $('f-flagInjury').checked = false;
     $('f-notes').value = '';
     setStatus('Form cleared.');
   });
@@ -390,7 +435,7 @@
     body.innerHTML = '';
     var dates = Object.keys(entries).sort().reverse();
     if (!dates.length) {
-      body.innerHTML = '<tr><td colspan="10" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>';
+      body.innerHTML = '<tr><td colspan="11" style="color:var(--muted);">Nothing logged yet. Save your first entry above — it stays on this device only.</td></tr>';
       return;
     }
     dates.forEach(function (d) {
@@ -405,6 +450,7 @@
       tr.appendChild(td(x.breaks === null || x.breaks === undefined ? '–' : String(x.breaks)));
       tr.appendChild(td(x.exA ? '✓' : '–'));
       tr.appendChild(td(x.exB ? '✓' : '–'));
+      tr.appendChild(td(escapeHtml(flagText(x.flags))));
       tr.appendChild(td(escapeHtml(x.notes || '')));
       var action = document.createElement('td');
       var edit = document.createElement('button');
@@ -506,10 +552,10 @@
     var dates = Object.keys(state.entries).sort();
     if (!dates.length) { setStatus('Nothing to export yet.'); return; }
     function q(s) { return '"' + String(s === null || s === undefined ? '' : s).replace(/"/g, '""') + '"'; }
-    var rows = [['date', 'slept_on', 'pain_am', 'pain_pm', 'desk_hours', 'breaks', 'exercise_a', 'exercise_b', 'notes']];
+    var rows = [['date', 'slept_on', 'pain_am', 'pain_pm', 'desk_hours', 'breaks', 'exercise_a', 'exercise_b', 'flags', 'notes']];
     dates.forEach(function (d) {
       var x = state.entries[d];
-      rows.push([q(d), q(SIDE_LABEL[x.side] || ''), q(x.m === null || x.m === undefined ? '' : x.m), q(x.e === null || x.e === undefined ? '' : x.e), q(x.hours === null || x.hours === undefined ? '' : x.hours), q(x.breaks === null || x.breaks === undefined ? '' : x.breaks), q(x.exA ? 'yes' : 'no'), q(x.exB ? 'yes' : 'no'), q(x.notes || '')]);
+      rows.push([q(d), q(SIDE_LABEL[x.side] || ''), q(x.m === null || x.m === undefined ? '' : x.m), q(x.e === null || x.e === undefined ? '' : x.e), q(x.hours === null || x.hours === undefined ? '' : x.hours), q(x.breaks === null || x.breaks === undefined ? '' : x.breaks), q(x.exA ? 'yes' : 'no'), q(x.exB ? 'yes' : 'no'), q(flagText(x.flags)), q(x.notes || '')]);
     });
     download('shoulderpain-log-' + todayStr() + '.csv', rows.map(function (r) { return r.join(','); }).join('\r\n'), 'text/csv');
     setStatus('CSV downloaded.');
@@ -528,17 +574,29 @@
       var state = load();
       var added = 0, replaced = 0, skipped = 0;
       Object.keys(incoming).forEach(function (d) {
-        if (!validDate(d)) { skipped++; return; }
+        if (!validDate(d) || dateToDays(d) > todayDays()) { skipped++; return; }
         var x = incoming[d];
         if (!x || typeof x !== 'object') { skipped++; return; }
-        // sanitize each field (non-numeric values become "not recorded", never a false 0)
+        // Sanitize without silently turning a malformed number into 0 or a clamped value:
+        // blank stays "not recorded"; anything non-numeric or out of range skips the day (counted, not guessed).
+        function numberOrNull(value, min, max, integer) {
+          if (value === null || value === undefined || value === '') return null;
+          var n = Number(value);
+          if (!isFinite(n) || n < min || n > max) return undefined;
+          return integer ? Math.round(n) : n;
+        }
+        var m = numberOrNull(x.m, 0, 10, false);
+        var e = numberOrNull(x.e, 0, 10, false);
+        var hours = numberOrNull(x.hours, 0, 24, false);
+        var breaks = numberOrNull(x.breaks, 0, 99, true);
+        if (m === undefined || e === undefined || hours === undefined || breaks === undefined) { skipped++; return; }
+        var incomingFlags = x.flags && typeof x.flags === 'object' ? x.flags : {};
         var clean = {
-          m: num(x.m, 0, 10),
-          e: num(x.e, 0, 10),
+          m: m, e: e,
           side: ['left', 'right', 'back', 'mixed'].indexOf(x.side) >= 0 ? x.side : 'mixed',
-          hours: num(x.hours, 0, 24),
-          breaks: x.breaks === null || x.breaks === undefined || x.breaks === '' ? null : Math.max(0, Math.min(99, Math.round(Number(x.breaks) || 0))),
+          hours: hours, breaks: breaks,
           exA: !!x.exA, exB: !!x.exB,
+          flags: { wing: !!incomingFlags.wing, weak: !!incomingFlags.weak, nerve: !!incomingFlags.nerve, injury: !!incomingFlags.injury },
           notes: typeof x.notes === 'string' ? x.notes.slice(0, 500) : ''
         };
         if (state.entries[d]) replaced++; else added++;
@@ -559,6 +617,7 @@
 
   render();
   if (!storageOK) setStatus('⚠ Browser storage is unavailable (private mode?) — entries will not survive a reload.');
+  else if (storageWarning) setStatus('⚠ ' + storageWarning);
 })();
 </script>
 </body>
