@@ -281,12 +281,27 @@ button.btn { font-weight: 700; cursor: pointer; }
   .table-wrap { margin-left: -2px; margin-right: -2px; }
 }
 
+
+/* ---------- Pain Log chart (added pass 4) ---------- */
+#chart-wrap h3 { margin: 26px 0 2px; }
+.chart-box {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 10px 2px;
+  margin: 10px 0 6px;
+}
+#pain-chart { width: 100%; height: auto; display: block; }
+
 @media print {
   .site-header { position: static; background: #fff; color: #000; border-bottom: 1px solid #999; box-shadow: none; }
   .site-header .brand, nav.main-nav a { color: #000; }
-  nav.main-nav { display: none; }
+  nav.main-nav, .site-footer, .skip-link, .no-print, button, .btn { display: none !important; }
   .page { max-width: none; padding: 0; }
-  .site-footer { color: #000; background: #fff; border-top: 1px solid #999; }
   .callout { break-inside: avoid; }
+  .chart-box { break-inside: avoid; }
+  .chart-box svg { max-width: 100%; height: auto; }
+  table { page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
   a { color: #000; text-decoration: underline; }
 }
