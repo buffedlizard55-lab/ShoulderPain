@@ -8,20 +8,22 @@ A source-linked GitHub Pages guide for shoulder and shoulder-blade (“wing”) 
 
 ## Follow-up review (current session)
 
-This session starts at `06eec87`, after PR #11. It reopens the 20 registered
-sources, adds an accessible on-page statement ledger, and strengthens offline
-checks against stale ledger text/line numbers, missing pages, unknown template
-references and invalid/future source dates. New source flags include COMHOMA's
-mixed stock controls and Branch's unusable spec-sheet area. Branch specifications
-not reproduced in the current retrieval are omitted rather than re-certified.
-Run `npm run test:audit` for the eight new audit regression tests.
+This session starts at merged PR #12 (`6bca531`). It adds exact-document checks
+for VIVO MOUNT-SF1FB, Lillipad PRO, COMHOMA's manual index and the Branch
+Ergonomic Chair spec sheet. The product page and Branch PDF disagree on chair
+weight (42 lb versus 35 lb), so weight is left unresolved. A purchase gate now
+shows document status and stop conditions for every listed item. Costs add the
+official free UK NHS physiotherapy route while keeping every unknown local/private
+price unknown. Playwright is configured for Chromium, Firefox and WebKit in CI;
+that automated matrix still cannot replace manual browser or screen-reader-user
+testing.
 
 ## Prior release foundation
 
 The existing repository already contained a substantial static research site. This revision replaces blanket verification/completeness claims with a narrower, auditable source register, simplifies the UI and corrects unsafe or unverified assumptions. The previous site remains in Git history.
 
 - Ten organized pages: start, medical advice, treatment, exercises, desk/room, furniture/prices, care costs, optional log, sources/audit and next steps.
-- 20 directly opened official sources (2026-09-20). `data/sources.json` records source section, short excerpt, scope and check date. Government/medical-society guidance is separated from commercial product information.
+- 25 directly opened official sources (2026-09-20), including three exact product documents and one official manual index. `data/sources.json` records source section, short excerpt, scope and check date. Government/medical-society guidance is separated from commercial product information.
 - `data/claims.json` maps source-bearing content units to references and source-file lines. This is a review aid, **not an automated truth certificate**.
 - Five furniture listings, with exact variant/price boundaries and folding trade-offs. No product is claimed to fit an unmeasured room or treat shoulder pain.
 - Official provider PT price example ($135 self-pay per visit at Luna), not a nationwide average. Other unverified medical costs are explicitly unpriced.
@@ -37,8 +39,8 @@ npm ci                        # test/format dependencies only; no runtime depend
 npm run build                 # claim ledger + ten static root HTML pages
 npm run check                 # local targets/fragments, metadata, references and nav
 npm test                      # pure log-validation tests
-npx playwright install --with-deps chromium
-npm run test:browser           # desktop/mobile/keyboard/accessibility/log scenarios
+npx playwright install --with-deps chromium firefox webkit
+npm run test:browser           # three-engine responsive/accessibility/functional matrix
 npm run serve                 # local preview, 0.0.0.0:8000
 ```
 
@@ -57,7 +59,7 @@ The site is served from the repository root. Relative URLs work at the `/Shoulde
 
 ## Deployment
 
-At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bfa3-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
+At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bfc0-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
 
 ## Optional log and privacy
 

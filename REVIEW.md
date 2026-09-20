@@ -1,3 +1,78 @@
+# Verification follow-up — 20 September 2026
+
+Base: `6bca531dd2e4f5a659a974ff69c38f01c37430b1` (merged PR #12).
+Branch: `arena/01a0bfc0-shoulderpain`.
+
+## Pass 1 — implement and verify
+
+Reviewed the templates, generated pages, source/claim registers, validation,
+unit tests, browser tests and deployment workflow. Directly opened the five
+listed product pages plus the official VIVO MOUNT-SF1FB manual, Lillipad PRO
+manual, IKEA-linked care PDF, Branch Ergonomic Chair specification PDF and
+COMHOMA installation-guide index.
+
+Added a per-item manual/document purchase gate. The VIVO manual confirms wall
+requirements and fold operation. The Lillipad manual adds load-by-height,
+clearance, unplugging and transport constraints. COMHOMA's official index does
+not list DH005, so the matching guide, unit weight and folded envelope remain
+unverified. IKEA's linked document is generic care guidance, not evidence of a
+bare folded envelope. The direct Branch PDF was recovered and checked.
+
+Added the official UK NHS physiotherapy route (free, potentially long wait,
+local access varies) alongside the existing $135 Luna US self-pay example.
+Because no reader location or coverage was supplied, no private local price or
+currency conversion was invented.
+
+## Pass 2 — defects, conflicts and edge cases
+
+The Branch product page says 42 lb, while its official specification PDF says
+35 lb assembled. The site now exposes this conflict and leaves weight unresolved
+instead of selecting a value. Detailed dimensions common to the current page and
+PDF were restored, but the chair remains a non-folding exception and no body or
+route fit is claimed.
+
+Converted Playwright from one Chromium project to explicit Chromium, Firefox
+and WebKit projects, and updated CI to install all three. Corrected the workflow's
+stale prior-session branch trigger. Source IDs were kept compatible with the
+ledger marker grammar. Regenerated 10 pages and 99 source-bearing audit units.
+
+## Pass 3 — original-request reconciliation
+
+Rechecked that the site still separates possible causes from diagnosis, warning
+signs from routine care, supervised examples from a personal exercise plan, and
+manufacturer statements from clinical evidence. It does not claim to examine the
+user, prove room/body/doorway fit, guarantee price/stock, guarantee completeness
+or replace clinician/PT, manual assistive-technology or human browser testing.
+Reading requires no input or sign-in; the symptom log remains optional.
+
+Local results:
+
+- build: 10 pages, 25 registered sources, 99 source-bearing audit units;
+- structural/source/claim check: passed;
+- Node unit tests: 8 passed;
+- Python audit regression tests: 8 passed;
+- Prettier and `git diff --check`: passed;
+- local three-engine browser run: blocked because the Playwright CDN repeatedly
+  reset TLS connections (`ECONNRESET`). This is not recorded as a browser pass.
+  GitHub CI is configured to run the matrix after push.
+
+## Remaining priority work
+
+1. Qualified clinician/PT review of medical guidance and exercise suitability.
+2. Manual testing by screen-reader users and on real browser/device combinations;
+   automated axe and Playwright checks are not substitutes.
+3. Exact provider/payer pricing after a country/city and insurance route are
+   known. Current regional facts are deliberately limited to verified routes.
+4. On purchase day, repeat exact variant, checkout, stock, shipping, return and
+   manual checks. Obtain the missing DH005 guide and reconcile Branch weight.
+5. Measure the actual body, room, doorway, storage envelope and removal route.
+
+No purchase, care booking, diagnosis or clinician review was performed. The
+historical review below is retained as an audit trail; its "current" labels apply
+to earlier sessions.
+
+---
+
 # Follow-up review — 20 September 2026
 
 Current base: `06eec870f9dda637aae2ebac37d07dd76928bd52` (merged PR #11).

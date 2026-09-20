@@ -138,7 +138,7 @@
     "url": "https://comhoma.com/products/comhoma-small-adjustable-standing-desk-tiltable-tabletop-dh005",
     "locator": "White price; manufacturer specification and folding images",
     "excerpt": "Sale price$54.49Regular price$79.99",
-    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope not verified. Extracted controls include both in-stock and sold-out text; actual stock unresolved.",
+    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope and unit weight not published. Product controls include both in-stock and sold-out text; actual stock unresolved. The official installation index has no DH005 entry.",
     "checked": "2026-09-20",
     "method": "Official page directly opened and relevant text read"
   },
@@ -180,9 +180,9 @@
     "title": "Branch · Ergonomic Chair",
     "type": "Official manufacturer / seller",
     "url": "https://www.branchfurniture.com/products/ergonomic-chair",
-    "locator": "Selected Black / Black / Standard; Benefits; comparison; spec-sheet area",
+    "locator": "Selected Black / Black / Standard; Product details; Dimensions; comparison",
     "excerpt": "25”W x 24”D x 38-42”H",
-    "boundary": "Displayed $369. Non-folding exception. Earlier base diameter, unit weight, seat adjustment ranges and warranty duration not reproduced in this retrieval and omitted from current card. Spec-sheet area showed a template error/incomplete download URL.",
+    "boundary": "Displayed $369. Non-folding exception. Visible page and direct official spec-sheet link provide footprint, weight and adjustment dimensions; personal fit remains unverified.",
     "checked": "2026-09-20",
     "method": "Official page directly opened and relevant text read"
   },
@@ -216,6 +216,61 @@
     "locator": "Are Luna visits covered by insurance?",
     "excerpt": "Our self-pay rate is $135 per visit.",
     "boundary": "Search snippet displayed $125, but directly opened page displayed $135. Direct source used instead of snippet.",
+    "checked": "2026-09-20",
+    "method": "Official page directly opened and relevant text read"
+  },
+  {
+    "id": "P6",
+    "title": "COMHOMA · Installation guide index",
+    "type": "Official manufacturer / seller",
+    "url": "https://comhoma.com/pages/installation-guide",
+    "locator": "Manual list",
+    "excerpt": "Manual",
+    "boundary": "No DH005 guide is listed. This absence is a procurement flag, not proof that no manual exists.",
+    "checked": "2026-09-20",
+    "method": "Official index directly opened and its listed model identifiers checked"
+  },
+  {
+    "id": "P7",
+    "title": "VIVO · MOUNT-SF1FB instruction manual",
+    "type": "Official manufacturer manual",
+    "url": "https://cdn.shopify.com/s/files/1/1190/2562/files/MOUNT-SF1FB_online.pdf?v=1614329346",
+    "locator": "Warnings; Steps 2–4",
+    "excerpt": "DO NOT INSTALL INTO DRYWALL ALONE. VERIFY YOUR WALL CONSTRUCTION.",
+    "boundary": "Installation and folding instructions for SKU MOUNT-SF1FB; does not establish suitability of the user's wall or room.",
+    "checked": "2026-09-20",
+    "method": "Official PDF directly opened and relevant text read"
+  },
+  {
+    "id": "P8",
+    "title": "Lillipad · PRO workstation manual",
+    "type": "Official manufacturer manual",
+    "url": "https://cdn.shopify.com/s/files/1/0563/3431/9689/files/Lillipad_Pro_User_Manual_Live_Apr_25.pdf?v=1744763588",
+    "locator": "Safety instructions; Load Ratings; Transporting",
+    "excerpt": "Always unplug Lillipad before moving.",
+    "boundary": "April 2025 PRO manual for Standard (42) and Large (48). Movement still requires a real route and safe handling assessment.",
+    "checked": "2026-09-20",
+    "method": "Official PDF directly opened and relevant text read"
+  },
+  {
+    "id": "P9",
+    "title": "Branch · Ergonomic Chair specification sheet",
+    "type": "Official manufacturer specification sheet",
+    "url": "https://www.branchfurniture.com/cdn/shop/files/specs-ergonomic-chair.pdf?v=12709003491015077598",
+    "locator": "Specifications and dimensions",
+    "excerpt": "Assembled weight: 35 lbs",
+    "boundary": "Ergonomic Chair specification sheet; not Lite or Pro. It conflicts with the current product page’s 42 lb product weight, so chair weight is unresolved. Does not demonstrate personal fit or foldability.",
+    "checked": "2026-09-20",
+    "method": "Official PDF directly opened and relevant specifications read"
+  },
+  {
+    "id": "C4",
+    "title": "NHS · Physiotherapy",
+    "type": "Public health service",
+    "url": "https://www.nhs.uk/tests-and-treatments/physiotherapy/",
+    "locator": "How to get physiotherapy",
+    "excerpt": "You can get physiotherapy for free on the NHS, but there may be a long waiting list.",
+    "boundary": "UK NHS route only. Local eligibility, referral route and waiting time vary; private care is not priced by this source.",
     "checked": "2026-09-20",
     "method": "Official page directly opened and relevant text read"
   }
