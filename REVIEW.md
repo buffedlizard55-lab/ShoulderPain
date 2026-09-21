@@ -1,3 +1,92 @@
+# Verification follow-up — 21 September 2026
+
+Base: `1076d104b3c0978fad1bf5bf6b0093a85b417d10` (merged PR #13).
+Branch: `arena/01a0c21f-shoulderpain`.
+
+## Pass 1 — re-verify every registered source, line by line
+
+Direct sandbox networking is blocked (curl: no route/TLS reset), so every
+recheck used the workspace fetch tool. The 12 medical, exercise and
+workstation sources (M1–M6, E1–E3, W1–W3) were each opened again on
+21 September 2026 and compared with the registered excerpt, locator and
+boundary: all still match, verbatim where quoted (heart-attack warning,
+2-week threshold, nerve-injury cause, sleep-position instruction, NSAID
+and duplicate-paracetamol cautions, “You should not feel pain during an
+exercise”, AAOS doses for exercises 1, 2, 6 and 9, CSP pre-exercise
+advice, OSHA shoulder/viewing-distance/static-posture text). Their
+`checked` dates now read 2026-09-21.
+
+Product and document checks: VIVO and Lillipad were re-verified through
+their own official seller product-data endpoints — MOUNT-SF1FB $69.99
+available / MOUNT-SF1FW White sold out, and PRO Standard Maple $1,049
+(was $1,449) marked available in variant data while the page keeps
+contradictory sold-out messaging and Black is marked sold out. The
+COMHOMA DH005 gallery was re-read: four color variants, the mixed
+110 lb / 176 lb-with-drawer specification images and the $25.50 display
+(= 79.99 − 54.49, a discount figure, not the price) reconfirmed. The
+COMHOMA price box, IKEA GUNDE, both Branch pages, the three manual/spec
+PDFs and the four cost sources (C1–C4) could not be re-opened because the
+fetch proxy failed repeatedly; those entries stay dated 20 September 2026
+and the site now states that explicitly instead of implying a blanket
+same-day pass.
+
+New irregularity flagged: on 21 September the NHS shoulder-pain page’s
+own embedded video player showed a temporary “videos unavailable”
+network error while all text guidance was intact. Registered on M2; the
+site links the CSP video page, whose text was re-read cleanly.
+
+## Pass 2 — defects, edge cases and fixes
+
+Register and product page dates were inconsistent with a partial recheck
+(“checked 20 September” everywhere). The Sources page, sidebar and
+Products notice now present per-entry dates and label the non-reopened
+items as one day older. README/REVIEW session headers were stale on the
+previous branch name; the CI workflow push trigger still referenced
+`arena/01a0bfc0-shoulderpain`, which would silently skip push validation
+for other branches — it now triggers on `main` pushes and all pull
+requests. No site behavior changes were needed: the filter counts, audit
+ledger and tests track content automatically (99 units regenerated).
+Playwright browser downloads remain blocked in-sandbox (CDN failure), so
+local execution of the 14-test × 3-engine matrix is still recorded as
+blocked, not as a pass.
+
+## Pass 3 — original-request reconciliation
+
+The original brief (organized medical/treatment/exercise/ergonomics/
+product sections, official verified links, pricing, small-space
+foldable constraint, no hallucinations, PR + merge to main, multi-pass
+verification) is re-checked against the live site: ten pages, 25
+registered sources with dates and methods, per-claim audit with source
+links, purchase gate with unresolved items kept visible. The site still
+does not: diagnose, replace clinician/PT assessment, confirm room/door/
+body fit, price care beyond the US provider example and the free UK NHS
+route, guarantee stock or zero errors, or substitute manual screen-
+reader/cross-browser testing with automation.
+
+## Remaining priority work (unchanged in kind, refreshed in date)
+
+1. Qualified clinician/PT review of medical guidance and exercise
+   suitability — cannot be produced by this environment; still the top
+   open item.
+2. Human screen-reader testing (NVDA/JAWS/VoiceOver) and real-device
+   browser matrix; CI’s automated axe + Playwright runs are not
+   substitutes.
+3. Region-specific private care pricing requires the reader’s country/
+   city and coverage route; a US public-payer (Medicare) pathway was a
+   candidate this session but its official page could not be re-opened
+   before the sandbox network degraded — deliberately not added rather
+   than cited from memory.
+4. Purchase-day rechecks: COMHOMA price box, IKEA GUNDE, Branch page and
+   spec PDF (35 lb vs 42 lb conflict still unresolved), VIVO/Lillipad
+   manuals and the missing DH005 guide — all blocked today by the same
+   fetch failures; re-run this list when networking is healthy.
+5. Actual body/room/doorway/storage measurements remain the user’s step
+   before any fit claim.
+
+No purchase, booking, diagnosis or clinician review was performed.
+
+---
+
 # Verification follow-up — 20 September 2026
 
 Base: `6bca531dd2e4f5a659a974ff69c38f01c37430b1` (merged PR #12).

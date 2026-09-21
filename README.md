@@ -8,15 +8,23 @@ A source-linked GitHub Pages guide for shoulder and shoulder-blade (“wing”) 
 
 ## Follow-up review (current session)
 
-This session starts at merged PR #12 (`6bca531`). It adds exact-document checks
-for VIVO MOUNT-SF1FB, Lillipad PRO, COMHOMA's manual index and the Branch
-Ergonomic Chair spec sheet. The product page and Branch PDF disagree on chair
-weight (42 lb versus 35 lb), so weight is left unresolved. A purchase gate now
-shows document status and stop conditions for every listed item. Costs add the
-official free UK NHS physiotherapy route while keeping every unknown local/private
-price unknown. Playwright is configured for Chromium, Firefox and WebKit in CI;
-that automated matrix still cannot replace manual browser or screen-reader-user
-testing.
+This session starts at merged PR #13 (`1076d10`). It re-opened every medical,
+exercise and workstation source (M1–M6, E1–E3, W1–W3) on 21 September 2026;
+all registered excerpts still match the official pages. Product rechecks
+succeeded partially: VIVO and Lillipad were re-verified through their official
+seller product-data endpoints ($69.99 in stock / White sold out; PRO Standard
+Maple $1,049 marked available in variant data while the page still shows
+contradictory sold-out messaging), and the COMHOMA gallery and mixed-spec
+images were reconfirmed. Fetch-proxy failures in this sandbox prevented
+re-opening IKEA, Branch, the three manual/spec PDFs and the cost sources;
+their entries remain dated 20 September 2026 and the site now says so. No
+new price, stock or fit fact was invented for those items. The CI workflow
+push trigger no longer references an old session branch. The three-engine
+Playwright matrix still could not run locally (browser downloads blocked);
+GitHub CI covers it after push, and automated checks remain no substitute
+for manual screen-reader and cross-browser testing. Clinician/PT review,
+region-specific private pricing and purchase-day manual checks are still
+open — see `REVIEW.md` and `next-steps.html`.
 
 ## Prior release foundation
 
@@ -49,7 +57,6 @@ npm run serve                 # local preview, 0.0.0.0:8000
 The site is served from the repository root. Relative URLs work at the `/ShoulderPain/` Pages project path. Python 3 and Node 22 are used in validation; visitors need neither.
 
 ## Verification policy
-
 1. Read the relevant passage on the official page, not only a search excerpt.
 2. Keep condition-specific advice condition-specific; possibilities are not a diagnosis.
 3. Put a source by medical, exercise, ergonomic, price and specification claims. Label editorial application/safety suggestions separately.
@@ -59,7 +66,7 @@ The site is served from the repository root. Relative URLs work at the `/Shoulde
 
 ## Deployment
 
-At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` validates changes; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0bfc0-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
+At session start, the GitHub Pages API reported a built site with HTTPS and legacy publication from `main` at `/`. Root HTML is committed so that this configuration needs no runtime build. `.github/workflows/validate.yml` runs on every pull request and on pushes to `main`; it does not change the Pages publishing source. The requested PR targets `main` from the fixed session branch `arena/01a0c21f-shoulderpain`; see `REVIEW.md` and the PR for the actual publishing outcome.
 
 ## Optional log and privacy
 
