@@ -182,7 +182,14 @@ test("project subpath preserves assets and navigation", async ({ page }) => {
       url: route.request().url().replace("/ShoulderPain/", "/"),
     });
     if (!response.ok()) failed.push(route.request().url());
-    await route.fulfill({ response });
+    try {
+      await route.fulfill({ response });
+    } catch {
+      // Firefox sometimes disposes a response when the browser abandons the
+      // request during navigation. Persistent path bugs still land in
+      // `failed` and the page-level assertions below still require the
+      // products navigation and filter bar to work under the subpath.
+    }
   });
   await page.goto("/ShoulderPain/index.html");
   await page

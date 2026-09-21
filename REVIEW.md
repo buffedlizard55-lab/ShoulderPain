@@ -52,8 +52,18 @@ to 10 days without a doctor, which was added. No site behavior changes
 were needed: the filter counts, audit
 ledger and tests track content automatically (99 units regenerated).
 Playwright browser downloads remain blocked in-sandbox (CDN failure), so
-local execution of the 14-test × 3-engine matrix is still recorded as
+local execution of the 33-test × 3-engine matrix is still recorded as
 blocked, not as a pass.
+
+CI evidence and a flake fix: on commit `595ac8f` GitHub CI reported one
+Firefox failure in “project subpath preserves assets and navigation”
+(`route.fulfill: Fetch response has been disposed`) while the identical
+suite passed on Chromium, WebKit and in the adjacent runs; the assertion
+itself never fired (no missing subpath asset). Chromium/WebKit passed and
+the failure did not reproduce on the final commit, but rather than rely on
+luck the route handler now tolerates Firefox’s disposal race while still
+recording every non-OK subpath response and asserting navigation. Run
+#23 (final SHA) passed the whole 33-test × 3-engine matrix.
 
 ## Pass 3 — original-request reconciliation
 
@@ -129,6 +139,16 @@ Converted Playwright from one Chromium project to explicit Chromium, Firefox
 and WebKit projects, and updated CI to install all three. Corrected the workflow's
 stale prior-session branch trigger. Source IDs were kept compatible with the
 ledger marker grammar. Regenerated 10 pages and 99 source-bearing audit units.
+
+CI evidence and a flake fix: on commit `595ac8f` GitHub CI reported one
+Firefox failure in “project subpath preserves assets and navigation”
+(`route.fulfill: Fetch response has been disposed`) while the identical
+suite passed on Chromium, WebKit and in the adjacent runs; the assertion
+itself never fired (no missing subpath asset). Chromium/WebKit passed and
+the failure did not reproduce on the final commit, but rather than rely on
+luck the route handler now tolerates Firefox’s disposal race while still
+recording every non-OK subpath response and asserting navigation. Run
+#23 (final SHA) passed the whole 33-test × 3-engine matrix.
 
 ## Pass 3 — original-request reconciliation
 
@@ -286,6 +306,16 @@ Code inspection found old log issues: numeric coercion accepted non-numbers; dec
 Replaced the log with validated v1-compatible storage, plain-text DOM rendering, explicit overwrite/import confirmation, failure-safe saves/deletes, raw-backup recovery for corrupt data, CSV formula mitigation, limits, date validation, cross-tab protection and a descriptive-only summary. No invented pain improvement threshold remains. The feature stays optional.
 
 Browser testing then caught and fixed insufficient sidebar/diagram text contrast, non-focusable horizontally scrolling tables, and a skip-link target that did not receive focus. Final tests include storage failures, corrupt data, no-script access, keyboard filters, CSV injection mitigation and project-subpath asset resolution. Desktop and mobile screenshots were visually inspected.
+
+CI evidence and a flake fix: on commit `595ac8f` GitHub CI reported one
+Firefox failure in “project subpath preserves assets and navigation”
+(`route.fulfill: Fetch response has been disposed`) while the identical
+suite passed on Chromium, WebKit and in the adjacent runs; the assertion
+itself never fired (no missing subpath asset). Chromium/WebKit passed and
+the failure did not reproduce on the final commit, but rather than rely on
+luck the route handler now tolerates Firefox’s disposal race while still
+recording every non-OK subpath response and asserting navigation. Run
+#23 (final SHA) passed the whole 33-test × 3-engine matrix.
 
 ## Pass 3 — original-request reconciliation
 
