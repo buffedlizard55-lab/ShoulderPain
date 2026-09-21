@@ -44,7 +44,12 @@ items as one day older. README/REVIEW session headers were stale on the
 previous branch name; the CI workflow push trigger still referenced
 `arena/01a0bfc0-shoulderpain`, which would silently skip push validation
 for other branches — it now triggers on `main` pushes and all pull
-requests. No site behavior changes were needed: the filter counts, audit
+requests. The treatment page’s ibuprofen line said “do not combine …
+without medical advice,” a paraphrase weaker than the NHS statement; it
+now quotes the NHS sentence directly and keeps the pharmacist/doctor
+consultation as separate advice. The source also limits routine oral use
+to 10 days without a doctor, which was added. No site behavior changes
+were needed: the filter counts, audit
 ledger and tests track content automatically (99 units regenerated).
 Playwright browser downloads remain blocked in-sandbox (CDN failure), so
 local execution of the 14-test × 3-engine matrix is still recorded as
