@@ -7,8 +7,8 @@
     "locator": "Causes; When to Contact a Medical Professional",
     "excerpt": "Sudden left shoulder pain can sometimes be a sign of a heart attack.",
     "boundary": "General differential and emergency warning signs; not a diagnosis.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "M2",
@@ -17,9 +17,9 @@
     "url": "https://www.nhs.uk/symptoms/shoulder-pain/",
     "locator": "Self-care; urgent advice; treatments",
     "excerpt": "Get medical help if it does not start feeling better after 2 weeks.",
-    "boundary": "General shoulder pain. Uses UK care pathways; local services differ.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "boundary": "General shoulder pain. Uses UK care pathways; local services differ. On 21 September 2026 the page’s own embedded video player showed a temporary “videos unavailable” network error; the written guidance was intact.",
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "M3",
@@ -29,8 +29,8 @@
     "locator": "Cause; Doctor Examination; Treatment",
     "excerpt": "Injuries to the nerves that supply the muscles",
     "boundary": "Winging can involve muscle, nerve or bone/joint problems. Individual exam needed.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "M4",
@@ -40,8 +40,8 @@
     "locator": "Using Your Shoulder; Returning to Sports",
     "excerpt": "When you sleep, lie either on the side that is not in pain or on your back.",
     "boundary": "Rotator-cuff-specific comfort and return-to-sport guidance; does not establish the cause of this pain.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "M5",
@@ -51,8 +51,8 @@
     "locator": "Who can and cannot use; interactions",
     "excerpt": "Do not take ibuprofen at the same time as other non-steroidal anti-inflammatory drugs (NSAIDs), such as naproxen or aspirin.",
     "boundary": "Safety examples, not an exhaustive contraindication list or a prescription.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "M6",
@@ -62,8 +62,8 @@
     "locator": "How to take; Who can and cannot take",
     "excerpt": "You should also avoid taking paracetamol at the same time as other medicines containing paracetamol",
     "boundary": "Follow the local product label; do not substitute UK maximum doses for another formulation.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "E1",
@@ -73,8 +73,8 @@
     "locator": "Getting Started; exercises 1, 2, 6, 9",
     "excerpt": "You should not feel pain during an exercise.",
     "boundary": "General, supervised conditioning. Exact doses below belong to this source, not a personalized program.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "E2",
@@ -84,8 +84,8 @@
     "locator": "Introduction and video headings",
     "excerpt": "We recommend that you seek advice from a physiotherapist or healthcare professional before starting any new exercise regime.",
     "boundary": "Official page hosts Physiotec videos. Page checked; video playback not independently tested.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026; video playback still not independently tested"
   },
   {
     "id": "E3",
@@ -95,8 +95,8 @@
     "locator": "Introduction and exercise panels",
     "excerpt": "This is a general conditioning program that provides a wide range of exercises.",
     "boundary": "Illustrated reference only. Extracted text had artifacts; selected doses cross-checked against HTML E1. Some other loading limits differ.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official PDF directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "W1",
@@ -106,8 +106,8 @@
     "locator": "Work stations; Seating; General concepts",
     "excerpt": "Shoulders are relaxed (not elevated).",
     "boundary": "Workstation risk-reduction guidance, not proof that a product treats shoulder pain.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "W2",
@@ -117,8 +117,8 @@
     "locator": "Monitor Quick Tips; Viewing distance",
     "excerpt": "Generally, the preferred viewing distance is between 20 and 40 inches (50 and 100 cm)",
     "boundary": "Eye-to-screen distance, not desk depth. Screen top at or slightly below eye level.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "W3",
@@ -128,8 +128,8 @@
     "locator": "Prolonged periods of activity",
     "excerpt": "maintaining static postures, such as viewing the monitor, for a prolonged period of time without taking a break can fatigue the muscles of the neck and shoulder",
     "boundary": "Supports variation and short breaks; no universal timer interval in the cited text.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "checked": "2026-09-21",
+    "method": "Official page directly opened and relevant text read; re-verified 21 September 2026"
   },
   {
     "id": "P1",
@@ -138,9 +138,9 @@
     "url": "https://comhoma.com/products/comhoma-small-adjustable-standing-desk-tiltable-tabletop-dh005",
     "locator": "White price; manufacturer specification and folding images",
     "excerpt": "Sale price$54.49Regular price$79.99",
-    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope and unit weight not published. Product controls include both in-stock and sold-out text; actual stock unresolved. The official installation index has no DH005 entry.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "boundary": "Multiple variants mixed on the page. White, no-drawer specifications only; folded envelope and unit weight not published. Product controls include both in-stock and sold-out text; actual stock unresolved. The official installation index has no DH005 entry. The $25.50 figure seen again on 21 September equals 79.99 − 54.49, consistent with a discount badge, but the $54.49/$79.99 strings themselves were not re-read on 21 September and remain the 20 September snapshot.",
+    "checked": "2026-09-21",
+    "method": "Official page directly opened; gallery, four color variants and mixed specification images re-verified 21 September 2026; the price/availability box was not re-captured that day due to fetch failures"
   },
   {
     "id": "P2",
@@ -149,9 +149,9 @@
     "url": "https://vivo-us.com/products/mount-sf1fb",
     "locator": "Price; Compatibility; Specifications",
     "excerpt": "$69.99",
-    "boundary": "43.3 × 18 inches; 2.3 inches from wall folded; 110 lb capacity. Wall fixture remains installed.",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "boundary": "43.3 × 18 inches; 2.3 inches from wall folded; 110 lb capacity. Wall fixture remains installed. 21 September endpoint data: Black MOUNT-SF1FB $69.99 and available; White MOUNT-SF1FW sold out. Endpoint data is not a checkout guarantee.",
+    "checked": "2026-09-21",
+    "method": "Official seller product-data endpoint (JSON) opened directly and read on 21 September 2026"
   },
   {
     "id": "P3",
@@ -160,9 +160,9 @@
     "url": "https://www.lillipad.com/products/lillipad-foldable-electric-standing-desk",
     "locator": "Selected variant; Specifications; FAQ",
     "excerpt": "Collapsed: 53\" x 24\" x 6\" (at min. height)",
-    "boundary": "Displayed $1,049 with sold-out and add-to-cart/ship messaging. 67 lb desk; 75 lb operational rating. Static-load claims conflict (700 vs 350 lb).",
-    "checked": "2026-09-20",
-    "method": "Official page directly opened and relevant text read"
+    "boundary": "Displayed $1,049 with sold-out and add-to-cart/ship messaging. 67 lb desk; 75 lb operational rating. Static-load claims conflict (700 vs 350 lb). 21 September endpoint data: PRO Standard Maple $1,049 (was $1,449) marked available; PRO Standard Black marked sold out; page-level sold-out messaging conflicts with that data, so availability remains unresolved.",
+    "checked": "2026-09-21",
+    "method": "Official page and seller product-data endpoint (JSON) opened directly; endpoint read on 21 September 2026"
   },
   {
     "id": "P4",

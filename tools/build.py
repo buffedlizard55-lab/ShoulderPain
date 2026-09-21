@@ -31,7 +31,7 @@ def shell(slug,label,title,lead,body):
 <a class="skip-link" href="#main">Skip to content</a>
 <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">s.</span>Shoulder<span class="brand-light">guide</span></a>
 <p class="nav-label">YOUR RESEARCH COMPANION</p><nav aria-label="Main navigation">{nav}</nav>
-<div class="side-note"><span class="status-dot"></span> Sources checked<br><strong>20 September 2026</strong><p>Education, not diagnosis.<br>No ads. No affiliate links.</p></div></aside>
+<div class="side-note"><span class="status-dot"></span> Sources checked<br><strong>20–21 September 2026</strong><p>Education, not diagnosis.<br>No ads. No affiliate links.</p></div></aside>
 <div class="site-body"><header class="topbar"><span>SHOULDER &amp; SHOULDER-BLADE PAIN</span><a href="causes.html#red-flags">When to get help ↗</a></header>
 <main id="main" tabindex="-1"><div class="page-intro"><p class="eyebrow">{label}</p><h1>{title}</h1><p class="lead">{lead}</p></div>
 {refs(body)}
@@ -40,7 +40,7 @@ def shell(slug,label,title,lead,body):
 
 def source_page():
  text=(ROOT/'content/sources.html').read_text()
- text+='<section><h2>Official source register</h2><p>Each reference below was directly opened on 20 September 2026. Excerpts are short review aids, not full quotations of the guidance. Publisher authority does not make every claim certain. Commercial sources support prices/specifications only.</p><div class="source-list">'
+ text+='<section><h2>Official source register</h2><p>Each reference below was directly opened on the date recorded in its own entry (20–21 September 2026). Entries still dated 20 September were not re-opened successfully in the latest check; treat them as one day older. Excerpts are short review aids, not full quotations of the guidance. Publisher authority does not make every claim certain. Commercial sources support prices/specifications only.</p><div class="source-list">'
  for s in SOURCES:
   text+=f'''<article class="source-record" id="{s['id'].lower()}"><div><span class="pill">{s['id']} · {html.escape(s['type'])}</span><h3><a href="{html.escape(s['url'],quote=True)}">{html.escape(s['title'])} ↗</a></h3></div><p><strong>Read:</strong> {html.escape(s['locator'])}.</p><blockquote>{html.escape(s['excerpt'])}</blockquote><p><strong>Boundary:</strong> {html.escape(s['boundary'])}</p><p class="small">Checked {s['checked']} · {s['method']}</p></article>'''
  text+='</div></section><section id="statement-audit"><h2>Statement-by-statement review</h2><p>Source-bearing paragraphs, list items, table rows and cards, grouped by page. Nested units can overlap; this is not a count of independent facts. Uncited editorial text is not included: review the full page too. A reference is not a truth certificate.</p>'
