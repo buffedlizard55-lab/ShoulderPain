@@ -875,7 +875,7 @@
       "id": "treatment-12",
       "file": "content/treatment.html",
       "line": 118,
-      "text": "Ibuprofen (NSAID) May be unsuitable with previous ulcers, some asthma/allergies, heart/liver/kidney conditions or clotting problems. Interactions include anticoagulants and other medicines. Do not combine with other NSAIDs such as naproxen or aspirin without medical advice; do not stop prescribed medicines on your own. Use the smallest effective dose for the shortest time per label/advice. [[M5]] Not verified: formulation and suitability must be established first.",
+      "text": "Ibuprofen (NSAID) May be unsuitable with previous ulcers, some asthma/allergies, heart/liver/kidney conditions or clotting problems. Interactions include anticoagulants and other medicines. The NHS states: “Do not take ibuprofen at the same time as other non-steroidal anti-inflammatory drugs (NSAIDs), such as naproxen or aspirin.” Consult a pharmacist or doctor about any combination. Do not stop prescribed medicines on your own. Use the smallest effective dose for the shortest time per label/advice; oral tablets for more than 10 days need a doctor’s advice. [[M5]] Not verified: formulation and suitability must be established first.",
       "source_ids": [
         "M5"
       ]
@@ -883,7 +883,7 @@
     {
       "id": "treatment-13",
       "file": "content/treatment.html",
-      "line": 139,
+      "line": 142,
       "text": "Assessment before assumptions. A health professional examines the shoulder and may order tests to clarify the cause. [[M2]]",
       "source_ids": [
         "M2"
@@ -892,7 +892,7 @@
     {
       "id": "treatment-14",
       "file": "content/treatment.html",
-      "line": 143,
+      "line": 146,
       "text": "Physical therapy / rehabilitation. For scapular disorders, therapy targets the specific causes, strengthening stabilizing muscles and stretching limiting tightness. Generic band work is not a substitute for this assessment. [[M3]]",
       "source_ids": [
         "M3"
@@ -901,7 +901,7 @@
     {
       "id": "treatment-15",
       "file": "content/treatment.html",
-      "line": 149,
+      "line": 152,
       "text": "Medication or injections when appropriate. These may be offered for pain/swelling after evaluation. They are not a blanket recommendation for unexplained winging. [[M1]] [[M2]]",
       "source_ids": [
         "M1",
@@ -911,7 +911,7 @@
     {
       "id": "treatment-16",
       "file": "content/treatment.html",
-      "line": 154,
+      "line": 157,
       "text": "Specialist or surgical care when indicated. Most muscle-weakness/tightness-related dyskinesis does not need surgery; underlying shoulder injury can change the treatment. [[M3]]",
       "source_ids": [
         "M3"
@@ -920,7 +920,7 @@
     {
       "id": "treatment-17",
       "file": "content/treatment.html",
-      "line": 168,
+      "line": 171,
       "text": "NHS advises assessment if symptoms worsen or do not improve after 2 weeks. This is a care threshold, not a promise to heal in 2 weeks. [[M2]] MedlinePlus rotator-cuff advice supports gradual return to sport after pain, strength and motion are assessed. [[M4]]",
       "source_ids": [
         "M2",
